@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<!-- 目录页 -->
+<div class="home">
+  {%- for collection in site.collections -%}
+    {%- if collection.docs.size > 1 -%}
+    <ul class="menu-list">
+      <a class="post-link" href="/{{ collection.label}}/list">{{collection.title}}</a>
+      {%- for post in collection.docs limit:2 -%}
+      {%- if post.menu == undefined -%}
+      <li>
+        <span class="post-meta">{{ post.date | date: site.minima.date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+      </li>
+      {%- endif -%}
+      {%- endfor -%}
+    </ul>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
