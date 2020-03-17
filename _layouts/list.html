@@ -11,7 +11,7 @@ layout: default
     {%- if collection.label == page.type -%}
     <ul class="post-list">
         {%- for post in collection.docs -%}
-        {%- if post.menu == undefined -%}
+        {%- unless post.menu -%}
         <li>
             <span class="post-meta">{{ post.date | date: site.minima.date_format }}</span>
             <h3>
@@ -20,11 +20,12 @@ layout: default
                 </a>
             </h3>
         </li>
-        {%- endif -%}
+        {%- endunless -%}
         {%- endfor -%}
     </ul>
     {%- endif -%}
     {%- endfor -%}
+</div>
 
     <!-- {% if site.paginate %}
     <div class="pager">
@@ -51,4 +52,3 @@ layout: default
         </ul>
     </div>
     {%- endif %} -->
-</div>

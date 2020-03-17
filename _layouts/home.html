@@ -6,9 +6,9 @@ layout: default
   {%- for collection in site.collections -%}
     {%- if collection.docs.size > 1 -%}
     <ul class="menu-list">
-      <a class="post-link" href="/{{ collection.label}}/list">{{collection.title}}</a>
+      <a class="menu-link" href="/{{ collection.label}}/list">{{collection.title}}</a>
       {%- for post in collection.docs limit:2 -%}
-      {%- if post.menu == undefined -%}
+      {%- unless post.menu -%}
       <li>
         <span class="post-meta">{{ post.date | date: site.minima.date_format }}</span>
         <h3>
@@ -17,7 +17,7 @@ layout: default
           </a>
         </h3>
       </li>
-      {%- endif -%}
+      {%- endunless -%}
       {%- endfor -%}
     </ul>
     {%- endif -%}

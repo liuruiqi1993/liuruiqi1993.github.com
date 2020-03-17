@@ -2,25 +2,27 @@
 
 // Define defaults for each variable.
 
-$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
-$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
-$base-font-size:   16px !default;
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji",
+	"Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
+$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono", "Ubuntu Mono", "Liberation Mono", "Courier New",
+	monospace;
+$base-font-size: 16px !default;
 $base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
+$small-font-size: $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
-$spacing-unit:     30px !default;
+$spacing-unit: 30px !default;
 
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width: 800px !default;
 
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
 
-$on-medium:        $on-palm !default;
-$on-large:         $on-laptop !default;
+$on-medium: $on-palm !default;
+$on-large: $on-laptop !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -32,19 +34,85 @@ $on-large:         $on-laptop !default;
 // Notice the following mixin uses max-width, in a deprecated, desktop-first
 // approach, whereas media queries used elsewhere now use min-width.
 @mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
+	@media screen and (max-width: $device) {
+		@content;
+	}
 }
 
 @mixin relative-font-size($ratio) {
-  font-size: #{$ratio}rem;
+	font-size: #{$ratio}rem;
 }
 
+@mixin media-breakpoint-only($width) {
+	@if $width == xs {
+		@media (max-width: 575.98px) {
+			@content;
+		}
+	}
+	@if $width == sm {
+		@media (min-width: 576px) and (max-width: 767.98px) {
+			@content;
+		}
+	}
+	@if $width == md {
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			@content;
+		}
+	}
+	@if $width == lg {
+		@media (min-width: 992px) and (max-width: 1199.98px) {
+			@content;
+		}
+	}
+	@if $width == xl {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+@mixin media-breakpoint-up($width) {
+	@if $width == sm {
+		@media (min-width: 576px) {
+			@content;
+		}
+	}
+	@if $width == md {
+		@media (min-width: 768px) {
+			@content;
+		}
+	}
+	@if $width == lg {
+		@media (min-width: 992px) {
+			@content;
+		}
+	}
+	@if $width == xl {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+@mixin media-breakpoint-down($width) {
+	@if $width == xs {
+		@media (max-width: 575.98px) {
+			@content;
+		}
+	}
+	@if $width == sm {
+		@media (max-width: 767.98px) {
+			@content;
+		}
+	}
+	@if $width == md {
+		@media (max-width: 991.98px) {
+			@content;
+		}
+	}
+	@if $width == lg {
+		@media (max-width: 1199.98px) {
+			@content;
+		}
+	}
+}
 // Import pre-styling-overrides hook and style-partials.
-@import
-  "minima/custom-variables", // Hook to override predefined variables.
-  "minima/base",             // Defines element resets.
-  "minima/layout",           // Defines structure and style based on CSS selectors.
-  "minima/custom-styles"     // Hook to override existing styles.
-;
+@import "minima/custom-variables", "minima/base", "minima/layout", "minima/custom-styles";

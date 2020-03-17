@@ -1,5 +1,4 @@
 /vendor
 /_site
 .jekyll-cache/
-.bundle
-.bundle/config
+collections/intro/about.md

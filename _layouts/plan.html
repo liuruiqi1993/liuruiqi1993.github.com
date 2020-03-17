@@ -1,0 +1,272 @@
+---
+layout: default
+---
+<article class="plan">
+    <header class="post-header">
+        <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
+
+    <div class="post-content">
+        <form class="needs-validation" novalidate>
+            <div class="row">
+                <div class="mb col-xs-12 col-sm-7 col-md-8 col-lg-8 col-xl-8">
+                    <div class="form-row row-2">
+                        <div class="col">
+                            <input  type="text" id="name" class="form-control" placeholder="名称">
+                            <div class="invalid-feedback">
+                                <span>新增项名字不能为空</span>
+                                <span>筛选条件不能为空</span>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <select class="custom-select" id="status">
+                                <option value=''>全部状态</option>
+                                <option value="1">已完成</option>
+                                <option value="0">未完成</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                <span>筛选条件不能为空</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb col-xs-12 col-sm-5 col-md-4 col-lg-4 col-xl-4">
+                    <div class="btn-group" role="group">
+                        <button type="button" id="add" class="btn btn-success">新增</button>
+                        <button type="button" id="filter" class="btn btn-warning">过滤</button>
+                        <button type="button" id="reset" class="btn btn-primary">条件重置</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="card mb">
+            <div class="card-body">
+                <h5 class="title justify-content-between">未完成 <span class="badge badge-primary badge-pill">14</span></h5>
+                <ul class="list-group todo">
+                </ul>
+            </div>
+        </div>
+        <div class="card mb">
+            <div class="card-body">
+                <h5>已完成</h5>
+                <ul class="list-group done">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <style>
+        .mb{
+            margin-bottom: 10px;
+        }
+        .list-group{
+            margin-left: 0;
+        }
+        .card .title{
+            display: flex;
+        }
+        .card .form-group{
+            margin-bottom: 0;
+        }
+        .form-control-plaintext{
+            resize: none;
+            padding: 0;
+            height: 28px !important;
+        }
+        .btn-group button{
+            white-space: nowrap;;
+        }
+    </style>
+    <script>
+        $(($) => {
+            // 公共方法
+            const setClock = (a) => {
+                return !a ? new Date() : null
+            }
+            const getClock = (a) => {
+                a = new Date(a)
+                return `${a.getFullYear()}-${format(a.getMonth() + 1)}-${format(a.getDay())} ${format(a.getHours())}:${format(a.getMinutes())}:${format(a.getSeconds())}`
+            }
+            const getStorage = (key) => {
+                return JSON.parse(localStorage.getItem("list") || '[]')
+            }
+            const setStorage = () => {
+                localStorage.setItem("list", JSON.stringify(list))
+                load()
+            }
+            const format = (a)=> {
+                return a >= 10 ? a : '0'+a
+            }
+
+            //公共变量
+            let list = null;
+            let dragIndex = 0
+            let _plan = $('.plan');
+            let _form = $('.needs-validation');
+            let _name = $('#name')
+            let _status = $('#status')
+            let _todo = $('.todo')
+            let _done = $('.done')
+            let _badge = $('.badge')
+            let message = _name.next().children()
+
+            //方法
+            const load = () => {
+                let name = _name.val()
+                let status = _status.val()
+                list = getStorage("list")
+                let done = []
+                let todoStr = ""
+                let doneStr = ""
+                let pending = 0;
+                list.map((item,index) => {
+                    if(item.status){
+                        if (!((name && item.name.indexOf(name) === -1)
+                            || (status && item.status != status))) {
+                                //已完成
+                                item.index = index
+                                if (!done.some((doneItem, doneIndex) => {
+                                    if (doneItem.finished_time > item.finished_time) {
+                                        done.splice(doneIndex, 0, item)
+                                        return doneItem.finished_time > item.finished_time
+                                    }
+                                })) {
+                                    done.push(item)
+                                };
+                            }
+                    } else {
+                        if (!((name && item.name.indexOf(name) === -1 )
+                        || (status && item.status != status))){
+                            //未完成
+                            todoStr += `<li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action" data-index="${index}" data-order="${pending}" draggable="true">
+                                <div class="form-group form-check container-fluid">
+                                    <span class="post-meta">${getClock(item.created_time)}</span>
+                                    <br/>
+                                    <input type="checkbox" class="form-check-input">
+                                    <textarea class="form-control-plaintext" row="1" readonly>${item.name}</textarea>
+                                </div>
+                                <button type="button" class="close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </li>`
+                            pending++
+                        }
+                    }
+                })  
+                done.reverse().map((item) => {
+                    doneStr += `<li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action" data-index="${item.index}">
+                        <div class="form-group form-check">
+                            <span class="post-meta">${getClock(item.finished_time)}</span><br/>
+                            <input type="checkbox" class="form-check-input" checked>${item.name}
+                        </div>
+                        <button type="button" class="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </li>`
+                })
+                _badge.html(pending)
+                _todo.html(todoStr)
+                _done.html(doneStr)
+            }
+            const validate=(key)=>{
+                switch(key){
+                    case 'add': return !_name.val()
+                    case 'filter':  return !_name.val() && !_status.val();
+                }
+            };
+            const add=()=>{
+                _status.removeClass("is-invalid")
+                if (validate('add')) {
+                    //未通过给提示
+                    message.first().show();
+                    message.last().hide();
+                    _name.addClass("is-invalid")
+                } 
+                else {
+                    //通过验证新增
+                    list.push({
+                        name: _name.val(),
+                        status: 0,
+                        created_time: setClock()
+                    })
+                    _name.val("")
+                    setStorage()
+                }
+            }
+            const remove=(a)=>{
+                list.splice(a, 1)
+                setStorage()
+            }
+            const update=(key, value, index)=>{
+                list[index][key] = value
+                setStorage()
+            }
+            const filter=()=>{
+                if (validate('filter')){
+                    message.first().hide();
+                    message.last().show();
+                    _name.addClass("is-invalid")
+                    _status.addClass("is-invalid")
+                }
+                else{
+                    load()
+                }
+            }
+            const reset=()=>{
+                _name.val("")
+                _status.val("")
+                message.first().hide();
+                message.last().hide();
+                _name.removeClass("is-invalid")
+                _status.removeClass("is-invalid")
+                load()
+            }
+
+            //调用
+            load()
+            $('#add').on("click", add)
+            $('#filter').on("click", filter)
+            $('#reset').on("click", reset)
+            _name.on("blur", () => {
+                _name.removeClass("is-invalid")
+            })
+            _status.on("blur", () => {
+                _status.removeClass("is-invalid")
+            })
+            _plan.on("click", '.close', (e) => {
+                let {index} = e.currentTarget.parentNode.dataset
+                remove(index)
+            })
+            _plan.on("click", '.form-check-input', (e) => {
+                let checked = e.currentTarget.checked ? 1 : 0
+                let { index } = e.currentTarget.parentNode.parentNode.dataset
+                update('status', checked, index)
+                update('finished_time', checked ? setClock() : null, index)
+            })
+            _plan.on("dblclick", 'textarea', (e) => {
+                $(e.currentTarget).removeAttr('readonly')
+            })
+            _plan.on("blur", 'textarea', (e) => {
+                if(!e.currentTarget.readOnly){
+                    let value = e.currentTarget.value
+                    let { index } = e.currentTarget.parentNode.parentNode.dataset
+                    if (value) {update('name', value, index)} 
+                    else {remove(index)}
+                    $(e.currentTarget).attr('readonly')
+                }
+            })
+            _plan.on("dragend", 'li', (e) => {
+                let index = e.currentTarget.dataset.order
+                if(dragIndex != index){
+                    list.splice(dragIndex, 0, list.splice(index, 1)[0])
+                    setStorage()
+                    load()
+                }
+                e.preventDefault()
+            })
+            _todo.on("dragover", "li", (e) => {
+                dragIndex = e.currentTarget.dataset.order;
+                e.preventDefault()
+            })
+        });
+    </script>
+</article>
