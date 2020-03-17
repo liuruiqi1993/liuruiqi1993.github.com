@@ -139,7 +139,7 @@ layout: post
 date: 2020-03-15
 ---
 ```
-
+ **四号墓坑：_site文件没上传，结果scss样式没有编译，bootStrap的NAV栏切换也不生效，my bad**
 
 
 
