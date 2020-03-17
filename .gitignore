@@ -1,4 +1,4 @@
 /vendor
-/_site
+# /_site
 .jekyll-cache/
 collections/intro/about.md
