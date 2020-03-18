@@ -1,5 +1,6 @@
 ---
 layout: post
+title: Jekyll笔记
 date: 2020-03-15
 ---
 记录用jekyll建博中遇到的麻烦，主要是墙   
@@ -139,7 +140,7 @@ layout: post
 date: 2020-03-15
 ---
 ```
+这样建立集合存在的问题，`site.post`是按时间倒序排的，`site.js`呈现的是正序  
+为了实现最新在最上，用`assign my_array = collection.docs | sort: "date" | reverse `转一下
+
  **四号墓坑：_site文件没上传，结果scss样式没有编译，bootStrap的NAV栏切换也不生效，my bad**
-
-
-

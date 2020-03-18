@@ -3,18 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>立个flag先 | 每天进步一..</title>
+<title>React笔记 | 立个flag先</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="立个flag先" />
+<meta property="og:title" content="React笔记" />
 <meta name="author" content="刘瑞琪" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="每天进步一.." />
-<meta property="og:description" content="每天进步一.." />
-<link rel="canonical" href="http://localhost:4000/" />
-<meta property="og:url" content="http://localhost:4000/" />
+<meta name="description" content="文档： https://create-react-app.dev/docs/" />
+<meta property="og:description" content="文档： https://create-react-app.dev/docs/" />
+<link rel="canonical" href="http://localhost:4000/record/react.html" />
+<meta property="og:url" content="http://localhost:4000/record/react.html" />
 <meta property="og:site_name" content="立个flag先" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-18T23:38:43+08:00" />
 <script type="application/ld+json">
-{"headline":"立个flag先","author":{"@type":"Person","name":"刘瑞琪"},"description":"每天进步一..","@type":"WebSite","url":"http://localhost:4000/","name":"立个flag先","@context":"https://schema.org"}</script>
+{"headline":"React笔记","dateModified":"2020-03-18T23:38:43+08:00","datePublished":"2020-03-18T23:38:43+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/record/react.html"},"description":"文档： https://create-react-app.dev/docs/","@type":"BlogPosting","url":"http://localhost:4000/record/react.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -51,49 +53,69 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!-- 目录页 -->
-<div class="home"><ul class="menu-list">
-      <a class="menu-link" href="/js/list">Javasript</a>
-      <li>
-        <span class="post-meta">Mar 16, 2020</span>
-        <h3>
-          <a class="post-link" href="/js/2020-03-16.html">
-            创建一个计划表：复习增删改查
-          </a>
-        </h3>
-      </li></ul><ul class="menu-list">
-      <a class="menu-link" href="/react/list">React</a>
-      <li>
-        <span class="post-meta">Mar 18, 2020</span>
-        <h3>
-          <a class="post-link" href="/react/2020-03-18">
-            尝试一个react
-          </a>
-        </h3>
-      </li></ul><ul class="menu-list">
-      <a class="menu-link" href="/record/list">记录</a>
-      <li>
-        <span class="post-meta">Mar 18, 2020</span>
-        <h3>
-          <a class="post-link" href="/record/react.html">
-            React笔记
-          </a>
-        </h3>
-      </li><li>
-        <span class="post-meta">Mar 15, 2020</span>
-        <h3>
-          <a class="post-link" href="/record/jekyll/jekyll.html">
-            Jekyll笔记
-          </a>
-        </h3>
-      </li><li>
-        <span class="post-meta">Mar 14, 2020</span>
-        <h3>
-          <a class="post-link" href="/record/2020-03-14.html">
-            立个flag
-          </a>
-        </h3>
-      </li></ul></div>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">React笔记</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-03-18T23:38:43+08:00" itemprop="datePublished">
+        Mar 18, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>文档： <a href="https://create-react-app.dev/docs/">https://create-react-app.dev/docs/</a></p>
+
+<h3 id="路由">路由</h3>
+
+<h4 id="问题一编程式导航thispropshistory-得到-undefined">问题一：编程式导航，this.props.history 得到 undefined</h4>
+
+<ul>
+  <li>
+    <p>路由组件 (经过路由匹配渲染的组件) 可以直接获取这些属性，而非路由组件就必须通过withRouter修饰后才能获取这些属性了</p>
+  </li>
+  <li>
+    <p>非路由组件需要路由参数时，使用withRouter给此组件传入路由参数，可以将react-router的 history、location、match 三个对象传入不是通过路由切换过来的组件的props对象上，使得被修饰的组件可以从属性中获取history,location,match</p>
+  </li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import React from "react";
+import {withRouter} from "react-router-dom";
+ 
+class MyComponent extends React.Component {
+  ...
+  myFunction() {
+    this.props.history.push("/some/Path");
+  }
+  ...
+}
+export default withRouter(MyComponent);
+</code></pre></div></div>
+<h4 id="问题二switch用法">问题二：switch用法</h4>
+<p>路由变了，新组件没有挂载，去掉<switch>就可以跳了
+因为switch需要搭配exact用
+比如"/"，"/search"，"/account"，那么search和account可以视作是/的子路由，那么点击search或account还是会就近匹配到/。</switch></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;Router&gt;
+  &lt;Switch&gt;
+    &lt;Route exact path="/" component={Home} /&gt;
+    &lt;Route path="/search" component={Search} /&gt;
+    &lt;Route path="/account" component={Account} /&gt;
+  &lt;/Switch&gt;
+&lt;/Router&gt;
+</code></pre></div></div>
+
+<h3 id="组件">组件</h3>
+<h4 id="相对路径改绝对路径"><a href="https://create-react-app.dev/docs/importing-a-component/#absolute-imports">相对路径改绝对路径</a></h4>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// jsconfig.json
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/record/react.html" hidden></a>
+</article>
 
       </div>
     </main>

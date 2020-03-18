@@ -7,7 +7,8 @@ layout: default
     {%- if collection.docs.size > 1 -%}
     <ul class="menu-list">
       <a class="menu-link" href="/{{ collection.label}}/list">{{collection.title}}</a>
-      {%- for post in collection.docs limit:2 -%}
+      {% assign my_array = collection.docs | sort: "date" | reverse %}
+      {%- for post in my_array limit:4 -%}
       {%- unless post.menu -%}
       <li>
         <span class="post-meta">{{ post.date | date: site.minima.date_format }}</span>

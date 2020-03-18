@@ -10,7 +10,8 @@ layout: default
     {%- for collection in site.collections -%}
     {%- if collection.label == page.type -%}
     <ul class="post-list">
-        {%- for post in collection.docs -%}
+        {% assign my_array = collection.docs | sort: "date" | reverse %}
+        {%- for post in my_array -%}
         {%- unless post.menu -%}
         <li>
             <span class="post-meta">{{ post.date | date: site.minima.date_format }}</span>

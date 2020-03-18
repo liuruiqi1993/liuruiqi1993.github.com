@@ -35,6 +35,12 @@ collections:
   css:
     output: true
     title: Css
+  react:
+    output: true
+    title: React
+  vue:
+    output: true
+    title: Vue
   webpack:
     output: true
     title: Webpack
