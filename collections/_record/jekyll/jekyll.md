@@ -3,6 +3,7 @@ layout: post
 title: Jekyll笔记
 date: 2020-03-15
 ---
+
 记录用jekyll建博中遇到的麻烦，主要是墙   
 系统: mac Mojave   
 参考: 
@@ -144,3 +145,4 @@ date: 2020-03-15
 为了实现最新在最上，用`assign my_array = collection.docs | sort: "date" | reverse `转一下
 
  **四号墓坑：_site文件没上传，结果scss样式没有编译，bootStrap的NAV栏切换也不生效，my bad**
+ **五号墓坑：(添加目录Table of Contents)[https://blog.webjeda.com/jekyll-toc/]**

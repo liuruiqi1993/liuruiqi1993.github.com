@@ -26,9 +26,14 @@ layout: default
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+    <div class="post-wrap">
+      {{ content }}
+    </div>
+    <div class="post-sidebar">
+      {%- include sidebar.html -%}
+    </div>
   </div>
-
+   
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
   {%- endif -%}

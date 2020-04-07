@@ -29,8 +29,8 @@
     <div class="social social1"><ul class="social-media-list"><li><a rel="me" target="_blank"
       href="mailto:405782134@qq.com"
       title="405782134@qq.com"><svg class="svg-icon">
-        <use xlink:href="/assets/minima-social-icons.svg#email"></use>
-      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,8 +47,8 @@
     <div class="social social2"><ul class="social-media-list"><li><a rel="me" target="_blank"
       href="mailto:405782134@qq.com"
       title="405782134@qq.com"><svg class="svg-icon">
-        <use xlink:href="/assets/minima-social-icons.svg#email"></use>
-      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
   </nav>
 </header>
 <main class="page-content" aria-label="Content">
@@ -62,7 +62,8 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>记录用jekyll建博中遇到的麻烦，主要是墙 <br />
+    <div class="post-wrap">
+      <p>记录用jekyll建博中遇到的麻烦，主要是墙 <br />
 系统: mac Mojave <br />
 参考:</p>
 <ol>
@@ -204,11 +205,20 @@ date: 2020-03-15
 <p>这样建立集合存在的问题，<code class="highlighter-rouge">site.post</code>是按时间倒序排的，<code class="highlighter-rouge">site.js</code>呈现的是正序<br />
 为了实现最新在最上，用<code class="highlighter-rouge">assign my_array = collection.docs | sort: "date" | reverse </code>转一下</p>
 
-<p><strong>四号墓坑：_site文件没上传，结果scss样式没有编译，bootStrap的NAV栏切换也不生效，my bad</strong></p>
+<p><strong>四号墓坑：_site文件没上传，结果scss样式没有编译，bootStrap的NAV栏切换也不生效，my bad</strong>
+ <strong>五号墓坑：(添加目录Table of Contents)[https://blog.webjeda.com/jekyll-toc/]</strong></p>
 
+    </div>
+    <div class="post-sidebar"><script src="/assets/js/toc.js"></script>
+<div id="toc">
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#toc').toc();
+    });
+</script></div>
   </div><a class="u-url" href="/record/jekyll/jekyll.html" hidden></a>
 </article>
-
       </div>
     </main>
 

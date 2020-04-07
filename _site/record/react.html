@@ -8,15 +8,15 @@
 <meta property="og:title" content="React笔记" />
 <meta name="author" content="刘瑞琪" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="文档： https://create-react-app.dev/docs/" />
-<meta property="og:description" content="文档： https://create-react-app.dev/docs/" />
+<meta name="description" content="文档： https://create-react-app.dev/docs/getting-started" />
+<meta property="og:description" content="文档： https://create-react-app.dev/docs/getting-started" />
 <link rel="canonical" href="http://localhost:4000/record/react.html" />
 <meta property="og:url" content="http://localhost:4000/record/react.html" />
 <meta property="og:site_name" content="立个flag先" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-03-18T23:38:43+08:00" />
+<meta property="article:published_time" content="2020-04-08T01:57:21+08:00" />
 <script type="application/ld+json">
-{"headline":"React笔记","dateModified":"2020-03-18T23:38:43+08:00","datePublished":"2020-03-18T23:38:43+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/record/react.html"},"description":"文档： https://create-react-app.dev/docs/","@type":"BlogPosting","url":"http://localhost:4000/record/react.html","@context":"https://schema.org"}</script>
+{"headline":"React笔记","dateModified":"2020-04-08T01:57:21+08:00","datePublished":"2020-04-08T01:57:21+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/record/react.html"},"description":"文档： https://create-react-app.dev/docs/getting-started","@type":"BlogPosting","url":"http://localhost:4000/record/react.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -29,8 +29,8 @@
     <div class="social social1"><ul class="social-media-list"><li><a rel="me" target="_blank"
       href="mailto:405782134@qq.com"
       title="405782134@qq.com"><svg class="svg-icon">
-        <use xlink:href="/assets/minima-social-icons.svg#email"></use>
-      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,8 +47,8 @@
     <div class="social social2"><ul class="social-media-list"><li><a rel="me" target="_blank"
       href="mailto:405782134@qq.com"
       title="405782134@qq.com"><svg class="svg-icon">
-        <use xlink:href="/assets/minima-social-icons.svg#email"></use>
-      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
   </nav>
 </header>
 <main class="page-content" aria-label="Content">
@@ -56,13 +56,14 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">React笔记</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2020-03-18T23:38:43+08:00" itemprop="datePublished">
-        Mar 18, 2020
+    <p class="post-meta"><time class="dt-published" datetime="2020-04-08T01:57:21+08:00" itemprop="datePublished">
+        Apr 8, 2020
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>文档： <a href="https://create-react-app.dev/docs/">https://create-react-app.dev/docs/</a></p>
+    <div class="post-wrap">
+      <p>文档： <a href="https://create-react-app.dev/docs/getting-started">https://create-react-app.dev/docs/getting-started</a></p>
 
 <h3 id="路由">路由</h3>
 
@@ -114,9 +115,174 @@ export default withRouter(MyComponent);
 }
 </code></pre></div></div>
 
+<h3 id="css模块化">css模块化</h3>
+<p><a href="https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/">https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/</a>
+多个class<code class="highlighter-rouge">className={</code>${style.btn}  ${style.btn1}<code class="highlighter-rouge">}</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Button.module.css
+.error {
+  background-color: red;
+}
+
+// #another-stylesheet.css
+.error {
+  color: red;
+}
+
+// #Button.js
+import React, { Component } from 'react';
+import styles from './Button.module.css'; // Import css modules stylesheet as styles
+import './another-stylesheet.css'; // Import regular stylesheet
+class Button extends Component {
+  render() {
+    // reference as a js object
+    return &lt;button className={styles.error}&gt;Error Button&lt;/button&gt;;
+  }
+}
+</code></pre></div></div>
+
+<h3 id="传值和方法">传值和方法</h3>
+<h4 id="父调用子方法">父调用子方法</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;child ref="child"&gt;&lt;/child&gt;
+// this.refs['child']拿到子实力，拿去值和方法
+</code></pre></div></div>
+<h4 id="子调用父方法">子调用父方法</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;child {...this.state} functionName={() =&gt; {FuntionA}}&gt;&lt;/child&gt;
+// 子组件调用this.props.functionName(), 父组件就会运行FuntionA()
+</code></pre></div></div>
+<h3 id="ant-mobile">ant mobile</h3>
+<h4 id="tabs-sticky">tabs sticky</h4>
+<p>我就说为什么抄的还能错，renderTabBar我写成了renderTab，土拨鼠啊.jpg</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;StickyContainer&gt;
+  &lt;Tabs
+    tabs={this.state.tabs}
+    renderTabBar={(tab) =&gt; (
+      &lt;Sticky&gt;
+        {({ style }) =&gt; (
+          &lt;div style=&gt;
+            &lt;Tabs.DefaultTabBar {...tab} /&gt;
+          &lt;/div&gt;
+        )}
+      &lt;/Sticky&gt;
+    )}
+    onChange={(tab, index) =&gt; {
+      console.log('onChange', index, tab);
+    }}
+  &gt;
+    {this.state.tabs.map((item, index) =&gt; {
+      return &lt;List key={index} category={item.id} /&gt;;
+    })}
+  &lt;/Tabs&gt;
+&lt;/StickyContainer&gt;
+</code></pre></div></div>
+<h4 id="listview"><a href="https://www.jianshu.com/p/662126c138c3">listview</a></h4>
+<p>写完这个已经从fury到佛系了，(￣_,￣ )</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      list: [
+        {
+          img: 'https://zos.alipayobjects.com/rmsportal/dKbkpPXKfvZzWCM.png',
+          title: 'Meet hotel',
+          des: '不是所有的兼职汪都需要风吹日晒'
+        },
+        {
+          img: 'https://zos.alipayobjects.com/rmsportal/XmwCzSeJiqpkuMB.png',
+          title: "McDonald's invites you",
+          des: '不是所有的兼职汪都需要风吹日晒'
+        },
+        {
+          img: 'https://zos.alipayobjects.com/rmsportal/hfVtzEhPzTUewPm.png',
+          title: 'Eat the week',
+          des: '不是所有的兼职汪都需要风吹日晒'
+        }
+      ],
+      isLoading: false,
+      hasMore: true,
+      refreshing: true,
+      dataSource: new ListView.DataSource({ rowHasChanged: (row1, row2) =&gt; row1 !== row2 })
+    };
+  }
+  render() {
+    let { list, dataSource, isLoading, refreshing } = this.state;
+    return (
+      &lt;WingBlank&gt;
+        &lt;WhiteSpace size="lg" /&gt;
+        &lt;ListView
+          dataSource={dataSource.cloneWithRows(list)}
+          useBodyScroll
+          renderRow={(rowData, sectionID, rowID) =&gt; (
+            &lt;Card key={rowID}&gt;
+              &lt;Card.Header
+                title={rowData.title}
+                thumb={rowData.img}
+                thumbStyle=
+              /&gt;
+              &lt;Card.Body&gt;
+                &lt;div&gt;{rowData.des}&lt;/div&gt;
+              &lt;/Card.Body&gt;
+            &lt;/Card&gt;
+          )}
+          renderBodyComponent={(props) =&gt; (
+            &lt;div className="am-list-body my-body" style=&gt;
+              {props}
+            &lt;/div&gt;
+          )}
+          renderSeparator={(sectionID, rowID) =&gt; &lt;WhiteSpace size="lg" key={rowID} /&gt;}
+          renderFooter={() =&gt; (
+            &lt;div style=&gt;{isLoading ? '加载中...' : '加载完成'}&lt;/div&gt;
+          )}
+          onEndReached={this.onEndReached}
+          onEndReachedThreshold={10}
+          pullToRefresh={
+            &lt;PullToRefresh
+              refreshing={refreshing}
+              onRefresh={() =&gt; {
+                this.setState({ refreshing: true });
+                setTimeout(() =&gt; {
+                  this.setState({ refreshing: false });
+                }, 1000);
+              }}
+            /&gt;
+          }
+        /&gt;
+      &lt;/WingBlank&gt;
+    );
+  }
+  componentDidMount() {
+    this.getData();
+  }
+  onEndReached = (event) =&gt; {
+    if (this.state.isLoading || !this.state.hasMore) {
+      return;
+    }
+    this.getData();
+  };
+  getData() {
+    this.setState({ isLoading: true });
+    setTimeout(() =&gt; {
+      let list = this.state.list.concat(this.state.list);
+      this.setState({
+        list,
+        isLoading: false,
+        hasMore: list.length &lt; 10
+      });
+    }, 600);
+  }
+}
+</code></pre></div></div>
+
+    </div>
+    <div class="post-sidebar"><script src="/assets/js/toc.js"></script>
+<div id="toc">
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#toc').toc();
+    });
+</script></div>
   </div><a class="u-url" href="/record/react.html" hidden></a>
 </article>
-
       </div>
     </main>
 

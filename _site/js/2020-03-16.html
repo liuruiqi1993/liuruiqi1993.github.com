@@ -29,8 +29,8 @@
     <div class="social social1"><ul class="social-media-list"><li><a rel="me" target="_blank"
       href="mailto:405782134@qq.com"
       title="405782134@qq.com"><svg class="svg-icon">
-        <use xlink:href="/assets/minima-social-icons.svg#email"></use>
-      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,8 +47,8 @@
     <div class="social social2"><ul class="social-media-list"><li><a rel="me" target="_blank"
       href="mailto:405782134@qq.com"
       title="405782134@qq.com"><svg class="svg-icon">
-        <use xlink:href="/assets/minima-social-icons.svg#email"></use>
-      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
   </nav>
 </header>
 <main class="page-content" aria-label="Content">
@@ -62,7 +62,8 @@
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>正好需要一个能增删改查的计划表，那就正好复习一下dom操作。思路：</p>
+    <div class="post-wrap">
+      <p>正好需要一个能增删改查的计划表，那就正好复习一下dom操作。思路：</p>
 <ol>
   <li>没有数据库，写在localStorage里面好了。</li>
   <li>需要2个列表，待完成根据等级正序(拖拽)、创建时间正序，已完成根据完成时间倒序。</li>
@@ -110,9 +111,17 @@ _todo.on("dragover", "li", (e) =&gt; {
 })
 </code></pre></div></div>
 
+    </div>
+    <div class="post-sidebar"><script src="/assets/js/toc.js"></script>
+<div id="toc">
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#toc').toc();
+    });
+</script></div>
   </div><a class="u-url" href="/js/2020-03-16.html" hidden></a>
 </article>
-
       </div>
     </main>
 

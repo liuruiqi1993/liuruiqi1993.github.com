@@ -238,8 +238,29 @@
 	}
 
 	.post-content {
+		display: flex;
 		margin-bottom: $spacing-unit;
-
+		text-align: justify;
+		.post-wrap {
+			width: 100%;
+		}
+		.post-sidebar {
+			margin-left: $spacing-unit / 2;
+			max-width: 250px;
+			#toc > ul {
+				margin-left: 0;
+			}
+			li {
+				width: 100%;
+				list-style: none;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+		}
+		@media screen and (max-width: $content-width) {
+			overflow-x: hidden;
+		}
 		h1,
 		h2,
 		h3 {
@@ -279,7 +300,6 @@
 		}
 	}
 }
-
 /**
  * Grid helpers
  */
