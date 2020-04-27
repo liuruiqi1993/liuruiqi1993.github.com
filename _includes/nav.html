@@ -1,0 +1,50 @@
+<nav class="collection-wrap" id="accordionExample">
+    {% assign activeCollection = page.url | split: '/' %}
+    {%- for collection in site.collections -%}
+    {%- if collection.docs.size > 1 -%}
+    {%- if activeCollection[1] == collection.label -%}
+    <div class="collection-item">
+        <a class="collection-head active" href="/{{collection.label}}/list" data-toggle="collapse" data-target="#{{collection.title}}" aria-expanded="true" aria-controls="{{collection.title}}">
+            {{collection.title}}
+        </a>
+        <ul id="{{collection.title}}" class="collection-body collapse show" aria-labelledby="{{collection.title}}" data-parent="#accordionExample">
+            {% assign my_array = collection.docs %}
+            {%- for post in my_array -%}
+            {%- unless post.menu -%}
+            <li>
+                {%- if page.title == post.title -%}
+                <a class="active" href="{{post.url | relative_url}}">
+                    {{ post.title | escape }}
+                </a>
+                {% else %}
+                <a href="{{post.url | relative_url}}">
+                    {{ post.title | escape }}
+                </a>
+                {% endif %}
+            </li>
+            {%- endunless -%}
+            {%- endfor -%}
+        </ul>
+    </div>
+    {% else %}
+    <div class="collection-item">
+        <a class="collection-head" href="/{{collection.label}}/list" data-toggle="collapse" data-target="#{{collection.title}}" aria-expanded="false"
+            aria-controls="{{collection.title}}">
+            {{collection.title}}
+        </a>
+        <ul id="{{collection.title}}" class="collection-body collapse" aria-labelledby="{{collection.title}}" data-parent="#accordionExample">{% assign my_array = collection.docs %}
+            {%- for post in my_array -%}
+            {%- unless post.menu -%}
+            <li>
+                <a href="{{post.url | relative_url}}">
+                    {{ post.title | escape }}
+                </a>
+            </li>
+            {%- endunless -%}
+            {%- endfor -%}
+        </ul>
+    </div>
+    {%- endif -%}
+    {%- endif -%}
+    {%- endfor -%}
+</nav>

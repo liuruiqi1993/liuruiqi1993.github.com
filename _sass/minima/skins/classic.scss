@@ -10,6 +10,7 @@ $code-background-color: #eef !default;
 
 $link-base-color: #46c1ff !default;
 $link-visited-color: darken($link-base-color, 30%) !default;
+$link-active-color: #f79de6;
 
 $table-text-color: lighten($text-color, 18%) !default;
 $table-zebra-color: lighten($brand-color, 46%) !default;

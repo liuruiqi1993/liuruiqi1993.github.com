@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>CSS属性 | 立个flag先</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="CSS属性" />
+<meta name="author" content="刘瑞琪" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="@   @charset 定义样式表使用的字符集，比如content中使用。 @import 告诉 CSS 引擎引入一个外部样式表。@import url list-of-media-queries; @namespace 告诉 CSS 引擎必须考虑XML命名空间。 @media 如果满足媒介查询的条件则条件规则组里的规则生效。 @page 描述打印文档时布局的变化。 @font-face 描述将下载的外部的字体。 @keyframes 描述 CSS 动画的中间步骤。 @supports 特性查询，如果满足给定条件则条件规则组里的规则生效，ie不兼容。 @document 如果文档样式表满足给定条件则条件规则组里的规则生效。 function   calc()   min() min(40%, 400px)兼容不及calc() max() max(40%, 400px)兼容不及calc() clamp() clamp(1rem, 2.5vw, 1.5rem)兼容不及calc() attr() attr(data-width px, inherit); 兼容性 背景   background bg-color bg-image position/bg-size bg-repeat bg-origin (相对位置padding-box border-box content-box) bg-clip (绘制范围padding-box border-box content-box) bg-attachment (背景图像是否固定或者随着页面的其余部分滚动) border source slice(向内偏移截取) width outset repeat border-style dotted dashed solid double groove(外凹中凸) ridge(外凸中凹) inset(凹槽) outset(凸起) border-image source slice(留下边角，中间掏空) width outset(边框外移程度) repeat 三角形 div {width: 0;height: 0;border: 40px solid;border-color: transparent transparent red;} outline 1. 和border顺序相反(先颜色最后宽度)2. 在border之外3. outline-offset偏移距离(兼容性) 内容生成   counter-increment 在元素前面添加编号counter-increment:section; content:”Section “ counter(section) “. “; counter-reset 最顶级是body编号为0，所以去掉0，就给body加上reset quotes 设置嵌套引用的引号类型 list   list-style list-style-type list-style-position (inside, outside ) list-style-image. 多列(Multi-column) 属性   column-count 列数 column-gap   column-rule column-rule-width column-rule-style column-rule-color columns column-width(默认auto) column-count; 定位（Positioning） 属性   position relative(相对于其正常位置进行定位) clip 搭配fixed和absolute用(和padding的区别是，padding-box里还看得到，但clip区域外是透明的) float &amp;&amp; clear 浮动 &amp;&amp; 清除浮动 分页（Print） 属性 打印时才生效 page-break-before &amp;&amp; page-break-after &amp;&amp; page-break-inside(元素中) 分页符 表格（Table） 属性   border-collapse collapse(合并重复边框) separate border-spacing cell间距 empty-cells 空单元格(hide, show) table-layout 宽度fixed automatic WebKit Extensions   -webkit-line-clamp 把块容器中的内容限制为指定的行数。溢出缩略… -webkit-tap-highlight-color 设置点击链接的时候出现的高亮颜色" />
+<meta property="og:description" content="@   @charset 定义样式表使用的字符集，比如content中使用。 @import 告诉 CSS 引擎引入一个外部样式表。@import url list-of-media-queries; @namespace 告诉 CSS 引擎必须考虑XML命名空间。 @media 如果满足媒介查询的条件则条件规则组里的规则生效。 @page 描述打印文档时布局的变化。 @font-face 描述将下载的外部的字体。 @keyframes 描述 CSS 动画的中间步骤。 @supports 特性查询，如果满足给定条件则条件规则组里的规则生效，ie不兼容。 @document 如果文档样式表满足给定条件则条件规则组里的规则生效。 function   calc()   min() min(40%, 400px)兼容不及calc() max() max(40%, 400px)兼容不及calc() clamp() clamp(1rem, 2.5vw, 1.5rem)兼容不及calc() attr() attr(data-width px, inherit); 兼容性 背景   background bg-color bg-image position/bg-size bg-repeat bg-origin (相对位置padding-box border-box content-box) bg-clip (绘制范围padding-box border-box content-box) bg-attachment (背景图像是否固定或者随着页面的其余部分滚动) border source slice(向内偏移截取) width outset repeat border-style dotted dashed solid double groove(外凹中凸) ridge(外凸中凹) inset(凹槽) outset(凸起) border-image source slice(留下边角，中间掏空) width outset(边框外移程度) repeat 三角形 div {width: 0;height: 0;border: 40px solid;border-color: transparent transparent red;} outline 1. 和border顺序相反(先颜色最后宽度)2. 在border之外3. outline-offset偏移距离(兼容性) 内容生成   counter-increment 在元素前面添加编号counter-increment:section; content:”Section “ counter(section) “. “; counter-reset 最顶级是body编号为0，所以去掉0，就给body加上reset quotes 设置嵌套引用的引号类型 list   list-style list-style-type list-style-position (inside, outside ) list-style-image. 多列(Multi-column) 属性   column-count 列数 column-gap   column-rule column-rule-width column-rule-style column-rule-color columns column-width(默认auto) column-count; 定位（Positioning） 属性   position relative(相对于其正常位置进行定位) clip 搭配fixed和absolute用(和padding的区别是，padding-box里还看得到，但clip区域外是透明的) float &amp;&amp; clear 浮动 &amp;&amp; 清除浮动 分页（Print） 属性 打印时才生效 page-break-before &amp;&amp; page-break-after &amp;&amp; page-break-inside(元素中) 分页符 表格（Table） 属性   border-collapse collapse(合并重复边框) separate border-spacing cell间距 empty-cells 空单元格(hide, show) table-layout 宽度fixed automatic WebKit Extensions   -webkit-line-clamp 把块容器中的内容限制为指定的行数。溢出缩略… -webkit-tap-highlight-color 设置点击链接的时候出现的高亮颜色" />
+<link rel="canonical" href="http://localhost:4000/css/property/2020-04-13.html" />
+<meta property="og:url" content="http://localhost:4000/css/property/2020-04-13.html" />
+<meta property="og:site_name" content="立个flag先" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-27T17:21:33+08:00" />
+<script type="application/ld+json">
+{"headline":"CSS属性","dateModified":"2020-04-27T17:21:33+08:00","datePublished":"2020-04-27T17:21:33+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/css/property/2020-04-13.html"},"description":"@   @charset 定义样式表使用的字符集，比如content中使用。 @import 告诉 CSS 引擎引入一个外部样式表。@import url list-of-media-queries; @namespace 告诉 CSS 引擎必须考虑XML命名空间。 @media 如果满足媒介查询的条件则条件规则组里的规则生效。 @page 描述打印文档时布局的变化。 @font-face 描述将下载的外部的字体。 @keyframes 描述 CSS 动画的中间步骤。 @supports 特性查询，如果满足给定条件则条件规则组里的规则生效，ie不兼容。 @document 如果文档样式表满足给定条件则条件规则组里的规则生效。 function   calc()   min() min(40%, 400px)兼容不及cal\bc() max() max(40%, 400px)兼容不及cal\bc() clamp() clamp(1rem, 2.5vw, 1.5rem)兼容不及cal\bc() attr() attr(data-width px, inherit); 兼容性 背景   background bg-color bg-image position/bg-size bg-repeat bg-origin (相对位置padding-box border-box content-box) bg-clip (绘制范围padding-box border-box content-box) bg-attachment (背景图像是否固定或者随着页面的其余部分滚动) border source slice(向内偏移截取) width outset repeat border-style dotted dashed solid double groove(外凹中凸) ridge(外凸中凹) inset(凹槽) outset(凸起) border-image source slice(留下边角，中间掏空) width outset(边框外移程度) repeat 三角形 div {width: 0;height: 0;border: 40px solid;border-color: transparent transparent red;} outline 1. 和border顺序相反(先颜色最后宽度)2. 在border之外3. outline-offset偏移距离(兼容性) 内容生成   counter-increment 在元素前面添加编号counter-increment:section; content:”Section “ counter(section) “. “; counter-reset 最顶级是body编号为0，所以去掉0，就给body加上reset quotes 设置嵌套引用的引号类型 list   list-style list-style-type list-style-position (inside, outside ) list-style-image. 多列(Multi-column) 属性   column-count 列数 column-gap   column-rule column-rule-width column-rule-style column-rule-color columns column-width(默认auto) column-count; 定位（Positioning） 属性   position relative(相对于其正常位置进行定位) clip 搭配fixed和absolute用(和padding的区别是，padding-box里还看得到，但clip区域外是透明的) float &amp;&amp; clear 浮动 &amp;&amp; 清除浮动 分页（Print） 属性 打印时才生效 page-break-before &amp;&amp; page-break-after &amp;&amp; page-break-inside(元素中) 分页符 表格（Table） 属性   border-collapse collapse(合并重复边框) separate border-spacing cell间距 empty-cells 空单元格(hide, show) table-layout 宽度fixed automatic WebKit Extensions   -webkit-line-clamp 把块容器中的内容限制为指定的行数。溢出缩略… -webkit-tap-highlight-color 设置点击链接的时候出现的高亮颜色","@type":"BlogPosting","url":"http://localhost:4000/css/property/2020-04-13.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="立个flag先" />
+</head>
+<body><header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-sm navbar-light wrapper">
+    <a class="navbar-brand site-title" rel="author" href="/">立个flag先</a>
+
+    <div class="social social1"><ul class="social-media-list"><li><a rel="me" target="_blank"
+      href="mailto:405782134@qq.com"
+      title="405782134@qq.com"><svg class="svg-icon">
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav site-nav navbar-light"><li class="nav-item">
+          <a class="nav-link page-link" href="/plan/index.html">学习计划</a>
+        </li></ul>
+    </div>
+
+    <div class="social social2"><ul class="social-media-list"><li><a rel="me" target="_blank"
+      href="mailto:405782134@qq.com"
+      title="405782134@qq.com"><svg class="svg-icon">
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+  </nav>
+</header>
+<main class="page-content" aria-label="Content"  data-spy="scroll" data-target="#toc" data-offset="20">
+      <div class="custom-nav side-sticky sticky-top"><nav class="collection-wrap" id="accordionExample">
+    <div class="collection-item">
+        <a class="collection-head active" href="/css/list" data-toggle="collapse" data-target="#Css" aria-expanded="true" aria-controls="Css">
+            Css
+        </a>
+        <ul id="Css" class="collection-body collapse show" aria-labelledby="Css" data-parent="#accordionExample">
+            <li>
+                <a href="/css/%20adaptive/2020-04-14.html">
+                    响应式和自适应
+                </a>
+                
+            </li><li>
+                <a href="/css/2020-04-09.html">
+                    CSS选择器
+                </a>
+                
+            </li><li>
+                <a href="/css/3D-animate/2020-04-15.html">
+                    3D与动画
+                </a>
+                
+            </li><li>
+                <a href="/css/font/2020-04-12.html">
+                    CSS字体
+                </a>
+                
+            </li><li><a class="active" href="/css/property/2020-04-13.html">
+                    CSS属性
+                </a>
+                
+            </li></ul>
+    </div>
+    
+    <div class="collection-item">
+        <a class="collection-head" href="/html/list" data-toggle="collapse" data-target="#HTML" aria-expanded="false"
+            aria-controls="HTML">
+            HTML
+        </a>
+        <ul id="HTML" class="collection-body collapse" aria-labelledby="HTML" data-parent="#accordionExample"><li>
+                <a href="/html/meta/meta.html">
+                    meta
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/js/list" data-toggle="collapse" data-target="#Javasript" aria-expanded="false"
+            aria-controls="Javasript">
+            Javasript
+        </a>
+        <ul id="Javasript" class="collection-body collapse" aria-labelledby="Javasript" data-parent="#accordionExample"><li>
+                <a href="/js/2020-03-16.html">
+                    创建一个计划表：复习增删改查
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/react/list" data-toggle="collapse" data-target="#React" aria-expanded="false"
+            aria-controls="React">
+            React
+        </a>
+        <ul id="React" class="collection-body collapse" aria-labelledby="React" data-parent="#accordionExample"><li>
+                <a href="/react/2020-03-18.html">
+                    尝试一个react
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/record/list" data-toggle="collapse" data-target="#记录" aria-expanded="false"
+            aria-controls="记录">
+            记录
+        </a>
+        <ul id="记录" class="collection-body collapse" aria-labelledby="记录" data-parent="#accordionExample"><li>
+                <a href="/record/2020-03-14.html">
+                    立个flag
+                </a>
+            </li><li>
+                <a href="/record/jekyll/jekyll.html">
+                    Jekyll笔记
+                </a>
+            </li><li>
+                <a href="/record/interview/exam.html">
+                    笔试
+                </a>
+            </li><li>
+                <a href="/record/mock.html">
+                    Mock
+                </a>
+            </li><li>
+                <a href="/record/react.html">
+                    React笔记
+                </a>
+            </li><li>
+                <a href="/record/vue.html">
+                    Vue笔记
+                </a>
+            </li></ul>
+    </div></nav></div>
+      <div class="sidebar side-sticky sticky-top"><script src="/assets/js/toc.js"></script>
+<div id="toc"> 
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#toc').toc();
+    });
+</script></div>
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" >
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">CSS属性</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-04-27T17:21:33+08:00" itemprop="datePublished">
+        Apr 27, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div class="post-wrap">
+      <table>
+  <tbody>
+    <tr>
+      <td><strong>@</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>@charset</td>
+      <td>定义样式表使用的字符集，比如content中使用。</td>
+    </tr>
+    <tr>
+      <td>@import</td>
+      <td>告诉 CSS 引擎引入一个外部样式表。@import url list-of-media-queries;</td>
+    </tr>
+    <tr>
+      <td>@namespace</td>
+      <td>告诉 CSS 引擎必须考虑XML命名空间。</td>
+    </tr>
+    <tr>
+      <td>@media</td>
+      <td>如果满足媒介查询的条件则条件规则组里的规则生效。</td>
+    </tr>
+    <tr>
+      <td>@page</td>
+      <td>描述打印文档时布局的变化。</td>
+    </tr>
+    <tr>
+      <td>@font-face</td>
+      <td>描述将下载的外部的字体。</td>
+    </tr>
+    <tr>
+      <td>@keyframes</td>
+      <td>描述 CSS 动画的中间步骤。</td>
+    </tr>
+    <tr>
+      <td>@supports</td>
+      <td>特性查询，如果满足给定条件则条件规则组里的规则生效，ie不兼容。</td>
+    </tr>
+    <tr>
+      <td>@document</td>
+      <td>如果文档样式表满足给定条件则条件规则组里的规则生效。</td>
+    </tr>
+    <tr>
+      <td><strong>function</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>calc()</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>min()</td>
+      <td><code class="highlighter-rouge">min(40%, 400px)</code>兼容不及calc()</td>
+    </tr>
+    <tr>
+      <td>max()</td>
+      <td><code class="highlighter-rouge">max(40%, 400px)</code>兼容不及calc()</td>
+    </tr>
+    <tr>
+      <td>clamp()</td>
+      <td><code class="highlighter-rouge">clamp(1rem, 2.5vw, 1.5rem)</code>兼容不及calc()</td>
+    </tr>
+    <tr>
+      <td>attr()</td>
+      <td><code class="highlighter-rouge">attr(data-width px, inherit);</code> 兼容性</td>
+    </tr>
+    <tr>
+      <td><strong>背景</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>background</td>
+      <td>bg-color <br />bg-image <br />position/bg-size <br />bg-repeat <br />bg-origin (相对位置padding-box border-box content-box) <br />bg-clip (绘制范围padding-box border-box content-box) <br />bg-attachment (背景图像是否固定或者随着页面的其余部分滚动)</td>
+    </tr>
+    <tr>
+      <td><strong>border</strong></td>
+      <td>source <br />slice(向内偏移截取) <br />width <br />outset <br />repeat</td>
+    </tr>
+    <tr>
+      <td>border-style</td>
+      <td>dotted <br />dashed <br />solid <br />double <br />groove(外凹中凸) <br />ridge(外凸中凹) <br />inset(凹槽) <br />outset(凸起)</td>
+    </tr>
+    <tr>
+      <td>border-image</td>
+      <td>source <br />slice(留下边角，中间掏空) <br />width <br />outset(边框外移程度) <br />repeat</td>
+    </tr>
+    <tr>
+      <td><strong><em>三角形</em></strong></td>
+      <td>div {<br />width: 0;<br />height: 0;<br />border: 40px solid;<br />border-color: transparent transparent red;<br />}</td>
+    </tr>
+    <tr>
+      <td><strong>outline</strong></td>
+      <td>1. 和border顺序相反(先颜色最后宽度)<br />2. 在border之外<br />3. outline-offset偏移距离(兼容性)</td>
+    </tr>
+    <tr>
+      <td><strong>内容生成</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>counter-increment</td>
+      <td>在元素前面添加编号<br />counter-increment:section; <br />content:”Section “ counter(section) “. “;</td>
+    </tr>
+    <tr>
+      <td>counter-reset</td>
+      <td>最顶级是body编号为0，所以去掉0，就给body加上reset</td>
+    </tr>
+    <tr>
+      <td>quotes</td>
+      <td>设置嵌套引用的引号类型</td>
+    </tr>
+    <tr>
+      <td><strong>list</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>list-style</td>
+      <td>list-style-type <br />list-style-position (inside, outside ) <br />list-style-image.</td>
+    </tr>
+    <tr>
+      <td><strong>多列(Multi-column) 属性</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>column-count</td>
+      <td>列数</td>
+    </tr>
+    <tr>
+      <td>column-gap</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>column-rule</td>
+      <td>column-rule-width <br />column-rule-style <br />column-rule-color</td>
+    </tr>
+    <tr>
+      <td>columns</td>
+      <td>column-width(默认auto) column-count;</td>
+    </tr>
+    <tr>
+      <td><strong>定位（Positioning） 属性</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>position</td>
+      <td>relative(相对于其正常位置进行定位)</td>
+    </tr>
+    <tr>
+      <td>clip</td>
+      <td>搭配fixed和absolute用(和padding的区别是，padding-box里还看得到，但clip区域外是透明的)</td>
+    </tr>
+    <tr>
+      <td>float &amp;&amp; clear</td>
+      <td>浮动 &amp;&amp; 清除浮动</td>
+    </tr>
+    <tr>
+      <td><strong>分页（Print） 属性</strong></td>
+      <td>打印时才生效</td>
+    </tr>
+    <tr>
+      <td>page-break-before &amp;&amp;  <br />page-break-after &amp;&amp; <br />page-break-inside(元素中)</td>
+      <td>分页符</td>
+    </tr>
+    <tr>
+      <td><strong>表格（Table） 属性</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>border-collapse</td>
+      <td>collapse(合并重复边框) <br /> separate</td>
+    </tr>
+    <tr>
+      <td>border-spacing</td>
+      <td>cell间距</td>
+    </tr>
+    <tr>
+      <td>empty-cells</td>
+      <td>空单元格(hide, show)</td>
+    </tr>
+    <tr>
+      <td>table-layout</td>
+      <td>宽度fixed automatic</td>
+    </tr>
+    <tr>
+      <td><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/WebKit_Extensions"><strong>WebKit Extensions</strong></a></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>-webkit-line-clamp</td>
+      <td>把块容器中的内容限制为指定的行数。溢出缩略…</td>
+    </tr>
+    <tr>
+      <td>-webkit-tap-highlight-color</td>
+      <td>设置点击链接的时候出现的高亮颜色</td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+  </div><a class="u-url" href="/css/property/2020-04-13.html" hidden></a>
+</article>
+      </div>
+    </main>
+
+    <!--<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">刘瑞琪</li>
+          <li><a class="u-email" href="mailto:405782134@qq.com">405782134@qq.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>每天进步一..
+</p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

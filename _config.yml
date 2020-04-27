@@ -26,6 +26,9 @@ theme: minima
 
 collections_dir: collections
 collections:
+  html:
+    output: true
+    title: HTML
   js:
     output: true
     title: Javasript

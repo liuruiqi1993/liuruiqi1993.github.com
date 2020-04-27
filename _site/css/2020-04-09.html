@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>CSS选择器 | 立个flag先</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="CSS选择器" />
+<meta name="author" content="刘瑞琪" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="看到了这一篇https://juejin.im/post/5e6b2b9ce51d4526fd069b87 所以CSS选择器查缺补漏，安排上" />
+<meta property="og:description" content="看到了这一篇https://juejin.im/post/5e6b2b9ce51d4526fd069b87 所以CSS选择器查缺补漏，安排上" />
+<link rel="canonical" href="http://localhost:4000/css/2020-04-09.html" />
+<meta property="og:url" content="http://localhost:4000/css/2020-04-09.html" />
+<meta property="og:site_name" content="立个flag先" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-27T17:21:33+08:00" />
+<script type="application/ld+json">
+{"headline":"CSS选择器","dateModified":"2020-04-27T17:21:33+08:00","datePublished":"2020-04-27T17:21:33+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/css/2020-04-09.html"},"description":"看到了这一篇https://juejin.im/post/5e6b2b9ce51d4526fd069b87 所以CSS选择器查缺补漏，安排上","@type":"BlogPosting","url":"http://localhost:4000/css/2020-04-09.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="立个flag先" />
+</head>
+<body><header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-sm navbar-light wrapper">
+    <a class="navbar-brand site-title" rel="author" href="/">立个flag先</a>
+
+    <div class="social social1"><ul class="social-media-list"><li><a rel="me" target="_blank"
+      href="mailto:405782134@qq.com"
+      title="405782134@qq.com"><svg class="svg-icon">
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav site-nav navbar-light"><li class="nav-item">
+          <a class="nav-link page-link" href="/plan/index.html">学习计划</a>
+        </li></ul>
+    </div>
+
+    <div class="social social2"><ul class="social-media-list"><li><a rel="me" target="_blank"
+      href="mailto:405782134@qq.com"
+      title="405782134@qq.com"><svg class="svg-icon">
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+  </nav>
+</header>
+<main class="page-content" aria-label="Content"  data-spy="scroll" data-target="#toc" data-offset="20">
+      <div class="custom-nav side-sticky sticky-top"><nav class="collection-wrap" id="accordionExample">
+    <div class="collection-item">
+        <a class="collection-head active" href="/css/list" data-toggle="collapse" data-target="#Css" aria-expanded="true" aria-controls="Css">
+            Css
+        </a>
+        <ul id="Css" class="collection-body collapse show" aria-labelledby="Css" data-parent="#accordionExample">
+            <li>
+                <a href="/css/%20adaptive/2020-04-14.html">
+                    响应式和自适应
+                </a>
+                
+            </li><li><a class="active" href="/css/2020-04-09.html">
+                    CSS选择器
+                </a>
+                
+            </li><li>
+                <a href="/css/3D-animate/2020-04-15.html">
+                    3D与动画
+                </a>
+                
+            </li><li>
+                <a href="/css/font/2020-04-12.html">
+                    CSS字体
+                </a>
+                
+            </li><li>
+                <a href="/css/property/2020-04-13.html">
+                    CSS属性
+                </a>
+                
+            </li></ul>
+    </div>
+    
+    <div class="collection-item">
+        <a class="collection-head" href="/html/list" data-toggle="collapse" data-target="#HTML" aria-expanded="false"
+            aria-controls="HTML">
+            HTML
+        </a>
+        <ul id="HTML" class="collection-body collapse" aria-labelledby="HTML" data-parent="#accordionExample"><li>
+                <a href="/html/meta/meta.html">
+                    meta
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/js/list" data-toggle="collapse" data-target="#Javasript" aria-expanded="false"
+            aria-controls="Javasript">
+            Javasript
+        </a>
+        <ul id="Javasript" class="collection-body collapse" aria-labelledby="Javasript" data-parent="#accordionExample"><li>
+                <a href="/js/2020-03-16.html">
+                    创建一个计划表：复习增删改查
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/react/list" data-toggle="collapse" data-target="#React" aria-expanded="false"
+            aria-controls="React">
+            React
+        </a>
+        <ul id="React" class="collection-body collapse" aria-labelledby="React" data-parent="#accordionExample"><li>
+                <a href="/react/2020-03-18.html">
+                    尝试一个react
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/record/list" data-toggle="collapse" data-target="#记录" aria-expanded="false"
+            aria-controls="记录">
+            记录
+        </a>
+        <ul id="记录" class="collection-body collapse" aria-labelledby="记录" data-parent="#accordionExample"><li>
+                <a href="/record/2020-03-14.html">
+                    立个flag
+                </a>
+            </li><li>
+                <a href="/record/jekyll/jekyll.html">
+                    Jekyll笔记
+                </a>
+            </li><li>
+                <a href="/record/interview/exam.html">
+                    笔试
+                </a>
+            </li><li>
+                <a href="/record/mock.html">
+                    Mock
+                </a>
+            </li><li>
+                <a href="/record/react.html">
+                    React笔记
+                </a>
+            </li><li>
+                <a href="/record/vue.html">
+                    Vue笔记
+                </a>
+            </li></ul>
+    </div></nav></div>
+      <div class="sidebar side-sticky sticky-top"><script src="/assets/js/toc.js"></script>
+<div id="toc"> 
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#toc').toc();
+    });
+</script></div>
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" >
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">CSS选择器</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-04-27T17:21:33+08:00" itemprop="datePublished">
+        Apr 27, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div class="post-wrap">
+      <p>看到了这一篇<a href="https://juejin.im/post/5e6b2b9ce51d4526fd069b87">https://juejin.im/post/5e6b2b9ce51d4526fd069b87</a><br />
+所以CSS选择器查缺补漏，安排上</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>element1~element2</td>
+      <td>选择element1之后的每一个element2</td>
+    </tr>
+    <tr>
+      <td>a[src^=”https”]</td>
+      <td>选择每一个src属性的值以”https”开头的元素</td>
+    </tr>
+    <tr>
+      <td>a[src$=”.pdf”]</td>
+      <td>选择每一个src属性的值以”.pdf”结尾的元素</td>
+    </tr>
+    <tr>
+      <td>a[src*=”runoob”]</td>
+      <td>选择每一个src属性的值包含子字符串”runoob”的元素</td>
+    </tr>
+    <tr>
+      <td>p:first-of-type</td>
+      <td>选择每个p元素是其父级的第一个p元素</td>
+    </tr>
+    <tr>
+      <td>p:last-of-type</td>
+      <td>选择每个p元素是其父级的最后一个p元素</td>
+    </tr>
+    <tr>
+      <td>p:only-of-type</td>
+      <td>选择每个p元素是其父级的唯一p元素</td>
+    </tr>
+    <tr>
+      <td>p:nth-of-type(2)</td>
+      <td>选择每个p元素是其父级的第二个p元素</td>
+    </tr>
+    <tr>
+      <td>:not(p)</td>
+      <td>选择每个并非p元素的元素</td>
+    </tr>
+    <tr>
+      <td><strong>特殊</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>p:only-child</td>
+      <td>选择每个p元素是其父级的唯一子元素</td>
+    </tr>
+    <tr>
+      <td>p:empty</td>
+      <td>选择每个没有任何子级的p元素（包括文本节点）</td>
+    </tr>
+    <tr>
+      <td>:target</td>
+      <td>选择当前锚点</td>
+    </tr>
+    <tr>
+      <td>:root</td>
+      <td>选择文档的根元素,在HTML中根元素始终是HTML元素。</td>
+    </tr>
+    <tr>
+      <td>::selection</td>
+      <td>匹配元素中被用户选中或处于高亮状态的部分</td>
+    </tr>
+    <tr>
+      <td><strong>表单</strong></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>input:enabled</td>
+      <td>选择每一个已启用的输入元素，与input:disabled相反</td>
+    </tr>
+    <tr>
+      <td>input:optional</td>
+      <td>用于匹配可选的输入元素 和:required相反</td>
+    </tr>
+    <tr>
+      <td>:valid</td>
+      <td>用于匹配输入值为合法的元素和:invalid相反</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="组合">组合</h2>
+<h3 id="1-active伪类与css数据上报">1. :active伪类与CSS数据上报</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.button-1:active::after {
+    content: url(./pixel.gif?action=click&amp;id=button1);
+    display: none;
+}
+.button-2:active::after {
+    content: url(./pixel.gif?action=click&amp;id=button2);
+    display: none;
+}
+</code></pre></div></div>
+<h3 id="2-超实用超高频使用的empty-伪类">2. 超实用超高频使用的:empty 伪类</h3>
+<h4 id="21-隐藏空元素">2.1 隐藏空元素</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.cs-module:empty {
+    display: none;
+}
+</code></pre></div></div>
+<h4 id="22-字段缺失智能提示">2.2 字段缺失智能提示</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>td:empty::before{
+    content: '-';
+    color: gray;
+}
+
+公共类
+.cs-search-module:empty::before{
+    content: '没有搜索结果'；
+    display: block;
+    line-height: 300px;
+    text-align: center;
+    color: gray;
+}
+</code></pre></div></div>
+<h2 id="3-用好only-child伪类">3. 用好:only-child伪类</h2>
+<p><img src="https://user-gold-cdn.xitu.io/2020/3/13/170d2a24152f116a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="''" /></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- 1. 只有加载图片 --&gt;
+&lt;div class="cs-loading"&gt;
+    &lt;img src="./loading.png" class="cs-loading-img"&gt;
+&lt;/div&gt;
+&lt;!-- 2. 只有加载文字 --&gt;
+&lt;div class="cs-loading"&gt;
+    &lt;p class="cs-loading-p"&gt;正在加载中...&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- 3. 加载图片和加载文字同时存在 --&gt;
+&lt;div class="cs-loading"&gt;
+    &lt;img src="./loading.png" class="cs-loading-img"&gt;
+    &lt;p class="cs-loading-p"&gt;正在加载中...&lt;/p&gt;
+&lt;/div&gt;
+
+.cs-loading {
+    height: 150px;
+    position: relative;
+    text-align: center;
+    /* 与截图无关，截图示意用 */
+    border: 1px dotted;
+}
+/* 图片和文字同时存在时在中间留点间距 */
+.cs-loading-img {
+    width: 32px; height: 32px;
+    margin-top: 45px;
+    vertical-align: bottom;
+}
+.cs-loading-p {
+    margin: .5em 0 0;
+    color: gray;
+}
+/* 只有图片的时候居中绝对定位 */
+.cs-loading-img:only-child {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    margin: auto;
+}
+/* 只有文字的时候行号近似垂直居中 */
+.cs-loading-p:only-child {
+    margin: 0;
+    line-height: 150px;
+}
+</code></pre></div></div>
+
+    </div>
+  </div><a class="u-url" href="/css/2020-04-09.html" hidden></a>
+</article>
+      </div>
+    </main>
+
+    <!--<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">刘瑞琪</li>
+          <li><a class="u-email" href="mailto:405782134@qq.com">405782134@qq.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>每天进步一..
+</p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -10,21 +10,31 @@
 				showEffect: 'show', // values: [show|slideDown|fadeIn|none]
 				showSpeed: 'slow', // set to 0 to deactivate effect
 				classes: {
-					list: '',
-					item: ''
+					list: 'nav nav-pills flex-column',
+					item: 'nav-item',
+					link: 'nav-link'
 				}
 			},
 			settings = $.extend(defaults, options);
 
 		function fixedEncodeURIComponent(str) {
-			return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
-				return '%' + c.charCodeAt(0).toString(16);
-			});
+			return str;
+			// return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+			// 	return '%' + c.charCodeAt(0).toString(16);
+			// });
 		}
 
 		function createLink(header) {
 			var innerText = header.textContent === undefined ? header.innerText : header.textContent;
-			return "<a href='#" + fixedEncodeURIComponent(header.id) + "'>" + innerText + '</a>';
+			return (
+				"<a class='" +
+				settings.classes.link +
+				"' href='#" +
+				fixedEncodeURIComponent(header.id) +
+				"'>" +
+				innerText +
+				'</a>'
+			);
 		}
 
 		var headers = $(settings.headers).filter(function() {
@@ -69,7 +79,7 @@
 			})
 			.get()
 			.sort()[0];
-		var return_to_top = '<i class="icon-arrow-up back-to-top"> </i>';
+		var return_to_top = '<i class="icon-arrow-up back-to-top">返回顶部</i>';
 
 		var level = get_level(headers[0]),
 			this_level,
