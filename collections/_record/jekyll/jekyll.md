@@ -146,3 +146,4 @@ date: 2020-03-15
 
  **四号墓坑：_site文件没上传，结果scss样式没有编译，bootStrap的NAV栏切换也不生效，my bad**
  **五号墓坑：(添加目录Table of Contents)[https://blog.webjeda.com/jekyll-toc/]**
+ **六号墓坑：(添加目录collepse)[http://t.hengwei.me/post/%E4%B8%BAjekyll%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E7%9B%AE%E5%BD%95%E4%B8%8Escrollspy%E6%95%88%E6%9E%9C.html]**

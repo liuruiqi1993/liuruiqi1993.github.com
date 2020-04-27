@@ -204,9 +204,6 @@ $page-content-height: calc(100vh - #{$top-header} - #{$spacing-unit * 2});
 			display: none;
 		}
 		.nav-pills {
-			.nav-link {
-				padding: 0;
-			}
 			.nav-link.active,
 			.show > .nav-link {
 				background: #fff !important;

@@ -69,7 +69,7 @@
 			})
 			.get()
 			.sort()[0];
-		var return_to_top = '<i class="icon-arrow-up back-to-top">返回顶部</i>';
+		var return_to_top = '<i class="icon-arrow-up back-to-top"></i>';
 
 		var level = get_level(headers[0]),
 			this_level,

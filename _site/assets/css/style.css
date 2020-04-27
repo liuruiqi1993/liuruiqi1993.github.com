@@ -284,8 +284,6 @@ table td { border: 1px solid #e8e8e8; }
 
 .sidebar #toc::-webkit-scrollbar { display: none; }
 
-.sidebar #toc .nav-pills .nav-link { padding: 0; }
-
 .sidebar #toc .nav-pills .nav-link.active, .sidebar #toc .nav-pills .show > .nav-link { background: #fff !important; color: #f79de6 !important; }
 
 .custom-nav { float: left; left: 30px; border-right: 1px solid #e8e8e8; }
