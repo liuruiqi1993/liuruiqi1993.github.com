@@ -255,16 +255,16 @@ layout: default
                 }
             })
             _plan.on("dragend", 'li', (e) => {
-                let index = e.currentTarget.dataset.order
+                let index = e.currentTarget.dataset.index
                 if(dragIndex != index){
                     list.splice(dragIndex, 0, list.splice(index, 1)[0])
-                    setStorage()
-                    load()
                 }
+                setStorage()
+                load()
                 e.preventDefault()
             })
             _todo.on("dragover", "li", (e) => {
-                dragIndex = e.currentTarget.dataset.order;
+                dragIndex = e.currentTarget.dataset.index;
                 e.preventDefault()
             })
         });

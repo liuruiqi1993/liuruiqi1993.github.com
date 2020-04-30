@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Array总结 | 立个flag先</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Array总结" />
+<meta name="author" content="刘瑞琪" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="一个问题不能栽倒N次" />
+<meta property="og:description" content="一个问题不能栽倒N次" />
+<link rel="canonical" href="http://localhost:4000/js/Array%E6%80%BB%E7%BB%93.html" />
+<meta property="og:url" content="http://localhost:4000/js/Array%E6%80%BB%E7%BB%93.html" />
+<meta property="og:site_name" content="立个flag先" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-28T00:00:00+08:00" />
+<script type="application/ld+json">
+{"headline":"Array总结","dateModified":"2020-04-28T00:00:00+08:00","datePublished":"2020-04-28T00:00:00+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/js/Array%E6%80%BB%E7%BB%93.html"},"description":"一个问题不能栽倒N次","@type":"BlogPosting","url":"http://localhost:4000/js/Array%E6%80%BB%E7%BB%93.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="立个flag先" />
+</head>
+<body><header class="site-header sticky-top">
+  <nav class="navbar navbar-expand-sm navbar-light wrapper">
+    <a class="navbar-brand site-title" rel="author" href="/">立个flag先</a>
+
+    <div class="social social1"><ul class="social-media-list"><li><a rel="me" target="_blank"
+      href="mailto:405782134@qq.com"
+      title="405782134@qq.com"><svg class="svg-icon">
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav site-nav navbar-light"><li class="nav-item">
+          <a class="nav-link page-link" href="/plan/index.html">学习计划</a>
+        </li></ul>
+    </div>
+
+    <div class="social social2"><ul class="social-media-list"><li><a rel="me" target="_blank"
+      href="mailto:405782134@qq.com"
+      title="405782134@qq.com"><svg class="svg-icon">
+        <use xlink:href="/assets/font/minima-social-icons.svg#email"></use>
+      </svg></a></li><li><a rel="me" target="_blank" href="https://github.com/liuruiqi1993" title="liuruiqi1993"><svg class="svg-icon"><use xlink:href="/assets/font/minima-social-icons.svg#github"></use></svg></a></li></ul></div>
+  </nav>
+</header>
+<main class="page-content" aria-label="Content"  data-spy="scroll" data-target="#toc" data-offset="20">
+      <div class="custom-nav side-sticky sticky-top"><nav class="collection-wrap" id="accordionExample">
+    
+    <div class="collection-item">
+        <a class="collection-head" href="/css/list" data-toggle="collapse" data-target="#Css" aria-expanded="false"
+            aria-controls="Css">
+            Css
+        </a>
+        <ul id="Css" class="collection-body collapse" aria-labelledby="Css" data-parent="#accordionExample"><li>
+                <a href="/css/%20adaptive/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%92%8C%E8%87%AA%E9%80%82%E5%BA%94.html">
+                    响应式和自适应
+                </a>
+            </li><li>
+                <a href="/css/3D-animate/3D%E4%B8%8E%E5%8A%A8%E7%94%BB.html">
+                    3d与动画
+                </a>
+            </li><li>
+                <a href="/css/CSS%E9%80%89%E6%8B%A9%E5%99%A8.html">
+                    CSS选择器
+                </a>
+            </li><li>
+                <a href="/css/font/CSS%E5%AD%97%E4%BD%93.html">
+                    CSS字体
+                </a>
+            </li><li>
+                <a href="/css/property/CSS%E5%B1%9E%E6%80%A7.html">
+                    CSS属性
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/html/list" data-toggle="collapse" data-target="#HTML" aria-expanded="false"
+            aria-controls="HTML">
+            HTML
+        </a>
+        <ul id="HTML" class="collection-body collapse" aria-labelledby="HTML" data-parent="#accordionExample"><li>
+                <a href="/html/meta/meta.html">
+                    meta
+                </a>
+            </li></ul>
+    </div><div class="collection-item">
+        <a class="collection-head active" href="/js/list" data-toggle="collapse" data-target="#Javasript" aria-expanded="true" aria-controls="Javasript">
+            Javasript
+        </a>
+        <ul id="Javasript" class="collection-body collapse show" aria-labelledby="Javasript" data-parent="#accordionExample">
+            <li><a class="active" href="/js/Array%E6%80%BB%E7%BB%93.html">
+                    Array总结
+                </a>
+                
+            </li><li>
+                <a href="/js/Function%E6%80%BB%E7%BB%93.html">
+                    Function总结
+                </a>
+                
+            </li><li>
+                <a href="/js/Map,Set%E5%92%8Citerable.html">
+                    Map，Set和iterable
+                </a>
+                
+            </li><li>
+                <a href="/js/Object%E6%80%BB%E7%BB%93.html">
+                    Object总结
+                </a>
+                
+            </li><li>
+                <a href="/js/String%E6%80%BB%E7%BB%93.html">
+                    String总结
+                </a>
+                
+            </li><li>
+                <a href="/js/async,%20await,%20generator.html">
+                    async, await, generator
+                </a>
+                
+            </li><li>
+                <a href="/js/Number.html">
+                    Number总结
+                </a>
+                
+            </li><li>
+                <a href="/js/copy/%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D.html">
+                    深浅拷贝
+                </a>
+                
+            </li><li>
+                <a href="/js/input%E4%BA%8B%E4%BB%B6%E9%A1%BA%E5%BA%8F.html">
+                    input如何处理中文输入，事件顺序
+                </a>
+                
+            </li><li>
+                <a href="/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8.html">
+                    创建一个计划表：增删改查拖拽
+                </a>
+                
+            </li><li>
+                <a href="/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html">
+                    概念和简写
+                </a>
+                
+            </li><li>
+                <a href="/js/%E7%BB%A7%E6%89%BF/yuanxing.html">
+                    原型和继承
+                </a>
+                
+            </li></ul>
+    </div>
+    
+    <div class="collection-item">
+        <a class="collection-head" href="/react/list" data-toggle="collapse" data-target="#React" aria-expanded="false"
+            aria-controls="React">
+            React
+        </a>
+        <ul id="React" class="collection-body collapse" aria-labelledby="React" data-parent="#accordionExample"><li>
+                <a href="/react/react.html">
+                    React笔记
+                </a>
+            </li><li>
+                <a href="/react/%E5%B0%9D%E8%AF%95%E4%B8%80%E4%B8%AAreact.html">
+                    尝试一个react
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/record/list" data-toggle="collapse" data-target="#记录" aria-expanded="false"
+            aria-controls="记录">
+            记录
+        </a>
+        <ul id="记录" class="collection-body collapse" aria-labelledby="记录" data-parent="#accordionExample"><li>
+                <a href="/record/jekyll/jekyll.html">
+                    Jekyll笔记
+                </a>
+            </li><li>
+                <a href="/record/Mayday%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93.html">
+                    Mayday阶段总结
+                </a>
+            </li><li>
+                <a href="/record/mock.html">
+                    Mock
+                </a>
+            </li><li>
+                <a href="/record/%E7%AB%8B%E4%B8%AAflag.html">
+                    立个flag
+                </a>
+            </li><li>
+                <a href="/record/git%E5%92%8Clinux%E5%91%BD%E4%BB%A4.html">
+                    git和linux命令
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/vue/list" data-toggle="collapse" data-target="#Vue" aria-expanded="false"
+            aria-controls="Vue">
+            Vue
+        </a>
+        <ul id="Vue" class="collection-body collapse" aria-labelledby="Vue" data-parent="#accordionExample"><li>
+                <a href="/vue/vue.html">
+                    Vue笔记
+                </a>
+            </li><li>
+                <a href="/vue/%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A.html">
+                    双向绑定Object.defineProperty和Proxy
+                </a>
+            </li><li>
+                <a href="/vue/%E9%80%9A%E4%BF%A1.html">
+                    通信
+                </a>
+            </li></ul>
+    </div></nav></div>
+      <div class="sidebar side-sticky sticky-top"><script src="/assets/js/toc.js"></script>
+<div id="toc"> 
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#toc').toc();
+    });
+</script></div>
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" >
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Array总结</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-04-28T00:00:00+08:00" itemprop="datePublished">
+        Apr 28, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div class="post-wrap">
+      <p>一个问题不能栽倒N次</p>
+
+<h2 id="参考mdn">参考<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array">MDN</a></h2>
+<p>所有的回调中，如果有<code class="highlighter-rouge">thisArg</code>，那么回调函数的<code class="highlighter-rouge">this</code>值就是<code class="highlighter-rouge">thisArg</code>。只对<code class="highlighter-rouge">function(){}</code>有效，对<strong>箭头函数</strong>不起作用。</p>
+
+<h2 id="返回新数组">返回新数组</h2>
+
+<h3 id="arrayconcat"><code class="highlighter-rouge">Array.concat()</code></h3>
+<p>浅拷贝</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = ['A', 'B', 'C'];
+arr.concat(1, 2, [3, 4]); // ['A', 'B', 'C', 1, 2, 3, 4]
+</code></pre></div></div>
+
+<h3 id="arrayfrom"><code class="highlighter-rouge">Array.from()</code></h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log(Array.from('foo'));
+// expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], x =&gt; x + x));
+// expected output: Array [2, 4, 6]
+</code></pre></div></div>
+
+<h3 id="arrayfill"><code class="highlighter-rouge">Array.fill()</code></h3>
+<p>语法：arr.fill(value[, start[, end]])</p>
+
+<h3 id="arrayfilter"><code class="highlighter-rouge">Array.filter()</code></h3>
+<p>创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。</p>
+
+<h3 id="arrayflat"><code class="highlighter-rouge">Array.flat()</code></h3>
+<p>替代方案：使用 reduce 与 concat</p>
+
+<p><strong>深度递归遍历数组</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr2 = [1, 2, [3, 4, [5, 6]]];
+arr2.flat();
+// [1, 2, 3, 4, [5, 6]]
+
+var arr3 = [1, 2, [3, 4, [5, 6]]];
+arr3.flat(2);
+// [1, 2, 3, 4, 5, 6]
+
+//使用 Infinity，可展开任意深度的嵌套数组
+var arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+arr4.flat(Infinity);
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre></div></div>
+<p><strong>移除空项</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr4 = [1, 2, [3, 4, [5,, 6,, [7, ,8, [9,, 10]]]]];
+arr4.flat(Infinity)
+// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre></div></div>
+<h3 id="arrayflatmap"><code class="highlighter-rouge">Array.flatMap()</code></h3>
+<p>与map()相似，替代方案：使用 reduce 与 concat</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr1 = [1, 2, 3, 4];
+console.log(arr1.flatMap(x =&gt; x * 2));     // [2, 4, 6, 8]
+console.log(arr1.flatMap(x =&gt; [x * 2]));   // [2, 4, 6, 8]
+console.log(arr1.flatMap(x =&gt; [[x * 2]])); // [[2], [4], [6], [8]]
+</code></pre></div></div>
+
+<h3 id="arrayslice"><code class="highlighter-rouge">Array.slice()</code></h3>
+<p>返回一个新的数组对象，这一对象是一个由 <code class="highlighter-rouge">begin</code> 和 <code class="highlighter-rouge">end</code> 决定的原数组的浅拷贝</p>
+
+<h2 id="改变原数组">改变原数组</h2>
+<h3 id="arraycopywithin"><code class="highlighter-rouge">Array.copyWithin()</code></h3>
+<p>浅复制数组的一部分到同一数组中的另一个位置</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[1, 2, 3, 4, 5].copyWithin(-2)
+// [1, 2, 3, 1, 2]
+
+[1, 2, 3, 4, 5].copyWithin(0, 3)
+// [4, 5, 3, 4, 5]
+
+[1, 2, 3, 4, 5].copyWithin(0, 3, 4)
+// [4, 2, 3, 4, 5]
+
+[1, 2, 3, 4, 5].copyWithin(-2, -3, -1)
+// [1, 2, 3, 3, 4]
+
+[].copyWithin.call({length: 5, 3: 1}, 0, 3);
+// {0: 1, 3: 1, length: 5}
+</code></pre></div></div>
+
+<h3 id="arraypop"><code class="highlighter-rouge">Array.pop()</code></h3>
+<p>删除最后一个元素，并返回该元素的值。</p>
+
+<h3 id="arraypush"><code class="highlighter-rouge">Array.push()</code></h3>
+<p>将一个或多个元素添加到数组的末尾，并返回该数组的新长度。</p>
+
+<h3 id="arrayreverse"><code class="highlighter-rouge">Array.reverse()</code></h3>
+
+<h3 id="arrayshift"><code class="highlighter-rouge">Array.shift()</code></h3>
+<p>方法从数组中删除第一个元素，并返回该元素的值。</p>
+
+<h3 id="arrayunshift"><code class="highlighter-rouge">Array.unshift()</code></h3>
+<p>将一个或多个元素添加到数组的开头，并返回该数组的新长度。</p>
+
+<h3 id="arraysort"><code class="highlighter-rouge">Array.sort()</code></h3>
+<p>9 出现在 80 之前，但因为（没有指明 compareFunction），比较的数字会先被转换为字符串，所以在Unicode顺序上 “80” 要比 “9” 要靠前。
+<strong>对非 ASCII 字符排序</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
+items.sort(function (a, b) {
+  return a.localeCompare(b);
+});
+
+// items is ['adieu', 'café', 'cliché', 'communiqué', 'premier', 'réservé']
+</code></pre></div></div>
+
+<h3 id="arraysplice"><code class="highlighter-rouge">Array.splice()</code></h3>
+<p>返回由被删除的元素组成的一个数组。</p>
+
+<h2 id="合成字符串">合成字符串</h2>
+<h3 id="arrayjoin"><code class="highlighter-rouge">Array.join()</code></h3>
+<h3 id="arraytolocalestring"><code class="highlighter-rouge">Array.toLocaleString()</code></h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const array1 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];
+const localeString = array1.toLocaleString('en', {timeZone: "UTC"});
+
+console.log(localeString);
+// expected output: "1,a,12/21/1997, 2:12:00 PM",
+
+var prices = ['￥7', 500, 8123, 12];
+prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
+
+// "￥7,￥500,￥8,123,￥12"
+</code></pre></div></div>
+<h3 id="arraytostring"><code class="highlighter-rouge">Array.toString()</code></h3>
+<p>返回一个用逗号相隔的字符串。</p>
+
+<h2 id="判断">判断</h2>
+
+<h3 id="arrayevery"><code class="highlighter-rouge">Array.every()</code></h3>
+<p>一个数组内的所有元素是否都能通过某个指定函数的测试。它返回一个<strong>布尔值</strong>。</p>
+
+<h3 id="arrayisarray"><code class="highlighter-rouge">Array.isArray()</code></h3>
+<h3 id="arrayincludes"><code class="highlighter-rouge">Array.includes()</code></h3>
+<p>语法：arr.includes(valueToFind[, fromIndex])
+如果 fromIndex 大于等于数组的长度，则会返回 false，且该数组不会被搜索。</p>
+
+<h3 id="arraysome"><code class="highlighter-rouge">Array.some()</code></h3>
+<p>如果用一个空数组进行测试，在任何情况下它返回的都是<code class="highlighter-rouge">false</code>。<code class="highlighter-rouge">callback</code>返回真值时结束。</p>
+
+<h2 id="查找">查找</h2>
+<h3 id="arrayfind"><code class="highlighter-rouge">Array.find()</code></h3>
+<p>返回数组中满足提供的测试函数的第一个元素的值。否则返回 <code class="highlighter-rouge">undefined</code>。</p>
+
+<h3 id="arrayfindindex"><code class="highlighter-rouge">Array.findIndex()</code></h3>
+<p>返回数组中满足提供的测试函数的第一个元素的<strong>索引</strong>。否则返回<code class="highlighter-rouge">-1</code>。</p>
+
+<h3 id="arrayindexof"><code class="highlighter-rouge">Array.indexOf()</code></h3>
+<p>语法：arr.indexOf(searchElement[, fromIndex])
+如果该索引值大于或等于数组长度，意味着不会在数组里查找，返回-1。为负数也是<strong>从前往后</strong>查。</p>
+
+<h3 id="arraylastindexof"><code class="highlighter-rouge">Array.lastIndexOf()</code></h3>
+<p>语法：arr.lastIndexOf(searchElement[, fromIndex])
+如果该索引值大于或等于数组长度，意味着不会在数组里查找，返回-1。为负数也是<strong>从后往前</strong>查。</p>
+
+<h2 id="遍历">遍历</h2>
+<p>若你需要提前终止循环，你可以使用：</p>
+<ul>
+  <li>一个简单的 for 循环</li>
+  <li>for…value…of / for…key…in 循环</li>
+  <li>Array.every()直到falsy</li>
+  <li>Array.some()直到truthy</li>
+  <li>Array.find()</li>
+  <li>Array.findIndex()</li>
+  <li>Array.filter() + <a href="#arrayforeach">Array.forEach()</a> (forEach本身只能通过抛出错误来中止)</li>
+</ul>
+
+<h3 id="arraykeys"><code class="highlighter-rouge">Array.keys()</code></h3>
+<p>方法返回一个包含数组中每个<strong>索引键</strong>的Array Iterator对象。</p>
+<h3 id="arrayvalues"><code class="highlighter-rouge">Array.values()</code></h3>
+<p>方法返回一个包含数组中每个<strong>索引值</strong>的Array Iterator对象。</p>
+
+<h3 id="arrayentries"><code class="highlighter-rouge">Array.entries()</code></h3>
+<p>返回一个新的 Array 迭代器(Array Iterator)对象， 对象上有<code class="highlighter-rouge">next()</code>方法，<code class="highlighter-rouge">next()</code>返回一个对象，对象的<code class="highlighter-rouge">value</code>对应的值是<code class="highlighter-rouge">["key","value"]</code></p>
+
+<p><strong>二维数组按行排序</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function sortArr(arr) {
+    var goNext = true;
+    var entries = arr.entries();
+    while (goNext) {
+        var result = entries.next();
+        if (result.done !== true) {
+            result.value[1].sort((a, b) =&gt; a - b);
+            goNext = true;
+        } else {
+            goNext = false;
+        }
+    }
+    return arr;
+}
+
+var arr = [[1,34],[456,2,3,44,234],[4567,1,4,5,6],[34,78,23,1]];
+sortArr(arr);
+/*(4) [Array(2), Array(5), Array(5), Array(4)]
+    0:(2) [1, 34]
+    1:(5) [2, 3, 44, 234, 456]
+    2:(5) [1, 4, 5, 6, 4567]
+    3:(4) [1, 23, 34, 78]
+    length:4
+    __proto__:Array(0)
+*/
+</code></pre></div></div>
+<p><strong>使用for…of 循环</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var arr = ["a", "b", "c"];
+var iterator = arr.entries();
+// undefined
+
+for (let e of iterator) {
+    console.log(e);
+}
+
+// [0, "a"] 
+// [1, "b"] 
+// [2, "c"]
+</code></pre></div></div>
+
+<h3 id="arrayforeach"><code class="highlighter-rouge">Array.forEach()</code></h3>
+<p>方法对数组的每个元素执行一次给定的函数。<strong>没有返回值</strong>，已删除或者未初始化的项将被跳过，并且<strong>不可链式调用</strong>，<strong>除了抛出异常以外，没有办法中止或跳出 forEach() 循环</strong>。</p>
+
+<h3 id="arraymap"><code class="highlighter-rouge">Array.map()</code></h3>
+<p>返回一个新数组，其结果是该数组中的每个元素都调用一次提供的函数后的返回值。当你不打算使用返回的新数组却使用<code class="highlighter-rouge">map</code>是违背设计初衷的，请用<code class="highlighter-rouge">forEach</code>或者<code class="highlighter-rouge">for-of</code>替代。
+map会跳过空项，如果没有返回值就是<code class="highlighter-rouge">undefined</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var numbers = [1, 8, 4,7,10,, 9];
+var doubles = numbers.map(function(num,index) {
+    if(!(index%2)) { 
+        // 如果写!index%2，就会算成(!index)%2， 结果就是[2, undefined, undefined, undefined, undefined, empty, undefined]
+        console.log(num, index%2)
+        return num * 2
+    };
+});
+console.log(doubles)
+// 1 0
+// 4 0
+// 10 0
+// 9 0
+// [2, undefined, 8, undefined, 20, empty, 18]
+</code></pre></div></div>
+<h3 id="arrayreduce"><code class="highlighter-rouge">Array.reduce()</code></h3>
+<p>如果没有提供<code class="highlighter-rouge">initialValue</code>，<code class="highlighter-rouge">reduce</code> 会从索引1的地方开始执行 <code class="highlighter-rouge">callback</code> 方法，跳过第一个索引。如果提供<code class="highlighter-rouge">initialValue</code>，从索引0开始。
+空数组必须有<code class="highlighter-rouge">initialValue</code>。
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce"><strong>按顺序运行Promise</strong></a></p>
+<h3 id="arrayreduceright"><code class="highlighter-rouge">Array.reduceRight()</code></h3>
+<p>与<code class="highlighter-rouge">reduce</code>是相反方向。</p>
+
+<h2 id="筛选查找总结">筛选查找总结</h2>
+<p>要查找的元素可能是基础类型<code class="highlighter-rouge">String</code>，<code class="highlighter-rouge">Number</code>，也可能是<code class="highlighter-rouge">Objet</code>，<code class="highlighter-rouge">Array</code>。
+后者只能通过<code class="highlighter-rouge">callback</code>去判断它是不是<strong>符合条件</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var array = [['a', 'b'], 'a', 'c', 'a', 'd'];
+var element = ['a', 'b'];
+console.log(array.indexOf(element)) // -1
+</code></pre></div></div>
+<ul>
+  <li>是否都：<code class="highlighter-rouge">every</code>返回布尔值</li>
+  <li>有没有：
+    <ul>
+      <li><code class="highlighter-rouge">includes</code>，基础类型</li>
+      <li><code class="highlighter-rouge">indexOf</code> 有就返回索引，没有-1</li>
+      <li><code class="highlighter-rouge">some</code>，返回布尔值</li>
+      <li><code class="highlighter-rouge">find</code> 有就返回值，没有<code class="highlighter-rouge">undefined</code></li>
+      <li><code class="highlighter-rouge">findIndex</code>，有就返回索引，没有-1</li>
+    </ul>
+  </li>
+  <li>有哪些：<code class="highlighter-rouge">filter</code>返回符合条件的数组</li>
+</ul>
+
+    </div>
+  </div><a class="u-url" href="/js/Array%E6%80%BB%E7%BB%93.html" hidden></a>
+</article>
+      </div>
+    </main>
+
+    <!--<footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">刘瑞琪</li>
+          <li><a class="u-email" href="mailto:405782134@qq.com">405782134@qq.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>每天进步一..
+</p>
+      </div>
+    </div>
+  </div>
+
+</footer>
+-->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

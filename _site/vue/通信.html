@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>创建一个计划表：复习增删改查 | 立个flag先</title>
+<title>通信 | 立个flag先</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="创建一个计划表：复习增删改查" />
+<meta property="og:title" content="通信" />
 <meta name="author" content="刘瑞琪" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="正好需要一个能增删改查的计划表，那就正好复习一下dom操作。思路： 没有数据库，写在localStorage里面好了。 需要2个列表，待完成根据等级正序(拖拽)、创建时间正序，已完成根据完成时间倒序。 输入名字增到待完成。 单行删除。 名字和状态都能改。 根据名字，状态筛选。" />
-<meta property="og:description" content="正好需要一个能增删改查的计划表，那就正好复习一下dom操作。思路： 没有数据库，写在localStorage里面好了。 需要2个列表，待完成根据等级正序(拖拽)、创建时间正序，已完成根据完成时间倒序。 输入名字增到待完成。 单行删除。 名字和状态都能改。 根据名字，状态筛选。" />
-<link rel="canonical" href="http://localhost:4000/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8:%E5%A4%8D%E4%B9%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.html" />
-<meta property="og:url" content="http://localhost:4000/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8:%E5%A4%8D%E4%B9%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.html" />
+<meta name="description" content="https://juejin.im/post/5d267dcdf265da1b957081a3" />
+<meta property="og:description" content="https://juejin.im/post/5d267dcdf265da1b957081a3" />
+<link rel="canonical" href="http://localhost:4000/vue/%E9%80%9A%E4%BF%A1.html" />
+<meta property="og:url" content="http://localhost:4000/vue/%E9%80%9A%E4%BF%A1.html" />
 <meta property="og:site_name" content="立个flag先" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-03-16T00:00:00+08:00" />
+<meta property="article:published_time" content="2020-04-28T00:00:00+08:00" />
 <script type="application/ld+json">
-{"headline":"创建一个计划表：复习增删改查","dateModified":"2020-03-16T00:00:00+08:00","datePublished":"2020-03-16T00:00:00+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8:%E5%A4%8D%E4%B9%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.html"},"description":"正好需要一个能增删改查的计划表，那就正好复习一下dom操作。思路： 没有数据库，写在localStorage里面好了。 需要2个列表，待完成根据等级正序(拖拽)、创建时间正序，已完成根据完成时间倒序。 输入名字增到待完成。 单行删除。 名字和状态都能改。 根据名字，状态筛选。","@type":"BlogPosting","url":"http://localhost:4000/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8:%E5%A4%8D%E4%B9%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.html","@context":"https://schema.org"}</script>
+{"headline":"通信","dateModified":"2020-04-28T00:00:00+08:00","datePublished":"2020-04-28T00:00:00+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/vue/%E9%80%9A%E4%BF%A1.html"},"description":"https://juejin.im/post/5d267dcdf265da1b957081a3","@type":"BlogPosting","url":"http://localhost:4000/vue/%E9%80%9A%E4%BF%A1.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -65,7 +65,7 @@
                 </a>
             </li><li>
                 <a href="/css/3D-animate/3D%E4%B8%8E%E5%8A%A8%E7%94%BB.html">
-                    3D与动画
+                    3d与动画
                 </a>
             </li><li>
                 <a href="/css/CSS%E9%80%89%E6%8B%A9%E5%99%A8.html">
@@ -91,18 +91,62 @@
                     meta
                 </a>
             </li></ul>
-    </div><div class="collection-item">
-        <a class="collection-head active" href="/js/list" data-toggle="collapse" data-target="#Javasript" aria-expanded="true" aria-controls="Javasript">
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/js/list" data-toggle="collapse" data-target="#Javasript" aria-expanded="false"
+            aria-controls="Javasript">
             Javasript
         </a>
-        <ul id="Javasript" class="collection-body collapse show" aria-labelledby="Javasript" data-parent="#accordionExample">
-            <li><a class="active" href="/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8:%E5%A4%8D%E4%B9%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.html">
-                    创建一个计划表：复习增删改查
+        <ul id="Javasript" class="collection-body collapse" aria-labelledby="Javasript" data-parent="#accordionExample"><li>
+                <a href="/js/Array%E6%80%BB%E7%BB%93.html">
+                    Array总结
                 </a>
-                
+            </li><li>
+                <a href="/js/Function%E6%80%BB%E7%BB%93.html">
+                    Function总结
+                </a>
+            </li><li>
+                <a href="/js/Map,Set%E5%92%8Citerable.html">
+                    Map，Set和iterable
+                </a>
+            </li><li>
+                <a href="/js/Object%E6%80%BB%E7%BB%93.html">
+                    Object总结
+                </a>
+            </li><li>
+                <a href="/js/String%E6%80%BB%E7%BB%93.html">
+                    String总结
+                </a>
+            </li><li>
+                <a href="/js/async,%20await,%20generator.html">
+                    async, await, generator
+                </a>
+            </li><li>
+                <a href="/js/Number.html">
+                    Number总结
+                </a>
+            </li><li>
+                <a href="/js/copy/%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D.html">
+                    深浅拷贝
+                </a>
+            </li><li>
+                <a href="/js/input%E4%BA%8B%E4%BB%B6%E9%A1%BA%E5%BA%8F.html">
+                    input如何处理中文输入，事件顺序
+                </a>
+            </li><li>
+                <a href="/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8.html">
+                    创建一个计划表：增删改查拖拽
+                </a>
+            </li><li>
+                <a href="/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html">
+                    概念和简写
+                </a>
+            </li><li>
+                <a href="/js/%E7%BB%A7%E6%89%BF/yuanxing.html">
+                    原型和继承
+                </a>
             </li></ul>
     </div>
-    
     <div class="collection-item">
         <a class="collection-head" href="/react/list" data-toggle="collapse" data-target="#React" aria-expanded="false"
             aria-controls="React">
@@ -128,6 +172,10 @@
                     Jekyll笔记
                 </a>
             </li><li>
+                <a href="/record/Mayday%E9%98%B6%E6%AE%B5%E6%80%BB%E7%BB%93.html">
+                    Mayday阶段总结
+                </a>
+            </li><li>
                 <a href="/record/mock.html">
                     Mock
                 </a>
@@ -135,19 +183,33 @@
                 <a href="/record/%E7%AB%8B%E4%B8%AAflag.html">
                     立个flag
                 </a>
+            </li><li>
+                <a href="/record/git%E5%92%8Clinux%E5%91%BD%E4%BB%A4.html">
+                    git和linux命令
+                </a>
             </li></ul>
-    </div>
-    <div class="collection-item">
-        <a class="collection-head" href="/vue/list" data-toggle="collapse" data-target="#Vue" aria-expanded="false"
-            aria-controls="Vue">
+    </div><div class="collection-item">
+        <a class="collection-head active" href="/vue/list" data-toggle="collapse" data-target="#Vue" aria-expanded="true" aria-controls="Vue">
             Vue
         </a>
-        <ul id="Vue" class="collection-body collapse" aria-labelledby="Vue" data-parent="#accordionExample"><li>
+        <ul id="Vue" class="collection-body collapse show" aria-labelledby="Vue" data-parent="#accordionExample">
+            <li>
                 <a href="/vue/vue.html">
                     Vue笔记
                 </a>
+                
+            </li><li>
+                <a href="/vue/%E5%8F%8C%E5%90%91%E7%BB%91%E5%AE%9A.html">
+                    双向绑定Object.defineProperty和Proxy
+                </a>
+                
+            </li><li><a class="active" href="/vue/%E9%80%9A%E4%BF%A1.html">
+                    通信
+                </a>
+                
             </li></ul>
-    </div></nav></div>
+    </div>
+    </nav></div>
       <div class="sidebar side-sticky sticky-top"><script src="/assets/js/toc.js"></script>
 <div id="toc"> 
 </div>
@@ -159,64 +221,164 @@
       <div class="wrapper">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" >
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">创建一个计划表：复习增删改查</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2020-03-16T00:00:00+08:00" itemprop="datePublished">
-        Mar 16, 2020
+    <h1 class="post-title p-name" itemprop="name headline">通信</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-04-28T00:00:00+08:00" itemprop="datePublished">
+        Apr 28, 2020
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <div class="post-wrap">
-      <p>正好需要一个能增删改查的计划表，那就正好复习一下dom操作。思路：</p>
+      <p><a href="https://juejin.im/post/5d267dcdf265da1b957081a3">https://juejin.im/post/5d267dcdf265da1b957081a3</a></p>
+
+<h2 id="props--emit">props / $emit</h2>
+<h2 id="children--parent--refs">$children / $parent / $refs</h2>
+<h2 id="provide--inject">provide / inject</h2>
+<p><strong>provide和inject不是响应式的，这点很重要，除非申明的属性是响应式的！</strong></p>
+
+<p>C是B的子组件，B是A的子组件</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// A.vue
+
+&lt;template&gt;
+  &lt;div&gt;
+	&lt;comB&gt;&lt;/comB&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  import comB from '../components/test/comB.vue'
+  export default {
+    name: "A",
+    provide: {
+      for: "demo"
+    },
+    components:{
+      comB
+    }
+  }
+&lt;/script&gt;
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// B.vue
+
+&lt;template&gt;
+  &lt;div&gt;
+    
+    &lt;comC&gt;&lt;/comC&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+  import comC from '../components/test/comC.vue'
+  export default {
+    name: "B",
+    inject: ['for'],
+    data() {
+      return {
+        demo: this.for
+      }
+    },
+    components: {
+      comC
+    }
+  }
+&lt;/script&gt;
+</code></pre></div></div>
+<h2 id="eventbus">eventBus</h2>
 <ol>
-  <li>没有数据库，写在localStorage里面好了。</li>
-  <li>需要2个列表，待完成根据等级正序(拖拽)、创建时间正序，已完成根据完成时间倒序。</li>
-  <li>输入名字增到待完成。</li>
-  <li>单行删除。</li>
-  <li>名字和状态都能改。</li>
-  <li>根据名字，状态筛选。</li>
+  <li>初始化</li>
 </ol>
 
-<p>那么，数据格式：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[
-    {
-        created_time: null,
-        finish_time: null,
-        name: null,
-        status: null // 0未完成 1已完成
-    }
-]
-</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// event-bus.js
 
-<h2 id="总结">总结：</h2>
+import Vue from 'vue'
+export const EventBus = new Vue()
+
+</code></pre></div></div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;show-num-com&gt;&lt;/show-num-com&gt;
+    &lt;addition-num-com&gt;&lt;/addition-num-com&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import showNumCom from './showNum.vue'
+import additionNumCom from './additionNum.vue'
+export default {
+  components: { showNumCom, additionNumCom }
+}
+&lt;/script&gt;
+</code></pre></div></div>
 <ol>
-  <li>jq用起来还是很麻烦。</li>
-  <li>第一次写拖拽。</li>
-  <li>第一个JQ demo。</li>
-  <li>bootStrap也不好用。</li>
+  <li>发送事件
+```
+// addtionNum.vue 中发送事件</li>
 </ol>
 
-<p>学习使我不愉快，明天写react吧。
-|(*′口`)</p>
-<h3 id="拖拽思路">拖拽思路</h3>
-<p>监听dragover判断拖拽到哪个位置，dragend放置。<a href="http://localhost:4000/plan/index.html">代码</a></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>_plan.on("dragend", 'li', (e) =&gt; {
-    let index = e.currentTarget.dataset.order
-    if(dragIndex != index){
-        list.splice(dragIndex, 0, list.splice(index, 1)[0])
-        setStorage()
-        load()
+<template>
+  <div>
+    &lt;button @click="additionHandle"&gt;+加法器&lt;/button&gt;    
+  </div>
+</template>
+
+<script>
+import {EventBus} from './event-bus.js'
+console.log(EventBus)
+export default {
+  data(){
+    return{
+      num:1
     }
-    e.preventDefault()
-})
-_todo.on("dragover", "li", (e) =&gt; {
-    dragIndex = e.currentTarget.dataset.order;
-    e.preventDefault()
-})
+  },
+
+  methods:{
+    additionHandle(){
+      EventBus.$emit('addition', {
+        num:this.num++
+      })
+    }
+  }
+}
+</script>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3. 接收事件
 </code></pre></div></div>
+<p>// showNum.vue 中接收事件</p>
+
+<template>
+  <div>计算和: 8</div>
+</template>
+
+<script>
+import { EventBus } from './event-bus.js'
+export default {
+  data() {
+    return {
+      count: 0
+    }
+  },
+
+  mounted() {
+    EventBus.$on('addition', param => {
+      this.count = this.count + param.num;
+    })
+  }
+}
+</script>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>4. 移除事件监听者
+
+</code></pre></div></div>
+<p>import { eventBus } from ‘event-bus.js’
+EventBus.$off(‘addition’, {})
+```</p>
+<h2 id="vuex">Vuex</h2>
+<h2 id="localstorage--sessionstorage">localStorage / sessionStorage</h2>
+<h2 id="attrs与-listeners">$attrs与 $listeners</h2>
 
     </div>
-  </div><a class="u-url" href="/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8:%E5%A4%8D%E4%B9%A0%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5.html" hidden></a>
+  </div><a class="u-url" href="/vue/%E9%80%9A%E4%BF%A1.html" hidden></a>
 </article>
       </div>
     </main>
