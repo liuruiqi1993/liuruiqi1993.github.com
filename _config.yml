@@ -31,7 +31,10 @@ collections:
     title: HTML
   js:
     output: true
-    title: Javasript
+    title: JavaScript
+  ts:
+    output: true
+    title: TypeScript
   record:
     output: true
     title: 记录
@@ -47,6 +50,9 @@ collections:
   webpack:
     output: true
     title: Webpack
+  http:
+    output: true
+    title: HTTP
     
 plugins:
  - jekyll-feed

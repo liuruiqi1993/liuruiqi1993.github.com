@@ -177,6 +177,8 @@ child42.__proto__ ----> Child4.prototype ----> 浅拷贝Parent4.prototype ----> 
 * 没有公共属性
 * 不使用this
 * 不使用new调用
+
+
 ```
 function Person(name,age,job){
     //创建要返回的对象
@@ -195,6 +197,7 @@ friend.sayName();//"Nicholas"
 ```
 ### 动态原型模式
 **使用if语句，使得原型方法只初始化一次**
+
 ```
 function Person(name, age) {
   this.name = name
@@ -215,4 +218,36 @@ function Person(name, age) {
 
 var person = new Person("AAA", 23)
 person.getName()    //AAA
+
 ```
+
+### class
+```
+class Parent5 {
+    constructor() {
+        this.name = ['super5']
+    }
+    reName() {
+        this.name.push('new 5')
+    }
+}
+class Child5 extends Parent5 {
+    constructor() {
+        super()
+    }
+}
+var child51 = new Child5()
+var child52 = new Child5()
+
+child51.reName()
+console.log(child51.name, child52.name) 
+// [ 'super5', 'new 5' ], 子类实例不会相互影响
+console.log(child51.reName === child52.reName) 
+//true, 共享了父类的方法
+```
+
+```
+child51.__proto__ ----> Child5.prototype ----> Parent5.prototype ----> Object.prototype ----> null
+child52.__proto__ ----> Child5.prototype ----> Parent5.prototype ----> Object.prototype ----> null
+```
+![](./7.png)

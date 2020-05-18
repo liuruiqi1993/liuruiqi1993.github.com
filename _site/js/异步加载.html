@@ -3,20 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>概念和简写 | 立个flag先</title>
+<title>异步加载和Promise | 立个flag先</title>
 <meta name="generator" content="Jekyll v4.0.0" />
-<meta property="og:title" content="概念和简写" />
+<meta property="og:title" content="异步加载和Promise" />
 <meta name="author" content="刘瑞琪" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="基础概念 强弱类型语言 js是弱类型语言，因为同一个变量可以反复赋值，而且可以是不同类型的变量。 而强类型定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。" />
-<meta property="og:description" content="基础概念 强弱类型语言 js是弱类型语言，因为同一个变量可以反复赋值，而且可以是不同类型的变量。 而强类型定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。" />
-<link rel="canonical" href="http://localhost:4000/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html" />
-<meta property="og:url" content="http://localhost:4000/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html" />
+<meta name="description" content="在JavaScript的世界中，所有代码都是单线程执行的，导致JavaScript的所有网络操作，浏览器事件，都必须是异步执行。异步执行可以用回调函数实现。异步操作会在将来的某个时间点触发一个函数调用。" />
+<meta property="og:description" content="在JavaScript的世界中，所有代码都是单线程执行的，导致JavaScript的所有网络操作，浏览器事件，都必须是异步执行。异步执行可以用回调函数实现。异步操作会在将来的某个时间点触发一个函数调用。" />
+<link rel="canonical" href="http://localhost:4000/js/%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD.html" />
+<meta property="og:url" content="http://localhost:4000/js/%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD.html" />
 <meta property="og:site_name" content="立个flag先" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-04-28T00:00:00+08:00" />
+<meta property="article:published_time" content="2020-05-05T00:00:00+08:00" />
 <script type="application/ld+json">
-{"headline":"概念和简写","dateModified":"2020-04-28T00:00:00+08:00","datePublished":"2020-04-28T00:00:00+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html"},"description":"基础概念 强弱类型语言 js是弱类型语言，因为同一个变量可以反复赋值，而且可以是不同类型的变量。 而强类型定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。","@type":"BlogPosting","url":"http://localhost:4000/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html","@context":"https://schema.org"}</script>
+{"headline":"异步加载和Promise","dateModified":"2020-05-05T00:00:00+08:00","datePublished":"2020-05-05T00:00:00+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/js/%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD.html"},"description":"在JavaScript的世界中，所有代码都是单线程执行的，导致JavaScript的所有网络操作，浏览器事件，都必须是异步执行。异步执行可以用回调函数实现。异步操作会在将来的某个时间点触发一个函数调用。","@type":"BlogPosting","url":"http://localhost:4000/js/%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -151,7 +151,8 @@
                     async, await, generator
                 </a>
                 
-            </li><li><a class="active" href="/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html">
+            </li><li>
+                <a href="/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html">
                     概念和简写
                 </a>
                 
@@ -175,8 +176,7 @@
                     Window
                 </a>
                 
-            </li><li>
-                <a href="/js/%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD.html">
+            </li><li><a class="active" href="/js/%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD.html">
                     异步加载和Promise
                 </a>
                 
@@ -266,115 +266,46 @@
       <div class="wrapper">
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" >
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">概念和简写</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2020-04-28T00:00:00+08:00" itemprop="datePublished">
-        Apr 28, 2020
+    <h1 class="post-title p-name" itemprop="name headline">异步加载和Promise</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2020-05-05T00:00:00+08:00" itemprop="datePublished">
+        May 5, 2020
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <div class="post-wrap">
-      <h2 id="基础概念">基础概念</h2>
-<h3 id="强弱类型语言">强弱类型语言</h3>
-<p>js是弱类型语言，因为同一个变量可以反复赋值，而且可以是不同类型的变量。<br />
-而强类型定义变量时必须指定变量类型，如果赋值的时候类型不匹配，就会报错。</p>
+      <p>在JavaScript的世界中，所有代码都是单线程执行的，导致JavaScript的所有网络操作，浏览器事件，都必须是异步执行。异步执行可以用回调函数实现。<strong>异步操作会在将来的某个时间点触发一个函数调用。</strong></p>
 
-<h3 id="strict严格模式">strict严格模式</h3>
-<p>强制要求用var申明变量。没有通过var申明就被使用，那么该变量就自动被申明为全局变量。</p>
-
-<h3 id="truthy和falsy">Truthy和Falsy</h3>
-<p><code class="highlighter-rouge">null</code>、<code class="highlighter-rouge">undefined</code>、<code class="highlighter-rouge">0</code>、<code class="highlighter-rouge">NaN</code>和空字符串<code class="highlighter-rouge">''</code>视为false，其他值一概视为true</p>
-
-<h3 id="循环">循环</h3>
-<h4 id="for">for</h4>
-<p><code class="highlighter-rouge">break</code> 结束当前层级的循环，外层继续。
-<code class="highlighter-rouge">continue</code> 中止本次循环，接着开始下一次循环。
-<code class="highlighter-rouge">return</code> 是用来结束函数的，如果<code class="highlighter-rouge">for</code>循环没有写在<code class="highlighter-rouge">function</code>中会报<code class="highlighter-rouge">Illegal return statement</code>。</p>
-
-<h4 id="forin">for…in</h4>
-<h4 id="while--">while () {}</h4>
-<p>每次循环开始的时候判断条件。</p>
-<h4 id="do--while-">do {} while ()</h4>
-<p>每次循环完成的时候判断条件,至少执行一次。</p>
-
-<h2 id="简写">简写</h2>
-<h3 id="不确定">不确定</h3>
-<ul>
-  <li><code class="highlighter-rouge">const map = list.reduce((res, v) =&gt; (res[v.id] = v, res), {})</code> 逗号是什么意思，<code class="highlighter-rouge">return res</code></li>
-</ul>
-
-<h3 id="总结">总结</h3>
-<ul>
-  <li><code class="highlighter-rouge">a &amp;&amp; b()</code></li>
-  <li><code class="highlighter-rouge">a = b || c</code></li>
-  <li><a href="#解构赋值">解构赋值: 数组 + 对象 + 字符串</a>
-    <ul>
-      <li>[x, y] = [y, x]交换xy的值</li>
-    </ul>
-  </li>
-  <li><a href="#扩展运算符">扩展运算符<code class="highlighter-rouge">...</code>用于数组或对象浅拷贝，函数调用</a></li>
-  <li>三元运算</li>
-</ul>
-
-<h3 id="解构赋值">解构赋值</h3>
-<p>可以将属性/值从对象/数组中取出,赋值给其他变量。</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let {a,b,c,...rest} = {a: 1,b: 2,c: 3,d: 4,e: 5}
-console.log(a,b,c,rest) // 1 2 3 {d: 4, e: 5}
-
-let [a,b,c,...rest] = [1,2,3,4,5]
-console.log(a,b,c,rest) // 1 2 3 [4, 5]
-
-let [a,b,c,...rest] = '12345'
-console.log(a,b,c,rest) // "1" "2" "3" ["4", "5"]
-
-----------有问题分割线----------
-
-let {a,b,c,...rest} = '12345'
-console.log(a,b,c,rest) // undefined undefined undefined {0: "1", 1: "2", 2: "3", 3: "4", 4: "5"}
-
-let {a,b,c,...rest} = 12345
-console.log(a,b,c,rest) // undefined undefined undefined {}
-
-let [a,b,c,...rest] = 12345
-console.log(a,b,c,rest) // error: 12345 is not iterable
-
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function test(resolve, reject) {
+    var timeOut = Math.random() * 2;
+    log('set timeout to: ' + timeOut + ' seconds.');
+    setTimeout(function () {
+        if (timeOut &lt; 1) {
+            log('call resolve()...');
+            resolve('200 OK');
+        }
+        else {
+            log('call reject()...');
+            reject('timeout in ' + timeOut + ' seconds.');
+        }
+    }, timeOut * 1000);
+}
 </code></pre></div></div>
+<p>https://www.cnblogs.com/xiaojianwei/p/12209471.html</p>
 
-<h3 id="扩展运算">扩展运算</h3>
-<p>可以在函数调用/数组构造时, 将数组表达式或者string在语法层面展开；<br />
-还可以在构造字面量对象时, 将对象表达式按key-value的方式展开。</p>
+<h2 id="promise">Promise</h2>
+<p>变量<code class="highlighter-rouge">p1</code>是一个Promise对象，它负责执行<code class="highlighter-rouge">test</code>函数。由于<code class="highlighter-rouge">test</code>函数在内部是异步执行的，当<code class="highlighter-rouge">test</code>函数执行完毕，<code class="highlighter-rouge">p1</code>就能调用<code class="highlighter-rouge">then</code>和<code class="highlighter-rouge">catch</code></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>var p1 = new Promise(test);
 
-<p><strong>浅拷贝</strong>
-可替代<code class="highlighter-rouge">Array.unshift</code>，<code class="highlighter-rouge">Array.concat</code>，<code class="highlighter-rouge">Object.assign</code></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let obj = {a: 1, b: 2, c: {d: 4}, e: [5]}
-let objClone = { g: 7, ...obj, f: 6 };
-obj.b = 20
-obj.c.d = 40
-obj.e[0] = 50
-console.log(objClone) // {g: 7, a: 1, b: 2, c: {d: 40}, e: [50], f: 6}
+job1.then(job2).then(job3).catch(handleError); // job1、job2和job3都是Promise对象
 
-let arr = [1, 2, {a: 3}, [4]]
-let arrClone = [ 7, ...arr, 5 ];
-arr[1] = 20
-arr[2].a = 30
-arr[3][0] = 40
-console.log(arrClone) // [7, 1, 2, {a: 30}, [40], 5]
-</code></pre></div></div>
-<p><strong>函数调用</strong></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>//等价于apply的方式
-function myFunction(v, w, x, y, z) { }
-var args = [0, 1];
-myFunction(-1, ...args, 2, ...[3]);
-
-//在 new 表达式中应用
-var dateFields = [1970, 0, 1]; // 1970年1月1日
-var d = new Date(...dateFields);
+Promise.race([p1, p2]).then(function (result) {});
+Promise.all([p1, p2]).then(function (result) {});
 </code></pre></div></div>
 
 
     </div>
-  </div><a class="u-url" href="/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html" hidden></a>
+  </div><a class="u-url" href="/js/%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD.html" hidden></a>
 </article>
       </div>
     </main>

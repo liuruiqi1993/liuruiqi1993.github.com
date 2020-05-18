@@ -1,7 +1,7 @@
 ---
 layout: list
 permalink: /js/list
-title: Javascript
+title: JavaScript
 type: js
 menu: true
 ---

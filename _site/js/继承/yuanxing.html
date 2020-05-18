@@ -91,11 +91,26 @@
                     meta
                 </a>
             </li></ul>
-    </div><div class="collection-item">
-        <a class="collection-head active" href="/js/list" data-toggle="collapse" data-target="#Javasript" aria-expanded="true" aria-controls="Javasript">
-            Javasript
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/http/list" data-toggle="collapse" data-target="#HTTP" aria-expanded="false"
+            aria-controls="HTTP">
+            HTTP
         </a>
-        <ul id="Javasript" class="collection-body collapse show" aria-labelledby="Javasript" data-parent="#accordionExample">
+        <ul id="HTTP" class="collection-body collapse" aria-labelledby="HTTP" data-parent="#accordionExample"><li>
+                <a href="/http/%E7%8A%B6%E6%80%81%E7%A0%81.html">
+                    请求
+                </a>
+            </li><li>
+                <a href="/http/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86.html">
+                    反向代理
+                </a>
+            </li></ul>
+    </div><div class="collection-item">
+        <a class="collection-head active" href="/js/list" data-toggle="collapse" data-target="#JavaScript" aria-expanded="true" aria-controls="JavaScript">
+            JavaScript
+        </a>
+        <ul id="JavaScript" class="collection-body collapse show" aria-labelledby="JavaScript" data-parent="#accordionExample">
             <li>
                 <a href="/js/Array%E6%80%BB%E7%BB%93.html">
                     Array总结
@@ -109,6 +124,16 @@
             </li><li>
                 <a href="/js/Map,Set%E5%92%8Citerable.html">
                     Map，Set和iterable
+                </a>
+                
+            </li><li>
+                <a href="/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8.html">
+                    创建一个计划表：增删改查拖拽
+                </a>
+                
+            </li><li>
+                <a href="/js/input%E4%BA%8B%E4%BB%B6%E9%A1%BA%E5%BA%8F.html">
+                    input如何处理中文输入，事件顺序
                 </a>
                 
             </li><li>
@@ -127,6 +152,15 @@
                 </a>
                 
             </li><li>
+                <a href="/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html">
+                    概念和简写
+                </a>
+                
+            </li><li><a class="active" href="/js/%E7%BB%A7%E6%89%BF/yuanxing.html">
+                    原型和继承
+                </a>
+                
+            </li><li>
                 <a href="/js/Number.html">
                     Number总结
                 </a>
@@ -137,22 +171,13 @@
                 </a>
                 
             </li><li>
-                <a href="/js/input%E4%BA%8B%E4%BB%B6%E9%A1%BA%E5%BA%8F.html">
-                    input如何处理中文输入，事件顺序
+                <a href="/js/window/window.html">
+                    Window
                 </a>
                 
             </li><li>
-                <a href="/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8.html">
-                    创建一个计划表：增删改查拖拽
-                </a>
-                
-            </li><li>
-                <a href="/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html">
-                    概念和简写
-                </a>
-                
-            </li><li><a class="active" href="/js/%E7%BB%A7%E6%89%BF/yuanxing.html">
-                    原型和继承
+                <a href="/js/%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD.html">
+                    异步加载和Promise
                 </a>
                 
             </li></ul>
@@ -197,6 +222,17 @@
             </li><li>
                 <a href="/record/git%E5%92%8Clinux%E5%91%BD%E4%BB%A4.html">
                     git和linux命令
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
+        <a class="collection-head" href="/ts/list" data-toggle="collapse" data-target="#TypeScript" aria-expanded="false"
+            aria-controls="TypeScript">
+            TypeScript
+        </a>
+        <ul id="TypeScript" class="collection-body collapse" aria-labelledby="TypeScript" data-parent="#accordionExample"><li>
+                <a href="/ts/typescript.html">
+                    TypeScript笔记
                 </a>
             </li></ul>
     </div>
@@ -399,45 +435,77 @@ child42.__proto__ ----&gt; Child4.prototype ----&gt; 浅拷贝Parent4.prototype 
 <ul>
   <li>没有公共属性</li>
   <li>不使用this</li>
-  <li>不使用new调用
-```
-function Person(name,age,job){
-  //创建要返回的对象
-  var o=new Object();
-  //可以在这里定义私有变量和函数
-  //添加方法
-  o.sayName=function(){
-  alert(name);
-  }
-  //返回对象
-  return o;
-}</li>
+  <li>不使用new调用</li>
 </ul>
 
-<p>var friend=Person(“Nicholas”,29,”Software Engineer”);
-friend.sayName();//”Nicholas”</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### 动态原型模式
-**使用if语句，使得原型方法只初始化一次**
-</code></pre></div></div>
-<p>function Person(name, age) {
-  this.name = name
-  this.age = age</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function Person(name,age,job){
+    //创建要返回的对象
+    var o=new Object();
+    //可以在这里定义私有变量和函数
+    //添加方法
+    o.sayName=function(){
+    alert(name);
+    }
+    //返回对象
+    return o;
+}
 
-<p>//这里只需要使用任何一个方式或属性，不一定是getName，getAge也可以
+var friend=Person("Nicholas",29,"Software Engineer");
+friend.sayName();//"Nicholas"
+</code></pre></div></div>
+<h3 id="动态原型模式">动态原型模式</h3>
+<p><strong>使用if语句，使得原型方法只初始化一次</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>function Person(name, age) {
+  this.name = name
+  this.age = age
+
+  //这里只需要使用任何一个方式或属性，不一定是getName，getAge也可以
   //只要保证if里面的代码只执行一次就行
-  if(typeof this.getName !== ‘function’) {
+  if(typeof this.getName !== 'function') {
     Person.prototype.getName = function() {
       console.log(this.name)
-    }</p>
+    }
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Person.prototype.getAge = function() {
-  console.log(this.age)
-}   } }
+    Person.prototype.getAge = function() {
+      console.log(this.age)
+    }
+  }
+}
+
+var person = new Person("AAA", 23)
+person.getName()    //AAA
+
 </code></pre></div></div>
 
-<p>var person = new Person(“AAA”, 23)
-person.getName()    //AAA
-```</p>
+<h3 id="class">class</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class Parent5 {
+    constructor() {
+        this.name = ['super5']
+    }
+    reName() {
+        this.name.push('new 5')
+    }
+}
+class Child5 extends Parent5 {
+    constructor() {
+        super()
+    }
+}
+var child51 = new Child5()
+var child52 = new Child5()
+
+child51.reName()
+console.log(child51.name, child52.name) 
+// [ 'super5', 'new 5' ], 子类实例不会相互影响
+console.log(child51.reName === child52.reName) 
+//true, 共享了父类的方法
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>child51.__proto__ ----&gt; Child5.prototype ----&gt; Parent5.prototype ----&gt; Object.prototype ----&gt; null
+child52.__proto__ ----&gt; Child5.prototype ----&gt; Parent5.prototype ----&gt; Object.prototype ----&gt; null
+</code></pre></div></div>
+<p><img src="./7.png" alt="" /></p>
 
     </div>
   </div><a class="u-url" href="/js/%E7%BB%A7%E6%89%BF/yuanxing.html" hidden></a>
