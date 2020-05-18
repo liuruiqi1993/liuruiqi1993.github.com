@@ -14,13 +14,14 @@ title: CSS属性
 @supports | 特性查询，如果满足给定条件则条件规则组里的规则生效，ie不兼容。
 @document | 如果文档样式表满足给定条件则条件规则组里的规则生效。
 **function** | 
+expression() | ie5+
 calc() | 
-min() | `min(40%, 400px)`兼容不及calc()
-max() | `max(40%, 400px)`兼容不及calc()
-clamp()| `clamp(1rem, 2.5vw, 1.5rem)`兼容不及calc()
+min() | `min(40%, 400px)`兼容不及calc()
+max() | `max(40%, 400px)`兼容不及calc()
+clamp()| `clamp(1rem, 2.5vw, 1.5rem)`兼容不及calc()
 attr()|`attr(data-width px, inherit);` 兼容性
 **背景** |
-background | bg-color <br>bg-image <br>position/bg-size <br>bg-repeat <br>bg-origin (相对位置padding-box border-box content-box) <br>bg-clip (绘制范围padding-box border-box content-box) <br>bg-attachment (背景图像是否固定或者随着页面的其余部分滚动)
+background | bg-color <br>bg-image <br>position/bg-size <br>bg-repeat <br>bg-origin (相对位置padding-box border-box content-box) <br>bg-clip (绘制范围padding-box border-box content-box) <br>bg-attachment (背景图像是否固定或者随着页面的其余部分滚动) <br>background-position用top 或0px时都是以背景和盒子的左上角的原点。用百分比时，是图片本身（x%,y%）的那个点，与背景区域的（x%,y%）的那个点重合
 **border** | source <br>slice(向内偏移截取) <br>width <br>outset <br>repeat
 border-style | dotted <br>dashed <br>solid <br>double <br>groove(外凹中凸) <br>ridge(外凸中凹) <br>inset(凹槽) <br>outset(凸起)
 border-image | source <br>slice(留下边角，中间掏空) <br>width <br>outset(边框外移程度) <br>repeat
