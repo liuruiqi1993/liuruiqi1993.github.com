@@ -33,6 +33,7 @@ word-wrap | break-word(在长单词或 URL 地址内部进行换行)
 ```
 
 ## 安全字体
+"安全字体"，因为它可以保证所有用户的视觉效果是一样的。
 <table class="reference">
 <tbody><tr>
 <th width="55%" align="left">Serif 字体</th>
