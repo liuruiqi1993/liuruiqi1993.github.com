@@ -14,9 +14,9 @@
 <meta property="og:url" content="http://localhost:4000/css/%20adaptive/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%92%8C%E8%87%AA%E9%80%82%E5%BA%94.html" />
 <meta property="og:site_name" content="立个flag先" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-05-18T22:07:24+08:00" />
+<meta property="article:published_time" content="2020-05-25T19:16:43+08:00" />
 <script type="application/ld+json">
-{"headline":"响应式和自适应","dateModified":"2020-05-18T22:07:24+08:00","datePublished":"2020-05-18T22:07:24+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/css/%20adaptive/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%92%8C%E8%87%AA%E9%80%82%E5%BA%94.html"},"description":"响应式： 流动网格布局","@type":"BlogPosting","url":"http://localhost:4000/css/%20adaptive/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%92%8C%E8%87%AA%E9%80%82%E5%BA%94.html","@context":"https://schema.org"}</script>
+{"headline":"响应式和自适应","dateModified":"2020-05-25T19:16:43+08:00","datePublished":"2020-05-25T19:16:43+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/css/%20adaptive/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%92%8C%E8%87%AA%E9%80%82%E5%BA%94.html"},"description":"响应式： 流动网格布局","@type":"BlogPosting","url":"http://localhost:4000/css/%20adaptive/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%92%8C%E8%87%AA%E9%80%82%E5%BA%94.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -70,6 +70,11 @@
             </li><li>
                 <a href="/css/CSS%E9%80%89%E6%8B%A9%E5%99%A8.html">
                     CSS选择器
+                </a>
+                
+            </li><li>
+                <a href="/css/Less-Sass.html">
+                    less and sass
                 </a>
                 
             </li><li>
@@ -262,8 +267,8 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" >
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">响应式和自适应</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2020-05-18T22:07:24+08:00" itemprop="datePublished">
-        May 18, 2020
+    <p class="post-meta"><time class="dt-published" datetime="2020-05-25T19:16:43+08:00" itemprop="datePublished">
+        May 25, 2020
       </time></p>
   </header>
 
@@ -274,8 +279,15 @@
 <p>自适应： 使用固定分割点来进行布局</p>
 
 <p><img src="./21b19020b573ccdc38c13227f50f33b0_720w.jpg" alt="Mostly fluid" /></p>
+<h2 id="link"><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/link">link</a></h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" type="text/css" media="screen and (max-device-width: 400px)" ref="tinyScreen.css" /&gt;
+</code></pre></div></div>
 
-<h2 id="media">@media</h2>
+<h2 id="import"><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@import">@import</a></h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@import url("tinyScreen.css") screen and (max-device-width: 400px);
+</code></pre></div></div>
+
+<h2 id="media"><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media">@media</a></h2>
 <p>multiple features: <code class="highlighter-rouge">@media screen and (min-width: 30em) and (orientation: landscape) { ... }</code></p>
 
 <p>multiple queries: <code class="highlighter-rouge">@media (min-height: 680px), screen and (orientation: portrait) { ... }</code></p>
@@ -404,6 +416,19 @@
     </tr>
   </tbody>
 </table>
+
+<h2 id="图片自适应">图片自适应</h2>
+<p>windows平台缩放图片时，可能出现图像失真现象。这时，可以尝试使用IE的专有命令：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>img { -ms-interpolation-mode: bicubic; }
+</code></pre></div></div>
+<p>或者</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>addLoadEvent(function() {
+　　var imgs = document.getElementById("content").getElementsByTagName("img");
+　　imgSizer.collate(imgs);
+});
+</code></pre></div></div>
+<p>或者根据不同大小的屏幕，加载不同分辨率的图片。
+http://blog.cloudfour.com/responsive-imgs-part-2/</p>
 
 <h2 id="postcss-pxtorem"><a href="https://github.com/cuth/postcss-pxtorem">postcss-pxtorem</a></h2>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>module.exports = {

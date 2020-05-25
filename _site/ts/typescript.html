@@ -8,15 +8,15 @@
 <meta property="og:title" content="TypeScript笔记" />
 <meta name="author" content="刘瑞琪" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="基础类型 ``` // boolean let isDone: boolean = false;" />
-<meta property="og:description" content="基础类型 ``` // boolean let isDone: boolean = false;" />
+<meta name="description" content="对值所具有的结构进行类型检查。 基础类型 ``` // boolean let isDone: boolean = false;" />
+<meta property="og:description" content="对值所具有的结构进行类型检查。 基础类型 ``` // boolean let isDone: boolean = false;" />
 <link rel="canonical" href="http://localhost:4000/ts/typescript.html" />
 <meta property="og:url" content="http://localhost:4000/ts/typescript.html" />
 <meta property="og:site_name" content="立个flag先" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2020-05-18T22:07:24+08:00" />
+<meta property="article:published_time" content="2020-05-25T19:16:43+08:00" />
 <script type="application/ld+json">
-{"headline":"TypeScript笔记","dateModified":"2020-05-18T22:07:24+08:00","datePublished":"2020-05-18T22:07:24+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ts/typescript.html"},"description":"基础类型 ``` // boolean let isDone: boolean = false;","@type":"BlogPosting","url":"http://localhost:4000/ts/typescript.html","@context":"https://schema.org"}</script>
+{"headline":"TypeScript笔记","dateModified":"2020-05-25T19:16:43+08:00","datePublished":"2020-05-25T19:16:43+08:00","author":{"@type":"Person","name":"刘瑞琪"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/ts/typescript.html"},"description":"对值所具有的结构进行类型检查。 基础类型 ``` // boolean let isDone: boolean = false;","@type":"BlogPosting","url":"http://localhost:4000/ts/typescript.html","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -70,6 +70,10 @@
             </li><li>
                 <a href="/css/CSS%E9%80%89%E6%8B%A9%E5%99%A8.html">
                     CSS选择器
+                </a>
+            </li><li>
+                <a href="/css/Less-Sass.html">
+                    less and sass
                 </a>
             </li><li>
                 <a href="/css/font/CSS%E5%AD%97%E4%BD%93.html">
@@ -258,62 +262,112 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting" >
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">TypeScript笔记</h1>
-    <p class="post-meta"><time class="dt-published" datetime="2020-05-18T22:07:24+08:00" itemprop="datePublished">
-        May 18, 2020
+    <p class="post-meta"><time class="dt-published" datetime="2020-05-25T19:16:43+08:00" itemprop="datePublished">
+        May 25, 2020
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     <div class="post-wrap">
-      <h2 id="基础类型">基础类型</h2>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// boolean
-let isDone: boolean = false;
+      <ul>
+  <li>对值所具有的结构进行类型检查。
+    <h2 id="基础类型">基础类型</h2>
+    <p>```
+// boolean
+let isDone: boolean = false;</p>
+  </li>
+</ul>
 
-// number
+<p>// number
 let decLiteral: number = 6;
 let hexLiteral: number = 0xf00d;
 let binaryLiteral: number = 0b1010;
-let octalLiteral: number = 0o744;
+let octalLiteral: number = 0o744;</p>
 
-//string
-let name: string = "bob";
-let sentence: string = `Hello, my name is ${ name }.
+<p>//string
+let name: string = “bob”;
+let sentence: string = `Hello, my name is ${ name }.</p>
 
-//array
+<p>//array
 let list: number[] = [1, 2, 3];
-let list: any[] = [1, true, "free"];
-let list: Array&lt;number&gt; = [1, 2, 3];
+let list: any[] = [1, true, “free”];
+let list: Array<number> = [1, 2, 3];</number></p>
 
-//元组 Tuple 按顺序
+<p>//元组 Tuple 按顺序
 let x: [string, number];
-x = ['hello', 10]; // OK
-x = [10, 'hello']; // Error
+x = [‘hello’, 10]; // OK
+x = [10, ‘hello’]; // Error</p>
 
-//枚举
+<p>//枚举
 //使用枚举类型可以为一组数值赋予友好的名字，默认情况下，从0开始为元素编号。
 enum Color {Red = 1, Green, Blue}
 let colorName: string = Color[2];
-console.log(colorName);  // 显示'Green'因为上面代码里它的值是2
+console.log(colorName);  // 显示’Green’因为上面代码里它的值是2</p>
 
-//Any
+<p>//Any
 let notSure: any = 4;
-notSure = "maybe a string instead";
-notSure = false; // okay, definitely a boolean
+notSure = “maybe a string instead”;
+notSure = false; // okay, definitely a boolean</p>
 
-//Void，Null 和 Undefined
+<p>//Void，Null 和 Undefined
 //没有任何类型，当一个函数没有返回值时，你通常会见到其返回值类型是 void
 //null和undefined是所有类型的子类型，可以把 null和undefined赋值给number类型的变量
 function warnUser(): void {
-    console.log("This is my warning message");
-}
+    console.log(“This is my warning message”);
+}</p>
 
-let unusable: void = undefined;
+<p>let unusable: void = undefined;
 let u: undefined = undefined;
-let n: null = null;
+let n: null = null;</p>
 
-//Never
+<p>//Never
+//<code class="highlighter-rouge">never</code>类型表示的是那些永不存在的值的类型。<code class="highlighter-rouge">never</code>类型是任何类型的子类型，也可以赋值给任何类型；然而，没有类型是<code class="highlighter-rouge">never</code>的子类型或可以赋值给<code class="highlighter-rouge">never</code>类型（除了<code class="highlighter-rouge">never</code>本身之外）。 即使 <code class="highlighter-rouge">any</code>也不可以赋值给<code class="highlighter-rouge">never</code>。</p>
 
+<p>// 返回never的函数必须存在无法达到的终点
+function error(message: string): never {
+    throw new Error(message);
+}</p>
+
+<p>// 推断的返回值类型为never
+function fail() {
+    return error(“Something failed”);
+}</p>
+
+<p>// 返回never的函数必须存在无法达到的终点
+function infiniteLoop(): never {
+    while (true) {
+    }
+}</p>
+
+<p>//Object
+表示非原始类型，也就是除<code class="highlighter-rouge">number</code>，<code class="highlighter-rouge">string</code>，<code class="highlighter-rouge">boolean</code>，<code class="highlighter-rouge">symbol</code>，<code class="highlighter-rouge">null</code>或<code class="highlighter-rouge">undefined</code>之外的类型。</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## 变量声明
+### 解构函数
 </code></pre></div></div>
+<p>function f([first, second]: [number, number]) {
+    console.log(first);
+    console.log(second);
+}
+f(input);</p>
+
+<p>let {a, b}: {a: string, b: number} = o;</p>
+
+<p>function keepWholeObject(wholeObject: { a: string, b?: number }) {
+    let { a, b = 1001 } = wholeObject;
+}</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## 接口
+为类型命名和为你代码定义契约。
+
+类型检查器会查看`printLabel`的调用。 `printLabel`有一个参数，并要求这个对象参数有一个名为`label`类型为`string`的属性。 
+</code></pre></div></div>
+<p>function printLabel(labelledObj: { label: string }) {
+  console.log(labelledObj.label);
+}</p>
+
+<p>let myObj = { size: 10, label: “Size 10 Object” };
+printLabel(myObj);
+```</p>
 
     </div>
   </div><a class="u-url" href="/ts/typescript.html" hidden></a>
