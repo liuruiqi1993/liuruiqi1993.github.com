@@ -78,7 +78,7 @@ body {
 ```
 可以通过中括号查看mixin里的属性`mixin[prop];`，如果是空括号[]就会查询最后一条。
 
-mixin中的变量能被调用者访问到
+mixin中的变量能被调用者访问到, 作用域范围在调用者的大括号中。
 ```
 .mixin() {
   @width:  100%;
@@ -172,6 +172,33 @@ div {
   padding: .average(16px, 50px)[@result];
 }
 ```
+#### 循环loop
+```
+.generate-columns(4);
+
+.generate-columns(@n, @i: 1) when (@i =< @n) {
+  .column-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .generate-columns(@n, (@i + 1));
+}
+```
+转译为
+```
+.column-1 {
+  width: 25%;
+}
+.column-2 {
+  width: 50%;
+}
+.column-3 {
+  width: 75%;
+}
+.column-4 {
+  width: 100%;
+}
+```
+
 #### 匹配
 ```
 .mixin(dark; @color) {
