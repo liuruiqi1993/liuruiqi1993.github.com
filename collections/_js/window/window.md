@@ -117,9 +117,6 @@ parent.removeChild(parent.children[1]); // <-- 浏览器报错
 * querySelector()
 * querySelectorAll()
 
-### document.cookie
-服务器在设置Cookie时可以使用`httpOnly`，设定了`httpOnly`的Cookie将不能被JavaScript读取。这个行为由浏览器实现，主流浏览器均支持`httpOnly`选项，IE从IE6 SP1开始支持。
-
 ### document.write, document.open, document.close
 `document.open`, `document.close`的作用就是打开输出流。  
 文档在加载的过程中实际是一边加载一边用 `document.write` 写出内容到屏幕上，而**加载完成后，输出流关闭**，再调用 `document.write` 往网页上写内容的话，就会重写 `document`。  
