@@ -1,0 +1,18 @@
+{
+	"plugins": [
+		"-lunr",
+		"-search",
+		"search-pro",
+		"chapter-fold",
+		"splitter",
+		"anchor-navigation-ex",
+		"back-to-top-button",
+		"lightbox"
+	],
+	"pluginsConfig": {
+		"anchor-navigation-ex": {
+			"showLevel": false,
+			"showGoTop": false
+		}
+	}
+}

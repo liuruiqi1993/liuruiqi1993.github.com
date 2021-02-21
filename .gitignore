@@ -1,4 +1,6 @@
 /vendor
 # /_site
 .jekyll-cache/
+/node_modules
+/.vscode
 # collections/intro/about.md

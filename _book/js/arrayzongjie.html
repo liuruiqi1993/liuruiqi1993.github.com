@@ -1,0 +1,921 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Array总结 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="function.html" />
+    
+    
+    <link rel="prev" href="基础概念和简写问题.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Javascript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="基础概念和简写问题.html">
+            
+                <a href="基础概念和简写问题.html">
+            
+                    
+                    基础概念和简写问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="arrayzongjie.html">
+            
+                <a href="arrayzongjie.html">
+            
+                    
+                    Array总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="function.html">
+            
+                <a href="function.html">
+            
+                    
+                    Function总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="map,setiterable.html">
+            
+                <a href="map,setiterable.html">
+            
+                    
+                    Map,Set和iterable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="number.html">
+            
+                <a href="number.html">
+            
+                    
+                    Number总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="object.html">
+            
+                <a href="object.html">
+            
+                    
+                    Object总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="storage.html">
+            
+                <a href="storage.html">
+            
+                    
+                    Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    String总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="this.html">
+            
+                <a href="this.html">
+            
+                    
+                    this指向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="filetype.html">
+            
+                <a href="filetype.html">
+            
+                    
+                    文件格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="async&await&generator.html">
+            
+                <a href="async&await&generator.html">
+            
+                    
+                    async, await, generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="input.html">
+            
+                <a href="input.html">
+            
+                    
+                    input事件顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="异步加载.html">
+            
+                <a href="异步加载.html">
+            
+                    
+                    异步加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="深浅拷贝.html">
+            
+                <a href="深浅拷贝.html">
+            
+                    
+                    深浅拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="MVC与MVVM的区别.html">
+            
+                <a href="MVC与MVVM的区别.html">
+            
+                    
+                    MVC与MVVM的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="window.html">
+            
+                <a href="window.html">
+            
+                    
+                    window
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="yuanxing.html">
+            
+                <a href="yuanxing.html">
+            
+                    
+                    原型与原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../css/01.html">
+            
+                <a href="../css/01.html">
+            
+                    
+                    响应式&自适应
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../css/3d.html">
+            
+                <a href="../css/3d.html">
+            
+                    
+                    3D与动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../css/css.html">
+            
+                <a href="../css/css.html">
+            
+                    
+                    css选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../css/less_and_sass.html">
+            
+                <a href="../css/less_and_sass.html">
+            
+                    
+                    Less and Sass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../css/cssfont.html">
+            
+                <a href="../css/cssfont.html">
+            
+                    
+                    css属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../css/cssattr.html">
+            
+                <a href="../css/cssattr.html">
+            
+                    
+                    css字体
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../vue/">
+            
+                <a href="../vue/">
+            
+                    
+                    VUE
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../vue/通信.html">
+            
+                <a href="../vue/通信.html">
+            
+                    
+                    通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../vue/双向绑定.html">
+            
+                <a href="../vue/双向绑定.html">
+            
+                    
+                    双向绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../ts/">
+            
+                <a href="../ts/">
+            
+                    
+                    TypeScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../react/">
+            
+                <a href="../react/">
+            
+                    
+                    React
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../jekyll/">
+            
+                <a href="../jekyll/">
+            
+                    
+                    jekyll
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Array总结</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#array&#x603B;&#x7ED3;"><b></b>Array&#x603B;&#x7ED3;</a></li><ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;mdn"><b></b>&#x53C2;&#x8003;MDN</a></li><li><span class="title-icon "></span><a href="#&#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4;"><b></b>&#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4;</a></li><ul><li><span class="title-icon "></span><a href="#arrayconcat"><b></b>Array.concat()</a></li><li><span class="title-icon "></span><a href="#arrayfrom"><b></b>Array.from()</a></li><li><span class="title-icon "></span><a href="#arrayfill"><b></b>Array.fill()</a></li><li><span class="title-icon "></span><a href="#arrayfilter"><b></b>Array.filter()</a></li><li><span class="title-icon "></span><a href="#arrayflat"><b></b>Array.flat()</a></li><li><span class="title-icon "></span><a href="#arrayflatmap"><b></b>Array.flatMap()</a></li><li><span class="title-icon "></span><a href="#arrayslice"><b></b>Array.slice()</a></li></ul><li><span class="title-icon "></span><a href="#&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;"><b></b>&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</a></li><ul><li><span class="title-icon "></span><a href="#arraycopywithin"><b></b>Array.copyWithin()</a></li><li><span class="title-icon "></span><a href="#arraypop"><b></b>Array.pop()</a></li><li><span class="title-icon "></span><a href="#arraypush"><b></b>Array.push()</a></li><li><span class="title-icon "></span><a href="#arrayreverse"><b></b>Array.reverse()</a></li><li><span class="title-icon "></span><a href="#arrayshift"><b></b>Array.shift()</a></li><li><span class="title-icon "></span><a href="#arrayunshift"><b></b>Array.unshift()</a></li><li><span class="title-icon "></span><a href="#arraysort"><b></b>Array.sort()</a></li><li><span class="title-icon "></span><a href="#arraysplice"><b></b>Array.splice()</a></li></ul><li><span class="title-icon "></span><a href="#&#x5408;&#x6210;&#x5B57;&#x7B26;&#x4E32;"><b></b>&#x5408;&#x6210;&#x5B57;&#x7B26;&#x4E32;</a></li><ul><li><span class="title-icon "></span><a href="#arrayjoin"><b></b>Array.join()</a></li><li><span class="title-icon "></span><a href="#arraytolocalestring"><b></b>Array.toLocaleString()</a></li><li><span class="title-icon "></span><a href="#arraytostring"><b></b>Array.toString()</a></li></ul><li><span class="title-icon "></span><a href="#&#x5224;&#x65AD;"><b></b>&#x5224;&#x65AD;</a></li><ul><li><span class="title-icon "></span><a href="#arrayevery"><b></b>Array.every()</a></li><li><span class="title-icon "></span><a href="#arrayisarray"><b></b>Array.isArray()</a></li><li><span class="title-icon "></span><a href="#arrayincludes"><b></b>Array.includes()</a></li><li><span class="title-icon "></span><a href="#arraysome"><b></b>Array.some()</a></li></ul><li><span class="title-icon "></span><a href="#&#x67E5;&#x627E;"><b></b>&#x67E5;&#x627E;</a></li><ul><li><span class="title-icon "></span><a href="#arrayfind"><b></b>Array.find()</a></li><li><span class="title-icon "></span><a href="#arrayfindindex"><b></b>Array.findIndex()</a></li><li><span class="title-icon "></span><a href="#arrayindexof"><b></b>Array.indexOf()</a></li><li><span class="title-icon "></span><a href="#arraylastindexof"><b></b>Array.lastIndexOf()</a></li></ul><li><span class="title-icon "></span><a href="#&#x904D;&#x5386;"><b></b>&#x904D;&#x5386;</a></li><ul><li><span class="title-icon "></span><a href="#arraykeys"><b></b>Array.keys()</a></li><li><span class="title-icon "></span><a href="#arrayvalues"><b></b>Array.values()</a></li><li><span class="title-icon "></span><a href="#arrayentries"><b></b>Array.entries()</a></li><li><span class="title-icon "></span><a href="#arrayforeach"><b></b>Array.forEach()</a></li><li><span class="title-icon "></span><a href="#arraymap"><b></b>Array.map()</a></li><li><span class="title-icon "></span><a href="#arrayreduce"><b></b>Array.reduce()</a></li><li><span class="title-icon "></span><a href="#arrayreduceright"><b></b>Array.reduceRight()</a></li></ul><li><span class="title-icon "></span><a href="#&#x7B5B;&#x9009;&#x67E5;&#x627E;&#x603B;&#x7ED3;"><b></b>&#x7B5B;&#x9009;&#x67E5;&#x627E;&#x603B;&#x7ED3;</a></li></ul></ul></div><h1 id="array&#x603B;&#x7ED3;"><a name="array&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#array&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>Array&#x603B;&#x7ED3;</h1>
+<p>&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x4E0D;&#x80FD;&#x683D;&#x5012;N&#x6B21;</p>
+<h2 id="&#x53C2;&#x8003;mdn"><a name="&#x53C2;&#x8003;mdn" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;mdn"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array" target="_blank">MDN</a></h2>
+<p>&#x6240;&#x6709;&#x7684;&#x56DE;&#x8C03;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6709;<code>thisArg</code>&#xFF0C;&#x90A3;&#x4E48;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;<code>this</code>&#x503C;&#x5C31;&#x662F;<code>thisArg</code>&#x3002;&#x53EA;&#x5BF9;<code>function(){}</code>&#x6709;&#x6548;&#xFF0C;&#x5BF9;<strong>&#x7BAD;&#x5934;&#x51FD;&#x6570;</strong>&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;</p>
+<h2 id="&#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4;"><a name="&#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FD4;&#x56DE;&#x65B0;&#x6570;&#x7EC4;</h2>
+<h3 id="arrayconcat"><a name="arrayconcat" class="anchor-navigation-ex-anchor" href="#arrayconcat"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.concat()</code></h3>
+<p>&#x6D45;&#x62F7;&#x8D1D;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&apos;A&apos;</span>, <span class="hljs-string">&apos;B&apos;</span>, <span class="hljs-string">&apos;C&apos;</span>];
+arr.concat(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>]); <span class="hljs-comment">// [&apos;A&apos;, &apos;B&apos;, &apos;C&apos;, 1, 2, 3, 4]</span>
+</code></pre>
+<h3 id="arrayfrom"><a name="arrayfrom" class="anchor-navigation-ex-anchor" href="#arrayfrom"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.from()</code></h3>
+<pre><code class="lang-js"><span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.from(<span class="hljs-string">&apos;foo&apos;</span>));
+<span class="hljs-comment">// expected output: Array [&quot;f&quot;, &quot;o&quot;, &quot;o&quot;]</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">Array</span>.from([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], x =&gt; x + x));
+<span class="hljs-comment">// expected output: Array [2, 4, 6]</span>
+</code></pre>
+<h3 id="arrayfill"><a name="arrayfill" class="anchor-navigation-ex-anchor" href="#arrayfill"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.fill()</code></h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;arr.fill(value[, start[, end]])</p>
+<h3 id="arrayfilter"><a name="arrayfilter" class="anchor-navigation-ex-anchor" href="#arrayfilter"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.filter()</code></h3>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;, &#x5176;&#x5305;&#x542B;&#x901A;&#x8FC7;&#x6240;&#x63D0;&#x4F9B;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x7684;&#x6D4B;&#x8BD5;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x3002;</p>
+<h3 id="arrayflat"><a name="arrayflat" class="anchor-navigation-ex-anchor" href="#arrayflat"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.flat()</code></h3>
+<p>&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#xFF1A;&#x4F7F;&#x7528; reduce &#x4E0E; concat</p>
+<p><strong>&#x6DF1;&#x5EA6;&#x9012;&#x5F52;&#x904D;&#x5386;&#x6570;&#x7EC4;</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> arr2 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>]]];
+arr2.flat();
+<span class="hljs-comment">// [1, 2, 3, 4, [5, 6]]</span>
+
+<span class="hljs-keyword">var</span> arr3 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>]]];
+arr3.flat(<span class="hljs-number">2</span>);
+<span class="hljs-comment">// [1, 2, 3, 4, 5, 6]</span>
+
+<span class="hljs-comment">//&#x4F7F;&#x7528; Infinity&#xFF0C;&#x53EF;&#x5C55;&#x5F00;&#x4EFB;&#x610F;&#x6DF1;&#x5EA6;&#x7684;&#x5D4C;&#x5957;&#x6570;&#x7EC4;</span>
+<span class="hljs-keyword">var</span> arr4 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, [<span class="hljs-number">5</span>, <span class="hljs-number">6</span>, [<span class="hljs-number">7</span>, <span class="hljs-number">8</span>, [<span class="hljs-number">9</span>, <span class="hljs-number">10</span>]]]]];
+arr4.flat(<span class="hljs-literal">Infinity</span>);
+<span class="hljs-comment">// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+</code></pre>
+<p><strong>&#x79FB;&#x9664;&#x7A7A;&#x9879;</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> arr4 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, [<span class="hljs-number">5</span>,, <span class="hljs-number">6</span>,, [<span class="hljs-number">7</span>, ,<span class="hljs-number">8</span>, [<span class="hljs-number">9</span>,, <span class="hljs-number">10</span>]]]]];
+arr4.flat(<span class="hljs-literal">Infinity</span>)
+<span class="hljs-comment">// [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span>
+</code></pre>
+<h3 id="arrayflatmap"><a name="arrayflatmap" class="anchor-navigation-ex-anchor" href="#arrayflatmap"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.flatMap()</code></h3>
+<p>&#x4E0E;map()&#x76F8;&#x4F3C;&#xFF0C;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#xFF1A;&#x4F7F;&#x7528; reduce &#x4E0E; concat</p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> arr1 = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>];
+<span class="hljs-built_in">console</span>.log(arr1.flatMap(x =&gt; x * <span class="hljs-number">2</span>));     <span class="hljs-comment">// [2, 4, 6, 8]</span>
+<span class="hljs-built_in">console</span>.log(arr1.flatMap(x =&gt; [x * <span class="hljs-number">2</span>]));   <span class="hljs-comment">// [2, 4, 6, 8]</span>
+<span class="hljs-built_in">console</span>.log(arr1.flatMap(x =&gt; [[x * <span class="hljs-number">2</span>]])); <span class="hljs-comment">// [[2], [4], [6], [8]]</span>
+</code></pre>
+<h3 id="arrayslice"><a name="arrayslice" class="anchor-navigation-ex-anchor" href="#arrayslice"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.slice()</code></h3>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6570;&#x7EC4;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x4E00;&#x5BF9;&#x8C61;&#x662F;&#x4E00;&#x4E2A;&#x7531; <code>begin</code> &#x548C; <code>end</code> &#x51B3;&#x5B9A;&#x7684;&#x539F;&#x6570;&#x7EC4;&#x7684;&#x6D45;&#x62F7;&#x8D1D;</p>
+<h2 id="&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;"><a name="&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6539;&#x53D8;&#x539F;&#x6570;&#x7EC4;</h2>
+<h3 id="arraycopywithin"><a name="arraycopywithin" class="anchor-navigation-ex-anchor" href="#arraycopywithin"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.copyWithin()</code></h3>
+<p>&#x6D45;&#x590D;&#x5236;&#x6570;&#x7EC4;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x5230;&#x540C;&#x4E00;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;</p>
+<pre><code class="lang-js">[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>].copyWithin(<span class="hljs-number">-2</span>)
+<span class="hljs-comment">// [1, 2, 3, 1, 2]</span>
+
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>].copyWithin(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>)
+<span class="hljs-comment">// [4, 5, 3, 4, 5]</span>
+
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>].copyWithin(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+<span class="hljs-comment">// [4, 2, 3, 4, 5]</span>
+
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>].copyWithin(<span class="hljs-number">-2</span>, <span class="hljs-number">-3</span>, <span class="hljs-number">-1</span>)
+<span class="hljs-comment">// [1, 2, 3, 3, 4]</span>
+
+[].copyWithin.call({length: <span class="hljs-number">5</span>, <span class="hljs-number">3</span>: <span class="hljs-number">1</span>}, <span class="hljs-number">0</span>, <span class="hljs-number">3</span>);
+<span class="hljs-comment">// {0: 1, 3: 1, length: 5}</span>
+</code></pre>
+<h3 id="arraypop"><a name="arraypop" class="anchor-navigation-ex-anchor" href="#arraypop"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.pop()</code></h3>
+<p>&#x5220;&#x9664;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x503C;&#x3002;</p>
+<h3 id="arraypush"><a name="arraypush" class="anchor-navigation-ex-anchor" href="#arraypush"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.push()</code></h3>
+<p>&#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x672B;&#x5C3E;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x6570;&#x7EC4;&#x7684;&#x65B0;&#x957F;&#x5EA6;&#x3002;</p>
+<h3 id="arrayreverse"><a name="arrayreverse" class="anchor-navigation-ex-anchor" href="#arrayreverse"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.reverse()</code></h3>
+<h3 id="arrayshift"><a name="arrayshift" class="anchor-navigation-ex-anchor" href="#arrayshift"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.shift()</code></h3>
+<p>&#x65B9;&#x6CD5;&#x4ECE;&#x6570;&#x7EC4;&#x4E2D;&#x5220;&#x9664;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x5143;&#x7D20;&#x7684;&#x503C;&#x3002;</p>
+<h3 id="arrayunshift"><a name="arrayunshift" class="anchor-navigation-ex-anchor" href="#arrayunshift"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.unshift()</code></h3>
+<p>&#x5C06;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5143;&#x7D20;&#x6DFB;&#x52A0;&#x5230;&#x6570;&#x7EC4;&#x7684;&#x5F00;&#x5934;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x8BE5;&#x6570;&#x7EC4;&#x7684;&#x65B0;&#x957F;&#x5EA6;&#x3002;</p>
+<h3 id="arraysort"><a name="arraysort" class="anchor-navigation-ex-anchor" href="#arraysort"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.sort()</code></h3>
+<p>9 &#x51FA;&#x73B0;&#x5728; 80 &#x4E4B;&#x524D;&#xFF0C;&#x4F46;&#x56E0;&#x4E3A;&#xFF08;&#x6CA1;&#x6709;&#x6307;&#x660E; compareFunction&#xFF09;&#xFF0C;&#x6BD4;&#x8F83;&#x7684;&#x6570;&#x5B57;&#x4F1A;&#x5148;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6240;&#x4EE5;&#x5728;Unicode&#x987A;&#x5E8F;&#x4E0A; &quot;80&quot; &#x8981;&#x6BD4; &quot;9&quot; &#x8981;&#x9760;&#x524D;&#x3002;
+<strong>&#x5BF9;&#x975E; ASCII &#x5B57;&#x7B26;&#x6392;&#x5E8F;</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> items = [<span class="hljs-string">&apos;r&#xE9;serv&#xE9;&apos;</span>, <span class="hljs-string">&apos;premier&apos;</span>, <span class="hljs-string">&apos;clich&#xE9;&apos;</span>, <span class="hljs-string">&apos;communiqu&#xE9;&apos;</span>, <span class="hljs-string">&apos;caf&#xE9;&apos;</span>, <span class="hljs-string">&apos;adieu&apos;</span>];
+items.sort(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">a, b</span>) </span>{
+  <span class="hljs-keyword">return</span> a.localeCompare(b);
+});
+
+<span class="hljs-comment">// items is [&apos;adieu&apos;, &apos;caf&#xE9;&apos;, &apos;clich&#xE9;&apos;, &apos;communiqu&#xE9;&apos;, &apos;premier&apos;, &apos;r&#xE9;serv&#xE9;&apos;]</span>
+</code></pre>
+<h3 id="arraysplice"><a name="arraysplice" class="anchor-navigation-ex-anchor" href="#arraysplice"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.splice()</code></h3>
+<p>&#x8FD4;&#x56DE;&#x7531;&#x88AB;&#x5220;&#x9664;&#x7684;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x3002;</p>
+<h2 id="&#x5408;&#x6210;&#x5B57;&#x7B26;&#x4E32;"><a name="&#x5408;&#x6210;&#x5B57;&#x7B26;&#x4E32;" class="anchor-navigation-ex-anchor" href="#&#x5408;&#x6210;&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5408;&#x6210;&#x5B57;&#x7B26;&#x4E32;</h2>
+<h3 id="arrayjoin"><a name="arrayjoin" class="anchor-navigation-ex-anchor" href="#arrayjoin"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.join()</code></h3>
+<h3 id="arraytolocalestring"><a name="arraytolocalestring" class="anchor-navigation-ex-anchor" href="#arraytolocalestring"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.toLocaleString()</code></h3>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> array1 = [<span class="hljs-number">1</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&apos;21 Dec 1997 14:12:00 UTC&apos;</span>)];
+<span class="hljs-keyword">const</span> localeString = array1.toLocaleString(<span class="hljs-string">&apos;en&apos;</span>, {timeZone: <span class="hljs-string">&quot;UTC&quot;</span>});
+
+<span class="hljs-built_in">console</span>.log(localeString);
+<span class="hljs-comment">// expected output: &quot;1,a,12/21/1997, 2:12:00 PM&quot;,</span>
+
+<span class="hljs-keyword">var</span> prices = [<span class="hljs-string">&apos;&#xFFE5;7&apos;</span>, <span class="hljs-number">500</span>, <span class="hljs-number">8123</span>, <span class="hljs-number">12</span>];
+prices.toLocaleString(<span class="hljs-string">&apos;ja-JP&apos;</span>, { style: <span class="hljs-string">&apos;currency&apos;</span>, currency: <span class="hljs-string">&apos;JPY&apos;</span> });
+
+<span class="hljs-comment">// &quot;&#xFFE5;7,&#xFFE5;500,&#xFFE5;8,123,&#xFFE5;12&quot;</span>
+</code></pre>
+<h3 id="arraytostring"><a name="arraytostring" class="anchor-navigation-ex-anchor" href="#arraytostring"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.toString()</code></h3>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x9017;&#x53F7;&#x76F8;&#x9694;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<h2 id="&#x5224;&#x65AD;"><a name="&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5224;&#x65AD;</h2>
+<h3 id="arrayevery"><a name="arrayevery" class="anchor-navigation-ex-anchor" href="#arrayevery"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.every()</code></h3>
+<p>&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x5185;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x662F;&#x5426;&#x90FD;&#x80FD;&#x901A;&#x8FC7;&#x67D0;&#x4E2A;&#x6307;&#x5B9A;&#x51FD;&#x6570;&#x7684;&#x6D4B;&#x8BD5;&#x3002;&#x5B83;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<strong>&#x5E03;&#x5C14;&#x503C;</strong>&#x3002;</p>
+<h3 id="arrayisarray"><a name="arrayisarray" class="anchor-navigation-ex-anchor" href="#arrayisarray"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.isArray()</code></h3>
+<h3 id="arrayincludes"><a name="arrayincludes" class="anchor-navigation-ex-anchor" href="#arrayincludes"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.includes()</code></h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;arr.includes(valueToFind[, fromIndex])
+&#x5982;&#x679C; fromIndex &#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x6570;&#x7EC4;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x5219;&#x4F1A;&#x8FD4;&#x56DE; false&#xFF0C;&#x4E14;&#x8BE5;&#x6570;&#x7EC4;&#x4E0D;&#x4F1A;&#x88AB;&#x641C;&#x7D22;&#x3002;</p>
+<h3 id="arraysome"><a name="arraysome" class="anchor-navigation-ex-anchor" href="#arraysome"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.some()</code></h3>
+<p>&#x5982;&#x679C;&#x7528;&#x4E00;&#x4E2A;&#x7A7A;&#x6570;&#x7EC4;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x5728;&#x4EFB;&#x4F55;&#x60C5;&#x51B5;&#x4E0B;&#x5B83;&#x8FD4;&#x56DE;&#x7684;&#x90FD;&#x662F;<code>false</code>&#x3002;<code>callback</code>&#x8FD4;&#x56DE;&#x771F;&#x503C;&#x65F6;&#x7ED3;&#x675F;&#x3002;</p>
+<h2 id="&#x67E5;&#x627E;"><a name="&#x67E5;&#x627E;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x627E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x627E;</h2>
+<h3 id="arrayfind"><a name="arrayfind" class="anchor-navigation-ex-anchor" href="#arrayfind"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.find()</code></h3>
+<p>&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E2D;&#x6EE1;&#x8DB3;&#x63D0;&#x4F9B;&#x7684;&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x503C;&#x3002;&#x5426;&#x5219;&#x8FD4;&#x56DE; <code>undefined</code>&#x3002;</p>
+<h3 id="arrayfindindex"><a name="arrayfindindex" class="anchor-navigation-ex-anchor" href="#arrayfindindex"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.findIndex()</code></h3>
+<p>&#x8FD4;&#x56DE;&#x6570;&#x7EC4;&#x4E2D;&#x6EE1;&#x8DB3;&#x63D0;&#x4F9B;&#x7684;&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;<strong>&#x7D22;&#x5F15;</strong>&#x3002;&#x5426;&#x5219;&#x8FD4;&#x56DE;<code>-1</code>&#x3002;</p>
+<h3 id="arrayindexof"><a name="arrayindexof" class="anchor-navigation-ex-anchor" href="#arrayindexof"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.indexOf()</code></h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;arr.indexOf(searchElement[, fromIndex])
+&#x5982;&#x679C;&#x8BE5;&#x7D22;&#x5F15;&#x503C;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x4E0D;&#x4F1A;&#x5728;&#x6570;&#x7EC4;&#x91CC;&#x67E5;&#x627E;&#xFF0C;&#x8FD4;&#x56DE;-1&#x3002;&#x4E3A;&#x8D1F;&#x6570;&#x4E5F;&#x662F;<strong>&#x4ECE;&#x524D;&#x5F80;&#x540E;</strong>&#x67E5;&#x3002;</p>
+<h3 id="arraylastindexof"><a name="arraylastindexof" class="anchor-navigation-ex-anchor" href="#arraylastindexof"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.lastIndexOf()</code></h3>
+<p>&#x8BED;&#x6CD5;&#xFF1A;arr.lastIndexOf(searchElement[, fromIndex])
+&#x5982;&#x679C;&#x8BE5;&#x7D22;&#x5F15;&#x503C;&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;&#x6570;&#x7EC4;&#x957F;&#x5EA6;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x4E0D;&#x4F1A;&#x5728;&#x6570;&#x7EC4;&#x91CC;&#x67E5;&#x627E;&#xFF0C;&#x8FD4;&#x56DE;-1&#x3002;&#x4E3A;&#x8D1F;&#x6570;&#x4E5F;&#x662F;<strong>&#x4ECE;&#x540E;&#x5F80;&#x524D;</strong>&#x67E5;&#x3002;</p>
+<h2 id="&#x904D;&#x5386;"><a name="&#x904D;&#x5386;" class="anchor-navigation-ex-anchor" href="#&#x904D;&#x5386;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x904D;&#x5386;</h2>
+<p>&#x82E5;&#x4F60;&#x9700;&#x8981;&#x63D0;&#x524D;&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF1A;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684; for &#x5FAA;&#x73AF;</li>
+<li>for...value...of / for...key...in &#x5FAA;&#x73AF;</li>
+<li>Array.every()&#x76F4;&#x5230;falsy</li>
+<li>Array.some()&#x76F4;&#x5230;truthy</li>
+<li>Array.find()</li>
+<li>Array.findIndex()</li>
+<li>Array.filter() + <a href="#arrayforeach">Array.forEach()</a> (forEach&#x672C;&#x8EAB;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x629B;&#x51FA;&#x9519;&#x8BEF;&#x6765;&#x4E2D;&#x6B62;)</li>
+</ul>
+<h3 id="arraykeys"><a name="arraykeys" class="anchor-navigation-ex-anchor" href="#arraykeys"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.keys()</code></h3>
+<p>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E2A;<strong>&#x7D22;&#x5F15;&#x952E;</strong>&#x7684;Array Iterator&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="arrayvalues"><a name="arrayvalues" class="anchor-navigation-ex-anchor" href="#arrayvalues"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.values()</code></h3>
+<p>&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x6570;&#x7EC4;&#x4E2D;&#x6BCF;&#x4E2A;<strong>&#x7D22;&#x5F15;&#x503C;</strong>&#x7684;Array Iterator&#x5BF9;&#x8C61;&#x3002;</p>
+<h3 id="arrayentries"><a name="arrayentries" class="anchor-navigation-ex-anchor" href="#arrayentries"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.entries()</code></h3>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684; Array &#x8FED;&#x4EE3;&#x5668;(Array Iterator)&#x5BF9;&#x8C61;&#xFF0C; &#x5BF9;&#x8C61;&#x4E0A;&#x6709;<code>next()</code>&#x65B9;&#x6CD5;&#xFF0C;<code>next()</code>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x5BF9;&#x8C61;&#x7684;<code>value</code>&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x662F;<code>[&quot;key&quot;,&quot;value&quot;]</code></p>
+<p><strong>&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;&#x6309;&#x884C;&#x6392;&#x5E8F;</strong></p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sortArr</span>(<span class="hljs-params">arr</span>) </span>{
+    <span class="hljs-keyword">var</span> goNext = <span class="hljs-literal">true</span>;
+    <span class="hljs-keyword">var</span> entries = arr.entries();
+    <span class="hljs-keyword">while</span> (goNext) {
+        <span class="hljs-keyword">var</span> result = entries.next();
+        <span class="hljs-keyword">if</span> (result.done !== <span class="hljs-literal">true</span>) {
+            result.value[<span class="hljs-number">1</span>].sort((a, b) =&gt; a - b);
+            goNext = <span class="hljs-literal">true</span>;
+        } <span class="hljs-keyword">else</span> {
+            goNext = <span class="hljs-literal">false</span>;
+        }
+    }
+    <span class="hljs-keyword">return</span> arr;
+}
+
+<span class="hljs-keyword">var</span> arr = [[<span class="hljs-number">1</span>,<span class="hljs-number">34</span>],[<span class="hljs-number">456</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">44</span>,<span class="hljs-number">234</span>],[<span class="hljs-number">4567</span>,<span class="hljs-number">1</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>,<span class="hljs-number">6</span>],[<span class="hljs-number">34</span>,<span class="hljs-number">78</span>,<span class="hljs-number">23</span>,<span class="hljs-number">1</span>]];
+sortArr(arr);
+<span class="hljs-comment">/*(4) [Array(2), Array(5), Array(5), Array(4)]
+    0:(2) [1, 34]
+    1:(5) [2, 3, 44, 234, 456]
+    2:(5) [1, 4, 5, 6, 4567]
+    3:(4) [1, 23, 34, 78]
+    length:4
+    __proto__:Array(0)
+*/</span>
+</code></pre>
+<p><strong>&#x4F7F;&#x7528;for&#x2026;of &#x5FAA;&#x73AF;</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> arr = [<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>];
+<span class="hljs-keyword">var</span> iterator = arr.entries();
+<span class="hljs-comment">// undefined</span>
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> e <span class="hljs-keyword">of</span> iterator) {
+    <span class="hljs-built_in">console</span>.log(e);
+}
+
+<span class="hljs-comment">// [0, &quot;a&quot;]</span>
+<span class="hljs-comment">// [1, &quot;b&quot;]</span>
+<span class="hljs-comment">// [2, &quot;c&quot;]</span>
+</code></pre>
+<h3 id="arrayforeach"><a name="arrayforeach" class="anchor-navigation-ex-anchor" href="#arrayforeach"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.forEach()</code></h3>
+<p>&#x65B9;&#x6CD5;&#x5BF9;&#x6570;&#x7EC4;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x7ED9;&#x5B9A;&#x7684;&#x51FD;&#x6570;&#x3002;<strong>&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;</strong>&#xFF0C;&#x5DF2;&#x5220;&#x9664;&#x6216;&#x8005;&#x672A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x9879;&#x5C06;&#x88AB;&#x8DF3;&#x8FC7;&#xFF0C;&#x5E76;&#x4E14;<strong>&#x4E0D;&#x53EF;&#x94FE;&#x5F0F;&#x8C03;&#x7528;</strong>&#xFF0C;<strong>&#x9664;&#x4E86;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x4EE5;&#x5916;&#xFF0C;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x4E2D;&#x6B62;&#x6216;&#x8DF3;&#x51FA; forEach() &#x5FAA;&#x73AF;</strong>&#x3002;</p>
+<h3 id="arraymap"><a name="arraymap" class="anchor-navigation-ex-anchor" href="#arraymap"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.map()</code></h3>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x6570;&#x7EC4;&#xFF0C;&#x5176;&#x7ED3;&#x679C;&#x662F;&#x8BE5;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#x63D0;&#x4F9B;&#x7684;&#x51FD;&#x6570;&#x540E;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x3002;&#x5F53;&#x4F60;&#x4E0D;&#x6253;&#x7B97;&#x4F7F;&#x7528;&#x8FD4;&#x56DE;&#x7684;&#x65B0;&#x6570;&#x7EC4;&#x5374;&#x4F7F;&#x7528;<code>map</code>&#x662F;&#x8FDD;&#x80CC;&#x8BBE;&#x8BA1;&#x521D;&#x8877;&#x7684;&#xFF0C;&#x8BF7;&#x7528;<code>forEach</code>&#x6216;&#x8005;<code>for-of</code>&#x66FF;&#x4EE3;&#x3002;
+map&#x4F1A;&#x8DF3;&#x8FC7;&#x7A7A;&#x9879;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x662F;<code>undefined</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> numbers = [<span class="hljs-number">1</span>, <span class="hljs-number">8</span>, <span class="hljs-number">4</span>,<span class="hljs-number">7</span>,<span class="hljs-number">10</span>,, <span class="hljs-number">9</span>];
+<span class="hljs-keyword">var</span> doubles = numbers.map(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">num,index</span>) </span>{
+    <span class="hljs-keyword">if</span>(!(index%<span class="hljs-number">2</span>)) {
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x5199;!index%2&#xFF0C;&#x5C31;&#x4F1A;&#x7B97;&#x6210;(!index)%2&#xFF0C; &#x7ED3;&#x679C;&#x5C31;&#x662F;[2, undefined, undefined, undefined, undefined, empty, undefined]</span>
+        <span class="hljs-built_in">console</span>.log(num, index%<span class="hljs-number">2</span>)
+        <span class="hljs-keyword">return</span> num * <span class="hljs-number">2</span>
+    };
+});
+<span class="hljs-built_in">console</span>.log(doubles)
+<span class="hljs-comment">// 1 0</span>
+<span class="hljs-comment">// 4 0</span>
+<span class="hljs-comment">// 10 0</span>
+<span class="hljs-comment">// 9 0</span>
+<span class="hljs-comment">// [2, undefined, 8, undefined, 20, empty, 18]</span>
+</code></pre>
+<h3 id="arrayreduce"><a name="arrayreduce" class="anchor-navigation-ex-anchor" href="#arrayreduce"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.reduce()</code></h3>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x63D0;&#x4F9B;<code>initialValue</code>&#xFF0C;<code>reduce</code> &#x4F1A;&#x4ECE;&#x7D22;&#x5F15;1&#x7684;&#x5730;&#x65B9;&#x5F00;&#x59CB;&#x6267;&#x884C; <code>callback</code> &#x65B9;&#x6CD5;&#xFF0C;&#x8DF3;&#x8FC7;&#x7B2C;&#x4E00;&#x4E2A;&#x7D22;&#x5F15;&#x3002;&#x5982;&#x679C;&#x63D0;&#x4F9B;<code>initialValue</code>&#xFF0C;&#x4ECE;&#x7D22;&#x5F15;0&#x5F00;&#x59CB;&#x3002;
+&#x7A7A;&#x6570;&#x7EC4;&#x5FC5;&#x987B;&#x6709;<code>initialValue</code>&#x3002;
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" target="_blank"><strong>&#x6309;&#x987A;&#x5E8F;&#x8FD0;&#x884C;Promise</strong></a></p>
+<h3 id="arrayreduceright"><a name="arrayreduceright" class="anchor-navigation-ex-anchor" href="#arrayreduceright"><i class="fa fa-link" aria-hidden="true"></i></a><code>Array.reduceRight()</code></h3>
+<p>&#x4E0E;<code>reduce</code>&#x662F;&#x76F8;&#x53CD;&#x65B9;&#x5411;&#x3002;</p>
+<h2 id="&#x7B5B;&#x9009;&#x67E5;&#x627E;&#x603B;&#x7ED3;"><a name="&#x7B5B;&#x9009;&#x67E5;&#x627E;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x7B5B;&#x9009;&#x67E5;&#x627E;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B5B;&#x9009;&#x67E5;&#x627E;&#x603B;&#x7ED3;</h2>
+<p>&#x8981;&#x67E5;&#x627E;&#x7684;&#x5143;&#x7D20;&#x53EF;&#x80FD;&#x662F;&#x57FA;&#x7840;&#x7C7B;&#x578B;<code>String</code>&#xFF0C;<code>Number</code>&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x662F;<code>Objet</code>&#xFF0C;<code>Array</code>&#x3002;
+&#x540E;&#x8005;&#x53EA;&#x80FD;&#x901A;&#x8FC7;<code>callback</code>&#x53BB;&#x5224;&#x65AD;&#x5B83;&#x662F;&#x4E0D;&#x662F;<strong>&#x7B26;&#x5408;&#x6761;&#x4EF6;</strong></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> array = [[<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>], <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;c&apos;</span>, <span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;d&apos;</span>];
+<span class="hljs-keyword">var</span> element = [<span class="hljs-string">&apos;a&apos;</span>, <span class="hljs-string">&apos;b&apos;</span>];
+<span class="hljs-built_in">console</span>.log(array.indexOf(element)) <span class="hljs-comment">// -1</span>
+</code></pre>
+<ul>
+<li>&#x662F;&#x5426;&#x90FD;&#xFF1A;<code>every</code>&#x8FD4;&#x56DE;&#x5E03;&#x5C14;&#x503C;</li>
+<li><p>&#x6709;&#x6CA1;&#x6709;&#xFF1A;</p>
+<ul>
+<li><code>includes</code>&#xFF0C;&#x57FA;&#x7840;&#x7C7B;&#x578B;</li>
+<li><code>indexOf</code> &#x6709;&#x5C31;&#x8FD4;&#x56DE;&#x7D22;&#x5F15;&#xFF0C;&#x6CA1;&#x6709;-1</li>
+<li><code>some</code>&#xFF0C;&#x8FD4;&#x56DE;&#x5E03;&#x5C14;&#x503C;</li>
+<li><code>find</code> &#x6709;&#x5C31;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x6CA1;&#x6709;<code>undefined</code></li>
+<li><code>findIndex</code>&#xFF0C;&#x6709;&#x5C31;&#x8FD4;&#x56DE;&#x7D22;&#x5F15;&#xFF0C;&#x6CA1;&#x6709;-1</li>
+</ul>
+</li>
+<li><p>&#x6709;&#x54EA;&#x4E9B;&#xFF1A;<code>filter</code>&#x8FD4;&#x56DE;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x6570;&#x7EC4;</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="基础概念和简写问题.html" class="navigation navigation-prev " aria-label="Previous page: 基础概念和简写问题">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="function.html" class="navigation navigation-next " aria-label="Next page: Function总结">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Array总结","level":"1.2.2","depth":2,"next":{"title":"Function总结","level":"1.2.3","depth":2,"path":"js/function.md","ref":"js/function.md","articles":[]},"previous":{"title":"基础概念和简写问题","level":"1.2.1","depth":2,"path":"js/基础概念和简写问题.md","ref":"js/基础概念和简写问题.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-lunr","-search","search-pro","chapter-fold","splitter","anchor-navigation-ex","back-to-top-button","lightbox"],"pluginsConfig":{"chapter-fold":{},"splitter":{},"search-pro":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":false,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"js/arrayzongjie.md","mtime":"2021-02-21T11:57:37.194Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-21T11:59:21.628Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
