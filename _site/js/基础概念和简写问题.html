@@ -55,6 +55,17 @@
       <div class="custom-nav side-sticky sticky-top"><nav class="collection-wrap" id="accordionExample">
     
     <div class="collection-item">
+        <a class="collection-head" href="/code/list" data-toggle="collapse" data-target="#片段" aria-expanded="false"
+            aria-controls="片段">
+            片段
+        </a>
+        <ul id="片段" class="collection-body collapse" aria-labelledby="片段" data-parent="#accordionExample"><li>
+                <a href="/code/%E7%A7%AF%E7%B4%AF.html">
+                    积累
+                </a>
+            </li></ul>
+    </div>
+    <div class="collection-item">
         <a class="collection-head" href="/css/list" data-toggle="collapse" data-target="#Css" aria-expanded="false"
             aria-controls="Css">
             Css
@@ -116,6 +127,11 @@
         </a>
         <ul id="JavaScript" class="collection-body collapse show" aria-labelledby="JavaScript" data-parent="#accordionExample">
             <li>
+                <a href="/js/input%E4%BA%8B%E4%BB%B6%E9%A1%BA%E5%BA%8F.html">
+                    input如何处理中文输入，事件顺序
+                </a>
+                
+            </li><li>
                 <a href="/js/Array%E6%80%BB%E7%BB%93.html">
                     Array总结
                 </a>
@@ -128,16 +144,6 @@
             </li><li>
                 <a href="/js/Map,Set%E5%92%8Citerable.html">
                     Map，Set和iterable
-                </a>
-                
-            </li><li>
-                <a href="/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8.html">
-                    创建一个计划表：增删改查拖拽
-                </a>
-                
-            </li><li>
-                <a href="/js/input%E4%BA%8B%E4%BB%B6%E9%A1%BA%E5%BA%8F.html">
-                    input如何处理中文输入，事件顺序
                 </a>
                 
             </li><li>
@@ -156,6 +162,16 @@
                 </a>
                 
             </li><li>
+                <a href="/js/Number.html">
+                    Number总结
+                </a>
+                
+            </li><li>
+                <a href="/js/MVC/MVC%E4%B8%8EMVVM%E7%9A%84%E5%8C%BA%E5%88%AB.html">
+                    MVC与MVVM的区别
+                </a>
+                
+            </li><li>
                 <a href="/js/copy/%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D.html">
                     深浅拷贝
                 </a>
@@ -163,6 +179,11 @@
             </li><li>
                 <a href="/js/wenjiangeshi.html">
                     MIME, Base64, Blob
+                </a>
+                
+            </li><li>
+                <a href="/js/%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%AE%A1%E5%88%92%E8%A1%A8.html">
+                    创建一个计划表：增删改查拖拽
                 </a>
                 
             </li><li><a class="active" href="/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html">
@@ -175,11 +196,6 @@
                 </a>
                 
             </li><li>
-                <a href="/js/Number.html">
-                    Number总结
-                </a>
-                
-            </li><li>
                 <a href="/js/window/window.html">
                     Window
                 </a>
@@ -187,6 +203,16 @@
             </li><li>
                 <a href="/js/%E5%BC%82%E6%AD%A5%E5%8A%A0%E8%BD%BD.html">
                     异步加载和Promise
+                </a>
+                
+            </li><li>
+                <a href="/js/storage.html">
+                    Cookie, Storage 与 indexDB
+                </a>
+                
+            </li><li>
+                <a href="/js/this%E6%8C%87%E5%90%91.html">
+                    this指向
                 </a>
                 
             </li></ul>
@@ -231,6 +257,10 @@
             </li><li>
                 <a href="/record/git%E5%92%8Clinux%E5%91%BD%E4%BB%A4.html">
                     git和linux命令
+                </a>
+            </li><li>
+                <a href="/record/mark.html">
+                    清单
                 </a>
             </li></ul>
     </div>
@@ -323,10 +353,11 @@
   </li>
   <li><a href="#扩展运算符">扩展运算符<code class="highlighter-rouge">...</code>用于数组或对象浅拷贝，函数调用</a></li>
   <li>三元运算</li>
+  <li><code class="highlighter-rouge">obj == null</code> 可以用来检查 <code class="highlighter-rouge">null || undefined</code>
+    <h3 id="解构赋值">解构赋值</h3>
+    <p>可以将属性/值从对象/数组中取出,赋值给其他变量。</p>
+  </li>
 </ul>
-
-<h3 id="解构赋值">解构赋值</h3>
-<p>可以将属性/值从对象/数组中取出,赋值给其他变量。</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>let {a,b,c,...rest} = {a: 1,b: 2,c: 3,d: 4,e: 5}
 console.log(a,b,c,rest) // 1 2 3 {d: 4, e: 5}
@@ -381,6 +412,27 @@ var dateFields = [1970, 0, 1]; // 1970年1月1日
 var d = new Date(...dateFields);
 </code></pre></div></div>
 
+<p><a href="https://www.cnblogs.com/allen2333/p/9835654.html">https://www.cnblogs.com/allen2333/p/9835654.html</a></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> export default function (source, length = 3) {
+  source = String(source).split(".");
+  source[0] = source[0].replace(new RegExp('(\\d)(?=(\\d{'+length+'})+$)','ig'),"$1,");
+  return source.join(".");
+}
+</code></pre></div></div>
+<p>\d是把\d当作一个向后引用，先占位，
+对一个正则表达式模式或部分模式两边添加圆括号将导致相关匹配存储到一个临时缓冲区中，所捕获的每个子匹配都按照在正则表达式模式中从左到右出现的顺序存储。
+可以使用非捕获元字符 ?:、?= 或 ?! 来重写捕获，忽略对相关匹配的保存。</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log(('100000000').replace(new RegExp('(\\d)((\\d{3})+$)','ig'),"$1,$2     "))
+100,000000
+</code></pre></div></div>
+
+<p>(?=exp)也叫零宽度正预测先行断言，它断言自身出现的位置的后面能匹配表达式exp。比如\b\w+(?=ing\b)，匹配以ing结尾的单词的前面部分(除了ing以外的部分)，如查找I’m singing while you’re dancing.时，它会匹配sing和danc。
+(?&lt;=exp)也叫零宽度正回顾后发断言，它断言自身出现的位置的前面能匹配表达式exp。比如(?&lt;=\bre)\w+\b会匹配以re开头的单词的后半部分(除了re以外的部分)，例如在查找reading a book时，它匹配ading。</p>
+
+<p>$1匹配的是(\d),$2匹配(?=(\d{‘+length+’})+$)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>console.log(('1000000000').replace(new RegExp('(\\d)(?=(\\d{3})+$)','ig'),"$1,$2     "))
+1,000     000,000     000,000     000
+</code></pre></div></div>
 
     </div>
   </div><a class="u-url" href="/js/%E5%9F%BA%E7%A1%80%E6%A6%82%E5%BF%B5%E5%92%8C%E7%AE%80%E5%86%99%E9%97%AE%E9%A2%98.html" hidden></a>

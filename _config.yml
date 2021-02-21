@@ -38,6 +38,9 @@ collections:
   record:
     output: true
     title: 记录
+  code:
+    output: true
+    title: 片段
   css:
     output: true
     title: Css

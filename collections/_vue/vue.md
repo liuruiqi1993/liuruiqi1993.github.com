@@ -327,6 +327,18 @@ render: function (createElement) {
 
 ### provide / inject
 `provide` 和 `inject` 绑定并不是可响应的。这是刻意为之的。然而，如果你传入了一个可监听的对象，那么其对象的属性还是可响应的。
+用`Vue.observable`可以使其响应式
+```
+const state = Vue.observable({ count: 0 })
+
+const Demo = {
+  render(h) {
+    return h('button', {
+      on: { click: () => { state.count++ }}
+    }, `count is: ${state.count}`)
+  }
+}
+```
 
 ### [watch](https://cn.vuejs.org/v2/api/#vm-watch)
 停止监听，但是`immediate: true`的第一次无法取消监听。
