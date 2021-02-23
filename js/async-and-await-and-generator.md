@@ -1,7 +1,8 @@
 # async, await, generator
+
 一个generator看上去像一个函数，但可以返回多次。调用generator对象有两个方法：
 
-```js
+```javascript
 function* foo(x) {
     yield x + 1;
     yield x + 2;
@@ -12,7 +13,7 @@ function* foo(x) {
 * 用`for ... of`循环迭代generator对象
 * 调用generator对象的`next()`方法，返回一个对象`{value: x, done: true/false}`，`value`就是`yield`的返回值，`done`表示这个generator是否已经执行结束了。**下一次调用next的时候，传的参数会被作为上一个yield前面接受的值**
 
-```js
+```javascript
 const getData = () => new Promise(resolve => setTimeout(() => resolve("data"), 1000))
 function* testG() {
   // await被编译成了yield
@@ -32,4 +33,5 @@ gen.next('666')
 
 ## async await
 
-<https://juejin.im/post/5e79e841f265da5726612b6e>
+[https://juejin.im/post/5e79e841f265da5726612b6e](https://juejin.im/post/5e79e841f265da5726612b6e)
+

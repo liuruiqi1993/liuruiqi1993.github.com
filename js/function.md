@@ -19,7 +19,7 @@
 
 ### 函数提升
 
-```js
+```javascript
 //函数声明式，提到作用域最前面
 function bar () {}
 
@@ -29,14 +29,13 @@ var foo = function () {}
 
 ### 箭头函数
 
-箭头函数内部的this是词法作用域，由上下文确定。
-用`call()`或者`apply()`调用箭头函数时，无法对`this`进行绑定，即传入的第一个参数被忽略。
+箭头函数内部的this是词法作用域，由上下文确定。 用`call()`或者`apply()`调用箭头函数时，无法对`this`进行绑定，即传入的第一个参数被忽略。
 
 ### 剩余参数
 
 如果函数的最后一个命名参数以...为前缀，则它将成为一个由剩余参数组成的真数组。
 
-```js
+```javascript
 function(a, b, ...theArgs) {
   // ...
 }
@@ -50,10 +49,9 @@ function(a, b, ...theArgs) {
 
 ## 闭包
 
-闭包就是携带状态的函数，并且它的状态可以完全对外隐藏起来。
-函数1返回一个函数2，通过调用函数2可以访问函数1里的变量。
+闭包就是携带状态的函数，并且它的状态可以完全对外隐藏起来。 函数1返回一个函数2，通过调用函数2可以访问函数1里的变量。
 
-```js
+```javascript
 // 定义数字0:
 var zero = function (f) {
     return function (x) {
@@ -108,7 +106,7 @@ five = add(three, two)
 
 用new调用，返回一个对象的函数。
 
-```js
+```javascript
 function Student(name) {
     this.name = name;
     this.hello = function () {
@@ -120,6 +118,7 @@ function Student(name) {
 ### new一个对象具体做了什么
 
 1. 当以new关键字调用时，会创建一个新的内存空间，标记为 Animal 的实例。
-2. 函数体内部的 this 指向该内存
+2. 函数体内部的 this 指向该内存
 3. 执行函数体内的代码，给this添加属性和方法
 4. 默认返回this
+

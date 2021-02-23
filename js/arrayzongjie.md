@@ -12,14 +12,14 @@
 
 浅拷贝
 
-```js
+```javascript
 var arr = ['A', 'B', 'C'];
 arr.concat(1, 2, [3, 4]); // ['A', 'B', 'C', 1, 2, 3, 4]
 ```
 
 ### `Array.from()`
 
-```js
+```javascript
 console.log(Array.from('foo'));
 // expected output: Array ["f", "o", "o"]
 
@@ -29,7 +29,7 @@ console.log(Array.from([1, 2, 3], x => x + x));
 
 ### `Array.fill()`
 
-语法：arr.fill(value[, start[, end]])
+语法：arr.fill\(value\[, start\[, end\]\]\)
 
 ### `Array.filter()`
 
@@ -41,7 +41,7 @@ console.log(Array.from([1, 2, 3], x => x + x));
 
 **深度递归遍历数组**
 
-```js
+```javascript
 var arr2 = [1, 2, [3, 4, [5, 6]]];
 arr2.flat();
 // [1, 2, 3, 4, [5, 6]]
@@ -58,7 +58,7 @@ arr4.flat(Infinity);
 
 **移除空项**
 
-```js
+```javascript
 var arr4 = [1, 2, [3, 4, [5,, 6,, [7, ,8, [9,, 10]]]]];
 arr4.flat(Infinity)
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -66,9 +66,9 @@ arr4.flat(Infinity)
 
 ### `Array.flatMap()`
 
-与map()相似，替代方案：使用 reduce 与 concat
+与map\(\)相似，替代方案：使用 reduce 与 concat
 
-```js
+```javascript
 var arr1 = [1, 2, 3, 4];
 console.log(arr1.flatMap(x => x * 2));     // [2, 4, 6, 8]
 console.log(arr1.flatMap(x => [x * 2]));   // [2, 4, 6, 8]
@@ -85,7 +85,7 @@ console.log(arr1.flatMap(x => [[x * 2]])); // [[2], [4], [6], [8]]
 
 浅复制数组的一部分到同一数组中的另一个位置
 
-```js
+```javascript
 [1, 2, 3, 4, 5].copyWithin(-2)
 // [1, 2, 3, 1, 2]
 
@@ -122,10 +122,9 @@ console.log(arr1.flatMap(x => [[x * 2]])); // [[2], [4], [6], [8]]
 
 ### `Array.sort()`
 
-9 出现在 80 之前，但因为（没有指明 compareFunction），比较的数字会先被转换为字符串，所以在Unicode顺序上 "80" 要比 "9" 要靠前。
-**对非 ASCII 字符排序**
+9 出现在 80 之前，但因为（没有指明 compareFunction），比较的数字会先被转换为字符串，所以在Unicode顺序上 "80" 要比 "9" 要靠前。 **对非 ASCII 字符排序**
 
-```js
+```javascript
 var items = ['réservé', 'premier', 'cliché', 'communiqué', 'café', 'adieu'];
 items.sort(function (a, b) {
   return a.localeCompare(b);
@@ -144,7 +143,7 @@ items.sort(function (a, b) {
 
 ### `Array.toLocaleString()`
 
-```js
+```javascript
 const array1 = [1, 'a', new Date('21 Dec 1997 14:12:00 UTC')];
 const localeString = array1.toLocaleString('en', {timeZone: "UTC"});
 
@@ -171,8 +170,7 @@ prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 ### `Array.includes()`
 
-语法：arr.includes(valueToFind[, fromIndex])
-如果 fromIndex 大于等于数组的长度，则会返回 false，且该数组不会被搜索。
+语法：arr.includes\(valueToFind\[, fromIndex\]\) 如果 fromIndex 大于等于数组的长度，则会返回 false，且该数组不会被搜索。
 
 ### `Array.some()`
 
@@ -190,13 +188,11 @@ prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 ### `Array.indexOf()`
 
-语法：arr.indexOf(searchElement[, fromIndex])
-如果该索引值大于或等于数组长度，意味着不会在数组里查找，返回-1。为负数也是**从前往后**查。
+语法：arr.indexOf\(searchElement\[, fromIndex\]\) 如果该索引值大于或等于数组长度，意味着不会在数组里查找，返回-1。为负数也是**从前往后**查。
 
 ### `Array.lastIndexOf()`
 
-语法：arr.lastIndexOf(searchElement[, fromIndex])
-如果该索引值大于或等于数组长度，意味着不会在数组里查找，返回-1。为负数也是**从后往前**查。
+语法：arr.lastIndexOf\(searchElement\[, fromIndex\]\) 如果该索引值大于或等于数组长度，意味着不会在数组里查找，返回-1。为负数也是**从后往前**查。
 
 ## 遍历
 
@@ -204,11 +200,11 @@ prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 * 一个简单的 for 循环
 * for...value...of / for...key...in 循环
-* Array.every()直到falsy
-* Array.some()直到truthy
-* Array.find()
-* Array.findIndex()
-* Array.filter() + [Array.forEach()](#arrayforeach) (forEach本身只能通过抛出错误来中止)
+* Array.every\(\)直到falsy
+* Array.some\(\)直到truthy
+* Array.find\(\)
+* Array.findIndex\(\)
+* Array.filter\(\) + [Array.forEach\(\)](arrayzongjie.md#arrayforeach) \(forEach本身只能通过抛出错误来中止\)
 
 ### `Array.keys()`
 
@@ -220,11 +216,11 @@ prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 ### `Array.entries()`
 
-返回一个新的 Array 迭代器(Array Iterator)对象， 对象上有`next()`方法，`next()`返回一个对象，对象的`value`对应的值是`["key","value"]`
+返回一个新的 Array 迭代器\(Array Iterator\)对象， 对象上有`next()`方法，`next()`返回一个对象，对象的`value`对应的值是`["key","value"]`
 
 **二维数组按行排序**
 
-```js
+```javascript
 function sortArr(arr) {
     var goNext = true;
     var entries = arr.entries();
@@ -254,7 +250,7 @@ sortArr(arr);
 
 **使用for…of 循环**
 
-```js
+```javascript
 var arr = ["a", "b", "c"];
 var iterator = arr.entries();
 // undefined
@@ -270,14 +266,13 @@ for (let e of iterator) {
 
 ### `Array.forEach()`
 
-方法对数组的每个元素执行一次给定的函数。**没有返回值**，已删除或者未初始化的项将被跳过，并且**不可链式调用**，**除了抛出异常以外，没有办法中止或跳出 forEach() 循环**。
+方法对数组的每个元素执行一次给定的函数。**没有返回值**，已删除或者未初始化的项将被跳过，并且**不可链式调用**，**除了抛出异常以外，没有办法中止或跳出 forEach\(\) 循环**。
 
 ### `Array.map()`
 
-返回一个新数组，其结果是该数组中的每个元素都调用一次提供的函数后的返回值。当你不打算使用返回的新数组却使用`map`是违背设计初衷的，请用`forEach`或者`for-of`替代。
-map会跳过空项，如果没有返回值就是`undefined`
+返回一个新数组，其结果是该数组中的每个元素都调用一次提供的函数后的返回值。当你不打算使用返回的新数组却使用`map`是违背设计初衷的，请用`forEach`或者`for-of`替代。 map会跳过空项，如果没有返回值就是`undefined`
 
-```js
+```javascript
 var numbers = [1, 8, 4,7,10,, 9];
 var doubles = numbers.map(function(num,index) {
     if(!(index%2)) {
@@ -296,9 +291,7 @@ console.log(doubles)
 
 ### `Array.reduce()`
 
-如果没有提供`initialValue`，`reduce` 会从索引1的地方开始执行 `callback` 方法，跳过第一个索引。如果提供`initialValue`，从索引0开始。
-空数组必须有`initialValue`。
-[**按顺序运行Promise**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+如果没有提供`initialValue`，`reduce` 会从索引1的地方开始执行 `callback` 方法，跳过第一个索引。如果提供`initialValue`，从索引0开始。 空数组必须有`initialValue`。 [**按顺序运行Promise**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
 
 ### `Array.reduceRight()`
 
@@ -306,10 +299,9 @@ console.log(doubles)
 
 ## 筛选查找总结
 
-要查找的元素可能是基础类型`String`，`Number`，也可能是`Objet`，`Array`。
-后者只能通过`callback`去判断它是不是**符合条件**
+要查找的元素可能是基础类型`String`，`Number`，也可能是`Objet`，`Array`。 后者只能通过`callback`去判断它是不是**符合条件**
 
-```js
+```javascript
 var array = [['a', 'b'], 'a', 'c', 'a', 'd'];
 var element = ['a', 'b'];
 console.log(array.indexOf(element)) // -1
@@ -322,5 +314,5 @@ console.log(array.indexOf(element)) // -1
   * `some`，返回布尔值
   * `find` 有就返回值，没有`undefined`
   * `findIndex`，有就返回索引，没有-1
-
 * 有哪些：`filter`返回符合条件的数组
+

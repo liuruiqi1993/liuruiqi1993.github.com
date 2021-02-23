@@ -12,7 +12,7 @@
 
 C是B的子组件，B是A的子组件
 
-```vue
+```text
 // A.vue
 
 <template>
@@ -35,7 +35,7 @@ C是B的子组件，B是A的子组件
 </script>
 ```
 
-```vue
+```text
 // B.vue
 
 <template>
@@ -66,15 +66,14 @@ C是B的子组件，B是A的子组件
 
 1 初始化
 
-```js
+```javascript
 // event-bus.js
 
 import Vue from 'vue'
 export const EventBus = new Vue()
-
 ```
 
-```vue
+```text
 <template>
   <div>
     <show-num-com></show-num-com>
@@ -93,7 +92,7 @@ export default {
 
 2 发送事件
 
-```vue
+```text
 // addtionNum.vue 中发送事件
 
 <template>
@@ -125,7 +124,7 @@ export default {
 
 3 接收事件
 
-```vue
+```text
 // showNum.vue 中接收事件
 
 <template>
@@ -152,7 +151,7 @@ export default {
 
 4 移除事件监听者
 
-```js
+```javascript
 import { eventBus } from 'event-bus.js'
 EventBus.$off('addition', {})
 ```
@@ -162,3 +161,4 @@ EventBus.$off('addition', {})
 ## localStorage / sessionStorage
 
 ## $attrs与 $listeners
+

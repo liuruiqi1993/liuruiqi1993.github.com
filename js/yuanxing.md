@@ -1,7 +1,6 @@
-# 原型和继承
+# 原型与原型链
 
-JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。
-如果原型链很长，那么访问一个对象的属性就会因为花更多的时间查找而变得更慢，因此要注意不要把原型链搞得太长。
+JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。 如果原型链很长，那么访问一个对象的属性就会因为花更多的时间查找而变得更慢，因此要注意不要把原型链搞得太长。
 
 ## 关系
 
@@ -9,15 +8,16 @@ JavaScript对每个创建的对象都会设置一个原型，指向它的原型�
 
 `原型.constructor === 构造函数`
 
-![](image/1.png)
+![](../.gitbook/assets/1.png)
 
-![](image/2.png)
+![](../.gitbook/assets/2.png)
 
-## [构造函数](/js/Function总结.html#构造函数)
+## [构造函数](https://github.com/liuruiqi1993/liuruiqi1993.github.com/tree/45a99bedd3a50d8a0beea70cd4b8ac5aea2e55c1/js/Function总结.html#构造函数)
 
-### [new一个对象具体做了什么](/js/Function总结.html#new一个对象具体做了什么)
+### [new一个对象具体做了什么](https://github.com/liuruiqi1993/liuruiqi1993.github.com/tree/45a99bedd3a50d8a0beea70cd4b8ac5aea2e55c1/js/Function总结.html#new一个对象具体做了什么)
+
 1. 创建一个空对象
-2. 对象的__proto__指向原型
+2. 对象的**proto**指向原型
 3. this指向这个对象
 4. 利用构造函数为this绑定属性与方法
 5. 返回this
@@ -30,7 +30,7 @@ JavaScript对每个创建的对象都会设置一个原型，指向它的原型�
 
 基于Student扩展出PrimaryStudent，可以先定义出PrimaryStudent：
 
-```js
+```javascript
 function PrimaryStudent(props) {
     // 调用Student构造函数，绑定this变量:
     Student.call(this, props);
@@ -40,13 +40,13 @@ function PrimaryStudent(props) {
 
 但是，调用了`Student`构造函数不等于继承了`Student`，`PrimaryStudent`创建的对象的原型是：
 
-```js
+```javascript
 new PrimaryStudent() ----> PrimaryStudent.prototype ----> Object.prototype ----> null
 ```
 
 必须想办法把原型链修改为：
 
-```js
+```javascript
 new PrimaryStudent() ----> PrimaryStudent.prototype ----> Student.prototype ----> Object.prototype ----> null
 ```
 
@@ -58,10 +58,9 @@ new PrimaryStudent() ----> PrimaryStudent.prototype ----> Student.prototype ----
 
 ### 工厂模式
 
-**缺点：没有解决对象识别问题，即不能知道一个对象的类型。**
-`person1 instanceof Person === false`, `person1 instanceof Object === true`
+**缺点：没有解决对象识别问题，即不能知道一个对象的类型。** `person1 instanceof Person === false`, `person1 instanceof Object === true`
 
-```js
+```javascript
 function createPerson(name,age,job){
     var o = new Object();
     o.name = name;
@@ -76,7 +75,7 @@ var person1 = createPerson('Nike',29,'teacher');
 var person2 = createPerson('Arvin',20,'student');
 ```
 
-```js
+```javascript
 person1.__proto__ ----> Object.prototype ----> null
 person2.__proto__ ----> Object.prototype ----> null
 ```
@@ -85,7 +84,7 @@ person2.__proto__ ----> Object.prototype ----> null
 
 **缺点：实例相互影响**
 
-```js
+```javascript
 function Parent1() {
     this.name = ['super1']
     this.reName = function () {
@@ -103,18 +102,20 @@ console.log(child11.name, child12.name)
 // [ 'super1', 'super111' ] [ 'super1', 'super111' ]
 ```
 
-```js
+```javascript
 child11.__proto__ ----> Child1.prototype ----> Parent1.prototype ----> Object.prototype ----> null
 child12.__proto__ ----> Child1.prototype ----> Parent1.prototype ----> Object.prototype ----> null
 ```
 
-![](image/4.png)
+![](../.gitbook/assets/4.png)
 
 ### 构造函数模式
-**call()无法获得prototype上的方法**
+
+**call\(\)无法获得prototype上的方法** 
+
 **缺点：方法不共用，内存浪费**
 
-```js
+```javascript
 function Child2() {
     Parent1.call(this)
 }
@@ -129,18 +130,18 @@ console.log(child21.reName === child22.reName)
 // false, 实例方法也是独立的，没有共享同一个方法
 ```
 
-```js
+```javascript
 child21.__proto__ ----> Child2.prototype ----> Object.prototype ----> null
 child22.__proto__ ----> Child2.prototype ----> Object.prototype ----> null
 ```
 
-![](image/3.png)
+![](../.gitbook/assets/3.png)
 
 ### 混合构造函数和原型模式
 
 **缺点: 父类构造函数被调用两次,子类实例的属性存在两份。造成内存浪费**
 
-```js
+```javascript
 function Parent3() {
     this.name = ['super3']
 }
@@ -163,18 +164,18 @@ console.log(child31.reName === child32.reName)
 //true, 共享了父类的方法
 ```
 
-```js
+```javascript
 child31.__proto__ ----> Child3.prototype ----> Parent3.prototype ----> Object.prototype ----> null
 child32.__proto__ ----> Child3.prototype ----> Parent3.prototype ----> Object.prototype ----> null
 ```
 
-![](image/5.png)
+![](../.gitbook/assets/5.png)
 
 ### 寄生构造函数模式
 
 **完美：子类都有各自的实例不会相互影响，且共享了父类的方法**
 
-```js
+```javascript
 function Parent4() {
     this.name = ['super4']
 }
@@ -197,12 +198,12 @@ console.log(child41.reName === child42.reName)
 //true, 共享了父类的方法
 ```
 
-```js
+```javascript
 child41.__proto__ ----> Child4.prototype ----> 浅拷贝Parent4.prototype ----> Object.prototype ----> null
 child42.__proto__ ----> Child4.prototype ----> 浅拷贝Parent4.prototype ----> Object.prototype ----> null
 ```
 
-![](image/6.png)
+![](../.gitbook/assets/6.png)
 
 ### 稳妥构造函数模式
 
@@ -210,7 +211,7 @@ child42.__proto__ ----> Child4.prototype ----> 浅拷贝Parent4.prototype ----> 
 * 不使用this
 * 不使用new调用
 
-```js
+```javascript
 function Person(name,age,job){
     //创建要返回的对象
     var o=new Object();
@@ -231,7 +232,7 @@ friend.sayName();//"Nicholas"
 
 **使用if语句，使得原型方法只初始化一次**
 
-```js
+```javascript
 function Person(name, age) {
   this.name = name
   this.age = age
@@ -251,12 +252,11 @@ function Person(name, age) {
 
 var person = new Person("AAA", 23)
 person.getName()    //AAA
-
 ```
 
 ### class
 
-```js
+```javascript
 class Parent5 {
     constructor() {
         this.name = ['super5']
@@ -280,9 +280,10 @@ console.log(child51.reName === child52.reName)
 //true, 共享了父类的方法
 ```
 
-```js
+```javascript
 child51.__proto__ ----> Child5.prototype ----> Parent5.prototype ----> Object.prototype ----> null
 child52.__proto__ ----> Child5.prototype ----> Parent5.prototype ----> Object.prototype ----> null
 ```
 
-![](image/7.png)
+![](../.gitbook/assets/7.png)
+

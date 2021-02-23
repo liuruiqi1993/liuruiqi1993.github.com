@@ -1,29 +1,28 @@
 # css选择器
 
-看到了这一篇[https://juejin.im/post/5e6b2b9ce51d4526fd069b87](https://juejin.im/post/5e6b2b9ce51d4526fd069b87)
-所以CSS选择器查缺补漏，安排上
+看到了这一篇[https://juejin.im/post/5e6b2b9ce51d4526fd069b87](https://juejin.im/post/5e6b2b9ce51d4526fd069b87) 所以CSS选择器查缺补漏，安排上
 
-|基础||
-|--|--|
-|element1~element2 | 选择element1之后的每一个element2|
-|a[src^="https"]   | 选择每一个src属性的值以"https"开头的元素|
-|a[src$=".pdf"]    | 选择每一个src属性的值以".pdf"结尾的元素|
-|a[src*="runoob"]  | 选择每一个src属性的值包含子字符串"runoob"的元素|
-|p:first-of-type   | 选择每个p元素是其父级的第一个p元素|
-|p:last-of-type    | 选择每个p元素是其父级的最后一个p元素|
-|p:only-of-type    | 选择每个p元素是其父级的唯一p元素|
-|p:nth-of-type(2)  | 选择每个p元素是其父级的第二个p元素|
-|:not(p)           | 选择每个并非p元素的元素|
-|**特殊**           ||
-|p:only-child   | 选择每个p元素是其父级的唯一子元素|
-|p:empty           | 选择每个没有任何子级的p元素（包括文本节点）|
-|:target           | 选择当前锚点|
-|:root           | 选择文档的根元素,在HTML中根元素始终是HTML元素。|
-|::selection       | 匹配元素中被用户选中或处于高亮状态的部分|
-|**表单**           ||
-|input:enabled   | 选择每一个已启用的输入元素，与input:disabled相反|
-|input:optional   | 用于匹配可选的输入元素 和:required相反|
-|:valid           | 用于匹配输入值为合法的元素和:invalid相反|
+| 基础 |  |
+| :--- | :--- |
+| element1~element2 | 选择element1之后的每一个element2 |
+| a\[src^="https"\] | 选择每一个src属性的值以"https"开头的元素 |
+| a\[src$=".pdf"\] | 选择每一个src属性的值以".pdf"结尾的元素 |
+| a\[src\*="runoob"\] | 选择每一个src属性的值包含子字符串"runoob"的元素 |
+| p:first-of-type | 选择每个p元素是其父级的第一个p元素 |
+| p:last-of-type | 选择每个p元素是其父级的最后一个p元素 |
+| p:only-of-type | 选择每个p元素是其父级的唯一p元素 |
+| p:nth-of-type\(2\) | 选择每个p元素是其父级的第二个p元素 |
+| :not\(p\) | 选择每个并非p元素的元素 |
+| **特殊** |  |
+| p:only-child | 选择每个p元素是其父级的唯一子元素 |
+| p:empty | 选择每个没有任何子级的p元素（包括文本节点） |
+| :target | 选择当前锚点 |
+| :root | 选择文档的根元素,在HTML中根元素始终是HTML元素。 |
+| ::selection | 匹配元素中被用户选中或处于高亮状态的部分 |
+| **表单** |  |
+| input:enabled | 选择每一个已启用的输入元素，与input:disabled相反 |
+| input:optional | 用于匹配可选的输入元素 和:required相反 |
+| :valid | 用于匹配输入值为合法的元素和:invalid相反 |
 
 ## 组合
 
@@ -70,9 +69,9 @@ td:empty::before{
 
 ## 3. 用好:only-child伪类
 
-![''](https://user-gold-cdn.xitu.io/2020/3/13/170d2a24152f116a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+![&apos;&apos;](https://user-gold-cdn.xitu.io/2020/3/13/170d2a24152f116a?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-```html
+```markup
 <!-- 1. 只有加载图片 -->
 <div class="cs-loading">
     <img src="./loading.png" class="cs-loading-img">
@@ -118,3 +117,4 @@ td:empty::before{
     line-height: 150px;
 }
 ```
+

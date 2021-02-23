@@ -1,5 +1,7 @@
-# input如何处理中文输入，事件顺序
+# input事件顺序
+
 [https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/129](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/129)
+
 * 输入到input框触发`input`事件
 * 失去焦点后内容有改变触发`change`事件
 * 识别到你开始使用中文输入法触发`compositionstart` 事件
@@ -10,7 +12,7 @@
 
 参考vue源码对v-model的实现中，对输入中文的处理
 
-```js
+```javascript
 <input id='myinput'>
 
 function jeiliu(timeout){
@@ -45,3 +47,4 @@ input_dom.addEventListener('input',jeiliu(1000));
 input_dom.addEventListener('compositionstart',onCompositionStart);
 input_dom.addEventListener('compositionend',onCompositionEnd);
 ```
+

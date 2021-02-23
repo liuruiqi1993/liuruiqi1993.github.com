@@ -1,6 +1,6 @@
 # MVC与MVVM的区别
 
-<https://www.php.cn/faq/417707.html>
+[https://www.php.cn/faq/417707.html](https://www.php.cn/faq/417707.html)
 
 ## MVC
 
@@ -21,3 +21,4 @@ MVVM包括view视图层、model数据层、viewmodel层。各部分通信都是�
 在MVC里，View是可以直接访问Model的，所以View里会包含Model信息以及一些业务逻辑。 MVC模型关注的是Model的不变，所以在MVC模型里，Model不依赖于View，但是 View是依赖于Model的。不仅如此，因为有一些业务逻辑在View里实现了，导致要更改View也是比较困难的，至少那些业务逻辑是无法重用的。
 
 MVVM在概念上是真正将页面与数据逻辑分离的模式，它把数据绑定工作放到一个JS里去实现，而这个JS文件的主要功能是完成数据的绑定，即把model绑定到UI的元素上。此外MVVM另一个重要特性双向绑定，它更方便你去同时维护页面上都依赖于某个字段的N个区域，而不用手动更新它们。
+
