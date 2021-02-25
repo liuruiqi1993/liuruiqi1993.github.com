@@ -2,7 +2,6 @@
 
 * [介绍](README.md)
 * [Javascript](js/README.md)
-  * [基础概念和简写问题](js/ji-chu-gai-nian-he-jian-xie-wen-ti.md)
   * [Number总结](js/number.md)
   * [Array总结](js/arrayzongjie.md)
   * [Function总结](js/function.md)
@@ -24,8 +23,8 @@
   * [3D与动画](css/3d.md)
   * [css选择器](css/css.md)
   * [Less and Sass](css/less_and_sass.md)
-  * [css属性](css/css-shu-xing.md)
-  * [css字体](css/css-zi-ti.md)
+  * [css属性](css/cssattr.md.md)
+  * [css字体](css/cssfont.md.md)
 * [VUE](vue/README.md)
   * [通信](vue/tong-xin.md)
   * [双向绑定](vue/shuang-xiang-bang-ding.md)
