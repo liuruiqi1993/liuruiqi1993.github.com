@@ -6,7 +6,7 @@
 
 ## $children / $parent / $refs
 
-## provide / inject
+## provide/inject
 
 **provide和inject不是响应式的，这点很重要，除非申明的属性是响应式的！**
 
@@ -160,5 +160,7 @@ EventBus.$off('addition', {})
 
 ## localStorage / sessionStorage
 
-## $attrs与 $listeners
+## $attrs 与 $listeners
+
+$listeners本质是父组件上所有监听的事件，native除外。
 

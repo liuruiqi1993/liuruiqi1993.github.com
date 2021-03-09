@@ -1,18 +1,36 @@
 # Array总结
 
-一个问题不能栽倒N次
-
 ## 参考[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 所有的回调中，如果有`thisArg`，那么回调函数的`this`值就是`thisArg`。只对`function(){}`有效，对**箭头函数**不起作用。
+
+
+
+## 筛选查找总结
+
+要查找的元素可能是基础类型`String`，`Number`，也可能是`Objet`，`Array`。 后者只能通过`callback`去判断它是不是**符合条件**
+
+```javascript
+var array = [['a', 'b'], 'a', 'c', 'a', 'd'];
+var element = ['a', 'b'];
+console.log(array.indexOf(element)) // -1
+```
+
+* 是否都：`every`返回布尔值
+* 有没有：
+  * `includes`，基础类型
+  * `indexOf` 有就返回索引，没有-1
+  * `some`，返回布尔值
+  * `find` 有就返回值，没有`undefined`
+  * `findIndex`，有就返回索引，没有-1
+* 有哪些：`filter`返回符合条件的数组
 
 ## 返回新数组
 
 ### `Array.concat()`
 
-浅拷贝
-
 ```javascript
+// 浅拷贝
 var arr = ['A', 'B', 'C'];
 arr.concat(1, 2, [3, 4]); // ['A', 'B', 'C', 1, 2, 3, 4]
 ```
@@ -29,17 +47,17 @@ console.log(Array.from([1, 2, 3], x => x + x));
 
 ### `Array.fill()`
 
-语法：arr.fill\(value\[, start\[, end\]\]\)
+语法：`arr.fill(value[, start[, end]])`
 
 ### `Array.filter()`
 
-创建一个新数组, 其包含通过所提供函数实现的测试的所有元素。
+创建一个**新数组**, 其包含通过所提供函数实现的测试的所有元素。
 
 ### `Array.flat()`
 
-替代方案：使用 reduce 与 concat
+替代方案：使用 `reduce` 与 `concat`
 
-**深度递归遍历数组**
+#### **深度递归遍历数组**
 
 ```javascript
 var arr2 = [1, 2, [3, 4, [5, 6]]];
@@ -56,7 +74,7 @@ arr4.flat(Infinity);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-**移除空项**
+#### **移除空项**
 
 ```javascript
 var arr4 = [1, 2, [3, 4, [5,, 6,, [7, ,8, [9,, 10]]]]];
@@ -66,7 +84,7 @@ arr4.flat(Infinity)
 
 ### `Array.flatMap()`
 
-与map\(\)相似，替代方案：使用 reduce 与 concat
+与`map()`相似，替代方案：使用 `reduce` 与 `concat`
 
 ```javascript
 var arr1 = [1, 2, 3, 4];
@@ -77,7 +95,7 @@ console.log(arr1.flatMap(x => [[x * 2]])); // [[2], [4], [6], [8]]
 
 ### `Array.slice()`
 
-返回一个新的数组对象，这一对象是一个由 `begin` 和 `end` 决定的原数组的浅拷贝
+返回一个新的数组对象，这一对象是一个由 `begin` 和 `end` 决定的原数组的**浅拷贝**。
 
 ## 改变原数组
 
@@ -170,7 +188,7 @@ prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 ### `Array.includes()`
 
-语法：arr.includes\(valueToFind\[, fromIndex\]\) 如果 fromIndex 大于等于数组的长度，则会返回 false，且该数组不会被搜索。
+语法：`arr.includes(valueToFind[, fromIndex])` 如果 `fromIndex` 大于等于数组的长度，则会返回 `false`，且该数组不会被搜索。
 
 ### `Array.some()`
 
@@ -196,15 +214,15 @@ prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 ## 遍历
 
-若你需要提前终止循环，你可以使用：
+若你需要提**前终止循环**，你可以使用：
 
 * 一个简单的 for 循环
-* for...value...of / for...key...in 循环
-* Array.every\(\)直到falsy
-* Array.some\(\)直到truthy
-* Array.find\(\)
-* Array.findIndex\(\)
-* Array.filter\(\) + [Array.forEach\(\)](arrayzongjie.md#arrayforeach) \(forEach本身只能通过抛出错误来中止\)
+* `for...value...of` / `for...key...in` 循环
+* `Array.every()`直到falsy
+* `Array.some()`直到truthy
+* `Array.find()`
+* `Array.findIndex()`
+* `Array.filter() +` [`Array.forEach()`](arrayzongjie.md#arrayforeach) \(forEach本身只能通过抛出错误来中止\)
 
 ### `Array.keys()`
 
@@ -218,7 +236,7 @@ prices.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' });
 
 返回一个新的 Array 迭代器\(Array Iterator\)对象， 对象上有`next()`方法，`next()`返回一个对象，对象的`value`对应的值是`["key","value"]`
 
-**二维数组按行排序**
+#### **二维数组按行排序**
 
 ```javascript
 function sortArr(arr) {
@@ -248,7 +266,7 @@ sortArr(arr);
 */
 ```
 
-**使用for…of 循环**
+#### **使用for…of 循环**
 
 ```javascript
 var arr = ["a", "b", "c"];
@@ -291,28 +309,58 @@ console.log(doubles)
 
 ### `Array.reduce()`
 
-如果没有提供`initialValue`，`reduce` 会从索引1的地方开始执行 `callback` 方法，跳过第一个索引。如果提供`initialValue`，从索引0开始。 空数组必须有`initialValue`。 [**按顺序运行Promise**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+如果没有提供`initialValue`，`reduce` 会从索引1的地方开始执行 `callback` 方法，跳过第一个索引。如果提供`initialValue`，从索引0开始。 空数组必须有`initialValue`。
+
+#### [**按顺序运行Promise**](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce#%E6%8C%89%E9%A1%BA%E5%BA%8F%E8%BF%90%E8%A1%8Cpromise)
+
+```javascript
+/**
+ * Runs promises from array of functions that can return promises
+ * in chained manner
+ *
+ * @param {array} arr - promise arr
+ * @return {Object} promise object
+ */
+function runPromiseInSequence(arr, input) {
+  return arr.reduce(
+    (promiseChain, currentFunction) => promiseChain.then(currentFunction),
+    Promise.resolve(input)
+    // reduce((total, item, index) => {}, inittialValue)
+  );
+}
+
+// promise function 1
+function p1(a) {
+  return new Promise((resolve, reject) => {
+    resolve(a * 5);
+  });
+}
+
+// promise function 2
+function p2(a) {
+  return new Promise((resolve, reject) => {
+    resolve(a * 2);
+  });
+}
+
+// function 3  - will be wrapped in a resolved promise by .then()
+function f3(a) {
+ return a * 3;
+}
+
+// promise function 4
+function p4(a) {
+  return new Promise((resolve, reject) => {
+    resolve(a * 4);
+  });
+}
+
+const promiseArr = [p1, p2, f3, p4];
+runPromiseInSequence(promiseArr, 10)
+  .then(console.log);   // 1200
+```
 
 ### `Array.reduceRight()`
 
 与`reduce`是相反方向。
-
-## 筛选查找总结
-
-要查找的元素可能是基础类型`String`，`Number`，也可能是`Objet`，`Array`。 后者只能通过`callback`去判断它是不是**符合条件**
-
-```javascript
-var array = [['a', 'b'], 'a', 'c', 'a', 'd'];
-var element = ['a', 'b'];
-console.log(array.indexOf(element)) // -1
-```
-
-* 是否都：`every`返回布尔值
-* 有没有：
-  * `includes`，基础类型
-  * `indexOf` 有就返回索引，没有-1
-  * `some`，返回布尔值
-  * `find` 有就返回值，没有`undefined`
-  * `findIndex`，有就返回索引，没有-1
-* 有哪些：`filter`返回符合条件的数组
 

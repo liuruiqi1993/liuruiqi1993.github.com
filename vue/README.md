@@ -369,7 +369,7 @@ render: function (createElement) {
 
 如果需要，可以通过将 `vm.$data` 传入 `JSON.parse(JSON.stringify(...))` 得到深拷贝的原始数据对象。
 
-### provide / inject
+### provide/inject
 
 `provide` 和 `inject` 绑定并不是可响应的。这是刻意为之的。然而，如果你传入了一个可监听的对象，那么其对象的属性还是可响应的。 用`Vue.observable`可以使其响应式
 
