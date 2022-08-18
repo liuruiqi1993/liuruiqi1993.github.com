@@ -26,6 +26,20 @@ function bar () {}
 //函数字面量式 与变量提升一致，定义后才能console，否则undefined
 var foo = function () {}
 ```
+### 作用域
+```js
+var var1=1;
+var var2=2;
+function function1(){
+    var var3=3;
+    var var4=4;   
+    function innerFunction(){
+       var var6=5;
+       var var5=6; 
+    }
+}
+```
+!()[https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c7e4bcf145d146e3829d1cbb2946fad7~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp]
 
 ### 箭头函数
 
