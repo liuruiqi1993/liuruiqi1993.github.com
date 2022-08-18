@@ -8,13 +8,13 @@ JavaScript对每个创建的对象都会设置一个原型，指向它的原型�
 
 `原型.constructor === 构造函数`
 
-![](../../.gitbook/assets/1.png)
+![](<../../.gitbook/assets/1 (1).png>)
 
-![](../../.gitbook/assets/2.png)
+![](<../../.gitbook/assets/2 (1).png>)
 
-## [构造函数](https://github.com/liuruiqi1993/liuruiqi1993.github.com/tree/45a99bedd3a50d8a0beea70cd4b8ac5aea2e55c1/js/Function总结.html#构造函数)
+## [构造函数](https://github.com/liuruiqi1993/liuruiqi1993.github.com/tree/45a99bedd3a50d8a0beea70cd4b8ac5aea2e55c1/js/Function%E6%80%BB%E7%BB%93.html#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0)
 
-### [new一个对象具体做了什么](https://github.com/liuruiqi1993/liuruiqi1993.github.com/tree/45a99bedd3a50d8a0beea70cd4b8ac5aea2e55c1/js/Function总结.html#new一个对象具体做了什么)
+### [new一个对象具体做了什么](https://github.com/liuruiqi1993/liuruiqi1993.github.com/tree/45a99bedd3a50d8a0beea70cd4b8ac5aea2e55c1/js/Function%E6%80%BB%E7%BB%93.html#new%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%85%B7%E4%BD%93%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88)
 
 1. 创建一个空对象
 2. 对象的**proto**指向原型
@@ -54,7 +54,7 @@ new PrimaryStudent() ----> PrimaryStudent.prototype ----> Student.prototype ----
 
 ## 创建对象的方式
 
-[https://baijiahao.baidu.com/s?id=1611119750903121416&wfr=spider&for=pc](https://baijiahao.baidu.com/s?id=1611119750903121416&wfr=spider&for=pc)
+[https://baijiahao.baidu.com/s?id=1611119750903121416\&wfr=spider\&for=pc](https://baijiahao.baidu.com/s?id=1611119750903121416\&wfr=spider\&for=pc)
 
 ### 工厂模式
 
@@ -107,11 +107,11 @@ child11.__proto__ ----> Child1.prototype ----> Parent1.prototype ----> Object.pr
 child12.__proto__ ----> Child1.prototype ----> Parent1.prototype ----> Object.prototype ----> null
 ```
 
-![](../../.gitbook/assets/4.png)
+![](<../../.gitbook/assets/4 (1).png>)
 
 ### 构造函数模式
 
-**call\(\)无法获得prototype上的方法** 
+**call()无法获得prototype上的方法**
 
 **缺点：方法不共用，内存浪费**
 
@@ -203,7 +203,7 @@ child41.__proto__ ----> Child4.prototype ----> 浅拷贝Parent4.prototype ----> 
 child42.__proto__ ----> Child4.prototype ----> 浅拷贝Parent4.prototype ----> Object.prototype ----> null
 ```
 
-![](../../.gitbook/assets/6.png)
+![](<../../.gitbook/assets/6 (1).png>)
 
 ### 稳妥构造函数模式
 
@@ -285,5 +285,4 @@ child51.__proto__ ----> Child5.prototype ----> Parent5.prototype ----> Object.pr
 child52.__proto__ ----> Child5.prototype ----> Parent5.prototype ----> Object.prototype ----> null
 ```
 
-![](../../.gitbook/assets/7.png)
-
+![](<../../.gitbook/assets/7 (1).png>)
